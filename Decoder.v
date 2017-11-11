@@ -8,6 +8,7 @@ module Decoder (
     output alu_in2_mux,
     output [3 : 0] regno1,
     output [3 : 0] regno2,
+    output [`WORD_SIZE - 1 : 0] immOut,
     output regfile_wrtEn,
     output [3 : 0] regfile_wrtRegno
 );
@@ -53,7 +54,10 @@ assign regno2 = rs2;
 assign alu_in2_mux = opcode == `ALUR || opcode == `CMPR ? `ALUIN2_REG :
                     opcode == `ALUI || opcode == `CMPI ? `ALUIN2_IMM :
                     1'bz;
-assign regfile_wrtEn = 1'b1; //TODO All current operations write; modify later
+assign regfile_wrtEn = opcode == `ALUR || opcode == `ALUI || opcode == `CMPR || opcode == `CMPI
+                        ? 1'b1 : 1'bz;
 assign regfile_wrtRegno = rd;
+
+SignExtension #(.IN_BIT_WIDTH(16), .OUT_BIT_WIDTH(`WORD_SIZE)) immSext(imm, immOut);
 
 endmodule

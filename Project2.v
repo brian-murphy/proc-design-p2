@@ -1,3 +1,6 @@
+`include "Alu.vh"
+`include "Decoder.vh"
+
 module Project2(
   input  [9:0] SW,
   input  [3:0] KEY,
@@ -49,8 +52,9 @@ module Project2(
   
   // Create PC and its logic
   wire pcWrtEn = 1'b1;
-  wire[DBITS - 1: 0] pcIn; // Implement the logic that generates pcIn; you may change pcIn to reg if necessary
   wire[DBITS - 1: 0] pcOut;
+  wire[DBITS - 1: 0] pcIn; // Implement the logic that generates pcIn; you may change pcIn to reg if necessary
+  assign pcIn = pcOut + 4;
   // This PC instantiation is your starting point
   Register #(.BIT_WIDTH(DBITS), .RESET_VALUE(START_PC)) pc (clk, reset, pcWrtEn, pcIn, pcOut);
 
@@ -59,11 +63,37 @@ module Project2(
   InstMemory #(IMEM_INIT_FILE, IMEM_ADDR_BIT_WIDTH, IMEM_DATA_BIT_WIDTH) instMem (pcOut[IMEM_PC_BITS_HI - 1: IMEM_PC_BITS_LO], instWord);
   
   // Put the code for getting opcode1, rd, rs, rt, imm, etc. here 
-  
-  // Create the registers
-  
+  wire [`FUNC_BITS - 1 : 0] alu_func;
+  wire alu_in2_sel;
+  wire [REG_INDEX_BIT_WIDTH - 1 : 0] regno1, regno2, regfile_wrtRegno;
+  wire regfile_wrtEn;
+  wire [DBITS - 1 : 0] imm;
+
+  Decoder decoder(instWord, alu_func, alu_in2_sel, regno1, regno2, imm, regfile_wrtEn, regfile_wrtRegno);
+
+  wire [DBITS - 1 : 0] aluOut;
+  wire [DBITS - 1 : 0] regfileOut1, regfileOut2;
+
+  Regfile #(
+    .WORD_SIZE(DBITS),
+    .INDEX_WIDTH(REG_INDEX_BIT_WIDTH)
+  ) regfile (
+    clk,
+    reset,
+    regfile_wrtRegno,
+    aluOut,
+    regno1,
+    regno2,
+    regfileOut1,
+    regfileOut2
+  );
+
+  wire [DBITS - 1 : 0] aluIn2 = alu_in2_sel == `ALUIN2_REG ? regfileOut2 :
+                                alu_in2_sel == `ALUIN2_IMM ? imm :
+                                {DBITS{1'bz}};
+
   // Create ALU unit
-  
+  Alu alu(regfileOut1, aluIn2, alu_func, aluOut);
   // Put the code for data memory and I/O here
   
   // KEYS, SWITCHES, HEXS, and LEDS are memory mapped IO
