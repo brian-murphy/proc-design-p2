@@ -46,7 +46,7 @@ module Alu_tb();
 
         func = `MVHI;
         #2
-        $display("MVHI b11 = %b", out);
+        $display("MVHI b101 = %b", out);
 
         func = `F;
         #2

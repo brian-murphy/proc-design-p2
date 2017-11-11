@@ -19,6 +19,8 @@
 `define GTE 15
 `define GT 16
 
+`define WORD_SIZE 32
+`define FUNC_BITS 5
 
 // `define M (`N << 2)
-`endif //_my_incl_vh_
+`endif

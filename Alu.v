@@ -1,13 +1,10 @@
 `include "Alu.vh"
 
-module Alu #(
-    parameter WORD_SIZE = 32,
-    parameter FUNC_BITS = 5
-)(
-    input [WORD_SIZE - 1 : 0] in1,
-    input [WORD_SIZE - 1 : 0] in2,
-    input [FUNC_BITS - 1 : 0] func,
-    output [WORD_SIZE - 1 : 0] out
+module Alu (
+    input [`WORD_SIZE - 1 : 0] in1,
+    input [`WORD_SIZE - 1 : 0] in2,
+    input [`FUNC_BITS - 1 : 0] func,
+    output [`WORD_SIZE - 1 : 0] out
 );
 
 
@@ -20,7 +17,7 @@ assign out =
         func == `NAND ? ~(in1 & in2) :
         func == `NOR ? ~(in1 | in2) :
         func == `XNOR ? ~(in1 ^ in2) :
-        func == `MVHI ? in1 << 16 :
+        func == `MVHI ? in2 << 16 :
         
         func == `F ? 0 :
         func == `EQ ? (in1 == in2 ? 1 : 0) :
@@ -30,7 +27,7 @@ assign out =
         func == `NE ? (in1 != in2 ? 1 : 0) :
         func == `GTE ? (in1 >= in2 ? 1 : 0) :
         func == `GT ? (in1 > in2 ? 1 : 0) :
-        {WORD_SIZE{1'bz}};
+        {`WORD_SIZE{1'bz}};
 
 
 endmodule
