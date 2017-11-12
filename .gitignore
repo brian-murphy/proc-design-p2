@@ -1,3 +1,5 @@
 project2.cr.mti
 project2.mpf
 work
+*.mpf
+*.mti
