@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module counter_tb();
 
-    localparam COUNTER_SIZE = 10;
+    localparam COUNTER_SIZE = 4;
 
     reg clk;
     reg reset;
@@ -11,7 +11,7 @@ module counter_tb();
 
     counter #(
         .SIZE(COUNTER_SIZE),
-        .MAX_VALUE()) test_counter(clk, reset, enable, counter_output);
+        .MAX_VALUE(10)) test_counter(clk, reset, enable, counter_output);
 
     integer i;
 
@@ -51,7 +51,7 @@ module counter_tb();
 
         $display("**test wraparound**");
         enable = 1'b1;
-        for (i=0; i<10; i=i+1) begin
+        for (i=0; i<11; i=i+1) begin
             @ (negedge clk);
         end
         $display("expected: 0, actual: %d", counter_output);
