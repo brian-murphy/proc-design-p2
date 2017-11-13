@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Project2
-Sun Nov 12 12:13:03 2017
+Sun Nov 12 21:28:33 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -9,23 +9,24 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Resource Usage Summary
-  6. Analysis & Synthesis Resource Utilization by Entity
-  7. Analysis & Synthesis IP Cores Summary
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |Project2
- 10. Parameter Settings for User Entity Instance: PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i
- 11. Parameter Settings for User Entity Instance: Register:pc
- 12. Parameter Settings for User Entity Instance: InstMemory:instMem
- 13. Parameter Settings for User Entity Instance: Decoder:decoder|SignExtension:immSext
- 14. Parameter Settings for User Entity Instance: Regfile:regfile
- 15. Port Connectivity Checks: "Regfile:regfile"
- 16. Port Connectivity Checks: "Decoder:decoder"
- 17. Port Connectivity Checks: "Register:pc"
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |Project2
+ 11. Parameter Settings for User Entity Instance: PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i
+ 12. Parameter Settings for User Entity Instance: Register:pc
+ 13. Parameter Settings for User Entity Instance: InstMemory:instMem
+ 14. Parameter Settings for User Entity Instance: Decoder:decoder|SignExtension:immSext
+ 15. Parameter Settings for User Entity Instance: Regfile:regfile
+ 16. Port Connectivity Checks: "Regfile:regfile"
+ 17. Port Connectivity Checks: "Decoder:decoder"
+ 18. Port Connectivity Checks: "Register:pc"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,7 +52,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +-------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Sun Nov 12 12:13:03 2017           ;
+; Analysis & Synthesis Status         ; Successful - Sun Nov 12 21:28:33 2017           ;
 ; Quartus II 32-bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                       ; Project2                                        ;
 ; Top-level Entity Name               ; Project2                                        ;
@@ -160,24 +161,35 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+-----------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+-----------------------------+-----------------------------------------------------------------------------+---------+
-; SCProc-Controller.v              ; yes             ; User Verilog HDL File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/SCProc-Controller.v ;         ;
-; Regfile.v                        ; yes             ; User Verilog HDL File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/Regfile.v           ;         ;
-; Alu.vh                           ; yes             ; User Unspecified File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/Alu.vh              ;         ;
-; Alu.v                            ; yes             ; User Verilog HDL File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/Alu.v               ;         ;
-; Decoder.vh                       ; yes             ; User Unspecified File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/Decoder.vh          ;         ;
-; SignExtension.v                  ; yes             ; User Verilog HDL File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/SignExtension.v     ;         ;
-; Register.v                       ; yes             ; User Verilog HDL File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/Register.v          ;         ;
-; Project2.v                       ; yes             ; User Verilog HDL File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/Project2.v          ;         ;
-; InstMemory.v                     ; yes             ; User Verilog HDL File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/InstMemory.v        ;         ;
-; PLL.v                            ; yes             ; User Wizard-Generated File  ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/PLL.v               ; PLL     ;
-; PLL/PLL_0002.v                   ; yes             ; User Verilog HDL File       ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/PLL/PLL_0002.v      ; PLL     ;
-; altera_pll.v                     ; yes             ; Megafunction                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altera_pll.v              ;         ;
-+----------------------------------+-----------------+-----------------------------+-----------------------------------------------------------------------------+---------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------+---------+
+; SCProc-Controller.v              ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/SCProc-Controller.v ;         ;
+; Regfile.v                        ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/Regfile.v           ;         ;
+; Alu.vh                           ; yes             ; User Unspecified File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/Alu.vh              ;         ;
+; Alu.v                            ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/Alu.v               ;         ;
+; Decoder.vh                       ; yes             ; User Unspecified File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/Decoder.vh          ;         ;
+; SignExtension.v                  ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/SignExtension.v     ;         ;
+; Register.v                       ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/Register.v          ;         ;
+; Project2.v                       ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.v          ;         ;
+; InstMemory.v                     ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/InstMemory.v        ;         ;
+; PLL.v                            ; yes             ; User Wizard-Generated File  ; C:/Users/Brian/dev/proc-design/project2/modelsim/PLL.v               ; PLL     ;
+; PLL/PLL_0002.v                   ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/PLL/PLL_0002.v      ; PLL     ;
+; altera_pll.v                     ; yes             ; Megafunction                ; d:/altera/quartus/libraries/megafunctions/altera_pll.v               ;         ;
++----------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -215,14 +227,14 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                             ;
-+--------+--------------+---------+--------------+--------------+------------------------------------------+------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                          ; IP Include File                                                        ;
-+--------+--------------+---------+--------------+--------------+------------------------------------------+------------------------------------------------------------------------+
-; Altera ; altera_pll   ; 13.0sp1 ; N/A          ; N/A          ; |Project2|PLL:PLL_inst                   ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/PLL.v          ;
-; Altera ; altera_pll   ; 13.0    ; N/A          ; N/A          ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst ; C:/Users/MurphyBrianP/dev/proc-design/project2-template/PLL/PLL_0002.v ;
-+--------+--------------+---------+--------------+--------------+------------------------------------------+------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                      ;
++--------+--------------+---------+--------------+--------------+------------------------------------------+-----------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                          ; IP Include File                                                 ;
++--------+--------------+---------+--------------+--------------+------------------------------------------+-----------------------------------------------------------------+
+; Altera ; altera_pll   ; 13.0sp1 ; N/A          ; N/A          ; |Project2|PLL:PLL_inst                   ; C:/Users/Brian/dev/proc-design/project2/modelsim/PLL.v          ;
+; Altera ; altera_pll   ; 13.0    ; N/A          ; N/A          ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst ; C:/Users/Brian/dev/proc-design/project2/modelsim/PLL/PLL_0002.v ;
++--------+--------------+---------+--------------+--------------+------------------------------------------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -255,7 +267,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ADDR_HEX            ; 11110000000000000000000000000000 ; Unsigned Binary ;
 ; ADDR_LEDR           ; 11110000000000000000000000000100 ; Unsigned Binary ;
 ; ADDR_LEDG           ; 11110000000000000000000000001000 ; Unsigned Binary ;
-; IMEM_INIT_FILE      ; Sorter2.mif                      ; String          ;
+; IMEM_INIT_FILE      ; fib.mif                          ; String          ;
 ; IMEM_ADDR_BIT_WIDTH ; 11                               ; Signed Integer  ;
 ; IMEM_DATA_BIT_WIDTH ; 32                               ; Signed Integer  ;
 ; IMEM_PC_BITS_HI     ; 13                               ; Signed Integer  ;
@@ -512,14 +524,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: InstMemory:instMem ;
-+----------------+-------------+----------------------------------+
-; Parameter Name ; Value       ; Type                             ;
-+----------------+-------------+----------------------------------+
-; MEM_INIT_FILE  ; Sorter2.mif ; String                           ;
-; ADDR_BIT_WIDTH ; 11          ; Signed Integer                   ;
-; DATA_BIT_WIDTH ; 32          ; Signed Integer                   ;
-; N_WORDS        ; 2048        ; Signed Integer                   ;
-+----------------+-------------+----------------------------------+
++----------------+---------+--------------------------------------+
+; Parameter Name ; Value   ; Type                                 ;
++----------------+---------+--------------------------------------+
+; MEM_INIT_FILE  ; fib.mif ; String                               ;
+; ADDR_BIT_WIDTH ; 11      ; Signed Integer                       ;
+; DATA_BIT_WIDTH ; 32      ; Signed Integer                       ;
+; N_WORDS        ; 2048    ; Signed Integer                       ;
++----------------+---------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -584,7 +596,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -594,7 +606,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Nov 12 12:12:51 2017
+    Info: Processing started: Sun Nov 12 21:28:22 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project2 -c Project2
 Info (12021): Found 1 design units, including 1 entities, in source file scproc-controller.v
     Info (12023): Found entity 1: Decoder
@@ -617,6 +629,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll.v
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
     Info (12023): Found entity 1: PLL_0002
 Info (12127): Elaborating entity "Project2" for the top level hierarchy
+Warning (10034): Output port "LEDR" at Project2.v(9) has no driver
 Warning (10034): Output port "HEX0" at Project2.v(10) has no driver
 Warning (10034): Output port "HEX1" at Project2.v(11) has no driver
 Warning (10034): Output port "HEX2" at Project2.v(12) has no driver
@@ -860,16 +873,16 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "regfileOut1[0]" is missing source, defaulting to GND
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at VCC
-    Warning (13410): Pin "LEDR[1]" is stuck at VCC
-    Warning (13410): Pin "LEDR[2]" is stuck at VCC
-    Warning (13410): Pin "LEDR[3]" is stuck at VCC
-    Warning (13410): Pin "LEDR[4]" is stuck at VCC
-    Warning (13410): Pin "LEDR[5]" is stuck at VCC
-    Warning (13410): Pin "LEDR[6]" is stuck at VCC
-    Warning (13410): Pin "LEDR[7]" is stuck at VCC
-    Warning (13410): Pin "LEDR[8]" is stuck at VCC
-    Warning (13410): Pin "LEDR[9]" is stuck at VCC
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
     Warning (13410): Pin "HEX0[0]" is stuck at GND
     Warning (13410): Pin "HEX0[1]" is stuck at GND
     Warning (13410): Pin "HEX0[2]" is stuck at GND
@@ -914,7 +927,7 @@ Info (128003): Physical synthesis algorithm combinational resynthesis using bool
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:08
-Info (144001): Generated suppressed messages file C:/Users/MurphyBrianP/dev/proc-design/project2-template/Project2.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 16 input pin(s) that do not drive logic
@@ -937,16 +950,16 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
 Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 38 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 227 warnings
-    Info: Peak virtual memory: 702 megabytes
-    Info: Processing ended: Sun Nov 12 12:13:03 2017
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:08
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 228 warnings
+    Info: Peak virtual memory: 734 megabytes
+    Info: Processing ended: Sun Nov 12 21:28:33 2017
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/MurphyBrianP/dev/proc-design/project2-template/Project2.map.smsg.
+The suppressed messages can be found in C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.map.smsg.
 
 
