@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Project2
-Sun Nov 12 12:14:49 2017
+Sun Nov 12 21:29:33 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -8,52 +8,53 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ---------------------
   1. Legal Notice
   2. TimeQuest Timing Analyzer Summary
-  3. SDC File List
-  4. Clocks
-  5. Slow 1100mV 85C Model Fmax Summary
-  6. Timing Closure Recommendations
-  7. Slow 1100mV 85C Model Setup Summary
-  8. Slow 1100mV 85C Model Hold Summary
-  9. Slow 1100mV 85C Model Recovery Summary
- 10. Slow 1100mV 85C Model Removal Summary
- 11. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1100mV 85C Model Datasheet Report
- 13. Slow 1100mV 85C Model Metastability Report
- 14. Slow 1100mV 0C Model Fmax Summary
- 15. Slow 1100mV 0C Model Setup Summary
- 16. Slow 1100mV 0C Model Hold Summary
- 17. Slow 1100mV 0C Model Recovery Summary
- 18. Slow 1100mV 0C Model Removal Summary
- 19. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 20. Slow 1100mV 0C Model Datasheet Report
- 21. Slow 1100mV 0C Model Metastability Report
- 22. Fast 1100mV 85C Model Setup Summary
- 23. Fast 1100mV 85C Model Hold Summary
- 24. Fast 1100mV 85C Model Recovery Summary
- 25. Fast 1100mV 85C Model Removal Summary
- 26. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 27. Fast 1100mV 85C Model Datasheet Report
- 28. Fast 1100mV 85C Model Metastability Report
- 29. Fast 1100mV 0C Model Setup Summary
- 30. Fast 1100mV 0C Model Hold Summary
- 31. Fast 1100mV 0C Model Recovery Summary
- 32. Fast 1100mV 0C Model Removal Summary
- 33. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 34. Fast 1100mV 0C Model Datasheet Report
- 35. Fast 1100mV 0C Model Metastability Report
- 36. Multicorner Timing Analysis Summary
- 37. Board Trace Model Assignments
- 38. Input Transition Times
- 39. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 40. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 41. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 42. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 43. Clock Transfers
- 44. Report TCCS
- 45. Report RSKM
- 46. Unconstrained Paths
- 47. TimeQuest Timing Analyzer Messages
- 48. TimeQuest Timing Analyzer Suppressed Messages
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1100mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1100mV 85C Model Setup Summary
+  9. Slow 1100mV 85C Model Hold Summary
+ 10. Slow 1100mV 85C Model Recovery Summary
+ 11. Slow 1100mV 85C Model Removal Summary
+ 12. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1100mV 85C Model Datasheet Report
+ 14. Slow 1100mV 85C Model Metastability Report
+ 15. Slow 1100mV 0C Model Fmax Summary
+ 16. Slow 1100mV 0C Model Setup Summary
+ 17. Slow 1100mV 0C Model Hold Summary
+ 18. Slow 1100mV 0C Model Recovery Summary
+ 19. Slow 1100mV 0C Model Removal Summary
+ 20. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1100mV 0C Model Datasheet Report
+ 22. Slow 1100mV 0C Model Metastability Report
+ 23. Fast 1100mV 85C Model Setup Summary
+ 24. Fast 1100mV 85C Model Hold Summary
+ 25. Fast 1100mV 85C Model Recovery Summary
+ 26. Fast 1100mV 85C Model Removal Summary
+ 27. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 28. Fast 1100mV 85C Model Datasheet Report
+ 29. Fast 1100mV 85C Model Metastability Report
+ 30. Fast 1100mV 0C Model Setup Summary
+ 31. Fast 1100mV 0C Model Hold Summary
+ 32. Fast 1100mV 0C Model Recovery Summary
+ 33. Fast 1100mV 0C Model Removal Summary
+ 34. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 35. Fast 1100mV 0C Model Datasheet Report
+ 36. Fast 1100mV 0C Model Metastability Report
+ 37. Multicorner Timing Analysis Summary
+ 38. Board Trace Model Assignments
+ 39. Input Transition Times
+ 40. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 41. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 42. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 43. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 44. Clock Transfers
+ 45. Report TCCS
+ 46. Report RSKM
+ 47. Unconstrained Paths
+ 48. TimeQuest Timing Analyzer Messages
+ 49. TimeQuest Timing Analyzer Suppressed Messages
 
 
 
@@ -89,12 +90,23 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------------------------+
 
 
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
 +---------------------------------------------------+
 ; SDC File List                                     ;
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; Timing.sdc    ; OK     ; Sun Nov 12 12:14:38 2017 ;
+; Timing.sdc    ; OK     ; Sun Nov 12 21:29:27 2017 ;
 +---------------+--------+--------------------------+
 
 
@@ -595,7 +607,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Nov 12 12:14:35 2017
+    Info: Processing started: Sun Nov 12 21:29:25 2017
 Info: Command: quartus_sta Project2 -c Project2
 Info: qsta_default_script.tcl version: #1
 Info (21077): Low junction temperature is 0 degrees C
@@ -639,17 +651,17 @@ Info (332140): No Removal paths to report
 Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
-Info (144001): Generated suppressed messages file C:/Users/MurphyBrianP/dev/proc-design/project2-template/Project2.sta.smsg
+Info (144001): Generated suppressed messages file C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.sta.smsg
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 753 megabytes
-    Info: Processing ended: Sun Nov 12 12:14:49 2017
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 766 megabytes
+    Info: Processing ended: Sun Nov 12 21:29:33 2017
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +-----------------------------------------------+
 ; TimeQuest Timing Analyzer Suppressed Messages ;
 +-----------------------------------------------+
-The suppressed messages can be found in C:/Users/MurphyBrianP/dev/proc-design/project2-template/Project2.sta.smsg.
+The suppressed messages can be found in C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.sta.smsg.
 
 
