@@ -48,6 +48,7 @@ module Project2(
   wire [DBITS - 1 : 0] regfileOut1, regfileOut2;
 
   wire [DBITS - 1 : 0] aluOut;
+  wire [DBITS - 1 : 0] ioOut;
 
 
   // Create PC and its logic
@@ -55,7 +56,6 @@ module Project2(
   wire[1 : 0] pcSel;
   wire cmp;
 
-  assign pcSel = `PCSEL_PCPLUSFOUR;
   assign cmp = aluOut[0];
 
   PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, imm, pcSel, cmp, regfileOut1, pcOut);
@@ -70,8 +70,27 @@ module Project2(
   wire alu_in2_sel;
   wire [REG_INDEX_BIT_WIDTH - 1 : 0] regno1, regno2, regfile_wrtRegno;
   wire regfile_wrtEn;
+  wire [DBITS - 1 : 0] regfile_dataIn;
+  wire [1 : 0] regfileIn_sel;
 
-  Decoder decoder(instWord, alu_func, alu_in2_sel, regno1, regno2, imm, regfile_wrtEn, regfile_wrtRegno);
+  Decoder decoder(
+    instWord, 
+    alu_func,
+    pcSel,
+    alu_in1_sel,
+    alu_in2_sel, 
+    regfileIn_sel, 
+    regno1, 
+    regno2, 
+    imm, 
+    regfile_wrtEn, 
+    regfile_wrtRegno
+  );
+
+  assign regfile_dataIn = regfileIn_sel == `REGFILEINSEL_ALUOUT ? aluOut :
+                          regfileIn_sel == `REGFILEINSEL_PCPLUS4 ? pcOut + 4 :
+                          regfileIn_sel == `REGFILEINSEL_IO ? ioOut : 
+                          {DBITS{1'bz}};
 
   Regfile #(
     .WORD_SIZE(DBITS),
@@ -87,12 +106,16 @@ module Project2(
     regfileOut2
   );
 
-  wire [DBITS - 1 : 0] aluIn2 = alu_in2_sel == `ALUIN2_REG ? regfileOut2 :
-                                alu_in2_sel == `ALUIN2_IMM ? imm :
+  // mux alu second input
+  wire [DBITS - 1 : 0] aluIn2 = alu_in2_sel == `ALUIN2SEL_REG ? regfileOut2 :
+                                alu_in2_sel == `ALUIN2SEL_IMM ? imm :
+                                {DBITS{1'bz}};
+  wire [DBITS - 1 : 0] aluIn1 = alu_in1_sel == `ALUIN1SEL_REG ? regfileOut1 :
+                                alu_in2_sel == `ALUIN1SEL_ZERO ? {DBITS{1'b0}} :
                                 {DBITS{1'bz}};
 
   // Create ALU unit
-  Alu alu(regfileOut1, aluIn2, alu_func, aluOut);
+  Alu alu(aluIn1, aluIn2, alu_func, aluOut);
   // Put the code for data memory and I/O here
   
   // KEYS, SWITCHES, HEXS, and LEDS are memory mapped IO

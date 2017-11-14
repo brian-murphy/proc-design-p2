@@ -29,7 +29,29 @@
 `define INSTR_GTE 4'b0001
 `define INSTR_GT 4'b1110
 
-`define ALUIN2_REG 1'b0
-`define ALUIN2_IMM 1'b1
+`define INSTR_BF 4'b0011
+`define INSTR_BEQ 4'b1100
+`define INSTR_BLT 4'b1101
+`define INSTR_BLTE 4'b0010
+`define INSTR_BEQZ 4'b1000
+`define INSTR_BLTZ 4'b1001
+`define INSTR_BLTEZ 4'b0110
+`define INSTR_BT 4'b1111
+`define INSTR_BNE 4'b0000
+`define INSTR_BGTE 4'b0001
+`define INSTR_BGT 4'b1110
+`define INSTR_BNEZ 4'b0100
+`define INSTR_BGTEZ 4'b0101
+`define INSTR_BGTZ 4'b1010
+
+`define ALUIN1SEL_REG 1'b0
+`define ALUIN1SEL_ZERO 1'b1
+
+`define ALUIN2SEL_REG 1'b0
+`define ALUIN2SEL_IMM 1'b1
+
+`define REGFILEINSEL_ALUOUT     2'b00
+`define REGFILEINSEL_PCPLUS4    2'b01
+`define REGFILEINSEL_IO         2'b10
 
 `endif
