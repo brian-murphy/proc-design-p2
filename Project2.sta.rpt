@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Project2
-Sun Nov 12 21:29:33 2017
+Mon Nov 13 21:29:55 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -106,7 +106,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; Timing.sdc    ; OK     ; Sun Nov 12 21:29:27 2017 ;
+; Timing.sdc    ; OK     ; Mon Nov 13 21:29:48 2017 ;
 +---------------+--------+--------------------------+
 
 
@@ -607,7 +607,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Nov 12 21:29:25 2017
+    Info: Processing started: Mon Nov 13 21:29:47 2017
 Info: Command: quartus_sta Project2 -c Project2
 Info: qsta_default_script.tcl version: #1
 Info (21077): Low junction temperature is 0 degrees C
@@ -653,8 +653,8 @@ Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info (144001): Generated suppressed messages file C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.sta.smsg
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 766 megabytes
-    Info: Processing ended: Sun Nov 12 21:29:33 2017
+    Info: Peak virtual memory: 773 megabytes
+    Info: Processing ended: Mon Nov 13 21:29:55 2017
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 

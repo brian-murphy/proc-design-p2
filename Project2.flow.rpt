@@ -1,5 +1,5 @@
 Flow report for Project2
-Sun Nov 12 21:29:33 2017
+Mon Nov 13 21:29:55 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +-------------------------------------+-------------------------------------------------+
-; Flow Status                         ; Successful - Sun Nov 12 21:29:24 2017           ;
+; Flow Status                         ; Successful - Mon Nov 13 21:29:46 2017           ;
 ; Quartus II 32-bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                       ; Project2                                        ;
 ; Top-level Entity Name               ; Project2                                        ;
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/12/2017 21:28:22 ;
+; Start date & time ; 11/13/2017 21:28:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Project2            ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ applicable agreement for further details.
 +---------------------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                                   ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                             ; 123745747104029.151054010208408 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                             ; 123745747104029.151062653811044 ; --            ; --          ; --         ;
 ; FITTER_EFFORT                                     ; Standard Fit                    ; Auto Fit      ; --          ; --         ;
 ; IP_TOOL_ENV                                       ; mwpim                           ; --            ; PLL         ; --         ;
 ; IP_TOOL_ENV                                       ; mwpim                           ; --            ; PLL         ; --         ;
@@ -117,11 +117,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 734 MB              ; 00:00:05                           ;
-; Fitter                    ; 00:00:41     ; 1.0                     ; 1070 MB             ; 00:00:38                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 466 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 766 MB              ; 00:00:08                           ;
-; Total                     ; 00:01:06     ; --                      ; --                  ; 00:00:57                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 739 MB              ; 00:00:05                           ;
+; Fitter                    ; 00:00:36     ; 1.0                     ; 1075 MB             ; 00:00:35                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 467 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 773 MB              ; 00:00:08                           ;
+; Total                     ; 00:00:55     ; --                      ; --                  ; 00:00:53                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
