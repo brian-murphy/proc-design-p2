@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Project2
-Mon Nov 13 21:29:03 2017
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Nov 15 14:10:25 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -14,23 +14,25 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |Project2
- 11. Parameter Settings for User Entity Instance: PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i
- 12. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus
- 13. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus|Register:pc
- 14. Parameter Settings for User Entity Instance: InstMemory:instMem
- 15. Parameter Settings for User Entity Instance: Decoder:decoder|SignExtension:immSext
- 16. Parameter Settings for User Entity Instance: Regfile:regfile
- 17. Port Connectivity Checks: "SevenSeg:comb_145"
- 18. Port Connectivity Checks: "SevenSeg:comb_144"
- 19. Port Connectivity Checks: "Regfile:regfile"
- 20. Port Connectivity Checks: "Decoder:decoder"
- 21. Port Connectivity Checks: "PcApparatus:pcApparatus|Register:pc"
- 22. Port Connectivity Checks: "PcApparatus:pcApparatus"
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |Project2
+ 13. Parameter Settings for User Entity Instance: PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i
+ 14. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus
+ 15. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus|Register:pc
+ 16. Parameter Settings for User Entity Instance: InstMemory:instMem
+ 17. Parameter Settings for User Entity Instance: Decoder:decoder|SignExtension:immSext
+ 18. Parameter Settings for User Entity Instance: Regfile:regfile
+ 19. Parameter Settings for User Entity Instance: UiController:uiController
+ 20. Port Connectivity Checks: "UiController:uiController"
+ 21. Port Connectivity Checks: "Regfile:regfile"
+ 22. Port Connectivity Checks: "Decoder:decoder"
+ 23. Port Connectivity Checks: "PcApparatus:pcApparatus|Register:pc"
+ 24. Port Connectivity Checks: "PcApparatus:pcApparatus"
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,13 +58,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +-------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Mon Nov 13 21:29:03 2017           ;
-; Quartus II 32-bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status         ; Successful - Wed Nov 15 14:10:25 2017           ;
+; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                       ; Project2                                        ;
 ; Top-level Entity Name               ; Project2                                        ;
 ; Family                              ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)         ; N/A                                             ;
-; Total registers                     ; 0                                               ;
+; Total registers                     ; 16                                              ;
 ; Total pins                          ; 54                                              ;
 ; Total virtual pins                  ; 0                                               ;
 ; Total block memory bits             ; 0                                               ;
@@ -73,7 +75,7 @@ applicable agreement for further details.
 ; Total HSSI TX PCSs                  ; 0                                               ;
 ; Total HSSI PMA TX Serializers       ; 0                                               ;
 ; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
-; Total PLLs                          ; 0                                               ;
+; Total PLLs                          ; 1                                               ;
 ; Total DLLs                          ; 0                                               ;
 +-------------------------------------+-------------------------------------------------+
 
@@ -181,6 +183,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                         ; Library ;
 +----------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------+---------+
+; UiController.vh                  ; yes             ; User Unspecified File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/UiController.vh     ;         ;
+; UiController.v                   ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/UiController.v      ;         ;
 ; PcApparatus.vh                   ; yes             ; User Unspecified File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/PcApparatus.vh      ;         ;
 ; PcApparatus.v                    ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/PcApparatus.v       ;         ;
 ; SCProc-Controller.v              ; yes             ; User Verilog HDL File       ; C:/Users/Brian/dev/proc-design/project2/modelsim/SCProc-Controller.v ;         ;
@@ -199,38 +203,47 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 54    ;
-; Total DSP Blocks                            ; 0     ;
-; Maximum fan-out node                        ; SW[0] ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 54    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                         ;
++---------------------------------------------+-----------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                 ;
++---------------------------------------------+-----------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 11                                                                    ;
+;                                             ;                                                                       ;
+; Combinational ALUT usage for logic          ; 16                                                                    ;
+;     -- 7 input functions                    ; 0                                                                     ;
+;     -- 6 input functions                    ; 0                                                                     ;
+;     -- 5 input functions                    ; 0                                                                     ;
+;     -- 4 input functions                    ; 14                                                                    ;
+;     -- <=3 input functions                  ; 2                                                                     ;
+;                                             ;                                                                       ;
+; Dedicated logic registers                   ; 16                                                                    ;
+;                                             ;                                                                       ;
+; I/O pins                                    ; 54                                                                    ;
+; Total DSP Blocks                            ; 0                                                                     ;
+; Total PLLs                                  ; 1                                                                     ;
+;     -- PLLs                                 ; 1                                                                     ;
+;                                             ;                                                                       ;
+; Maximum fan-out node                        ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
+; Maximum fan-out                             ; 19                                                                    ;
+; Total fan-out                               ; 189                                                                   ;
+; Average fan-out                             ; 1.34                                                                  ;
++---------------------------------------------+-----------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |Project2                  ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 54   ; 0            ; |Project2           ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
++------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Library Name ;
++------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------+--------------+
+; |Project2                          ; 16 (0)            ; 16 (0)       ; 0                 ; 0          ; 54   ; 0            ; |Project2                                                        ; work         ;
+;    |PLL:PLL_inst|                  ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst                                           ; PLL          ;
+;       |PLL_0002:pll_inst|          ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst                         ; PLL          ;
+;          |altera_pll:altera_pll_i| ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i ; work         ;
+;    |UiController:uiController|     ; 16 (2)            ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController                              ; work         ;
+;       |SevenSeg:comb_13|           ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|SevenSeg:comb_13             ; work         ;
+;       |SevenSeg:comb_14|           ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|SevenSeg:comb_14             ; work         ;
++------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -244,19 +257,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------------+-----------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++-------------------------------------------+---------------------------------------------------+
+; Register name                             ; Reason for Removal                                ;
++-------------------------------------------+---------------------------------------------------+
+; UiController:uiController|hexValue[9..15] ; Merged with UiController:uiController|hexValue[8] ;
+; UiController:uiController|ledValue[9]     ; Merged with UiController:uiController|ledValue[8] ;
+; UiController:uiController|hexValue[8]     ; Stuck at GND due to stuck port data_in            ;
+; UiController:uiController|ledValue[8]     ; Stuck at GND due to stuck port data_in            ;
+; Total Number of Removed Registers = 10    ;                                                   ;
++-------------------------------------------+---------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 16    ;
+; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|ledValue[0] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|hexValue[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -568,24 +604,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SevenSeg:comb_145"                                                                                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
-; dOut ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "dOut[6..1]" have no fanouts ;
-; dOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; DBITS          ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SevenSeg:comb_144"                                                                                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
-; dOut ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "dOut[6..1]" have no fanouts ;
-; dOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController"                                                                                                                                                              ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; wrtEn     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; in[31..8] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; uiDevice  ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (2 bits) it drives.  The 30 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out       ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[31..1]" have no fanouts                                                           ;
+; out       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -638,7 +677,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -646,10 +685,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Nov 13 21:28:57 2017
+    Info: Processing started: Wed Nov 15 14:10:14 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project2 -c Project2
+Info (12021): Found 1 design units, including 1 entities, in source file uicontroller.v
+    Info (12023): Found entity 1: UiController
 Info (12021): Found 1 design units, including 1 entities, in source file pcapparatus.v
     Info (12023): Found entity 1: PcApparatus
 Info (12021): Found 1 design units, including 1 entities, in source file scproc-controller.v
@@ -672,19 +713,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll.v
     Info (12023): Found entity 1: PLL
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
     Info (12023): Found entity 1: PLL_0002
-Warning (10236): Verilog HDL Implicit Net warning at Project2.v(80): created implicit net for "alu_in1_sel"
-Warning (10236): Verilog HDL Implicit Net warning at Project2.v(113): created implicit net for "HEX4"
-Warning (10236): Verilog HDL Implicit Net warning at Project2.v(114): created implicit net for "HEX5"
-Critical Warning (10846): Verilog HDL Instantiation warning at Project2.v(109): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Project2.v(110): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Project2.v(111): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Project2.v(112): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Project2.v(113): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Project2.v(114): instance has no name
+Warning (10236): Verilog HDL Implicit Net warning at Project2.v(81): created implicit net for "alu_in1_sel"
+Warning (10236): Verilog HDL Implicit Net warning at Project2.v(134): created implicit net for "out"
+Critical Warning (10846): Verilog HDL Instantiation warning at UiController.v(25): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at UiController.v(26): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at UiController.v(27): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at UiController.v(28): instance has no name
 Info (12127): Elaborating entity "Project2" for the top level hierarchy
-Warning (10858): Verilog HDL warning at Project2.v(51): object ioOut used but never assigned
-Warning (10036): Verilog HDL or VHDL warning at Project2.v(73): object "regfile_dataIn" assigned a value but never read
-Warning (10034): Output port "LEDR" at Project2.v(10) has no driver
+Warning (10858): Verilog HDL warning at Project2.v(52): object ioOut used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at Project2.v(74): object "regfile_dataIn" assigned a value but never read
 Info (12128): Elaborating entity "PLL" for hierarchy "PLL:PLL_inst"
 Info (12128): Elaborating entity "PLL_0002" for hierarchy "PLL:PLL_inst|PLL_0002:pll_inst"
 Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i"
@@ -757,8 +794,9 @@ Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder"
 Warning (10230): Verilog HDL assignment warning at SCProc-Controller.v(33): truncated value with size 32 to match size of target (6)
 Info (12128): Elaborating entity "SignExtension" for hierarchy "Decoder:decoder|SignExtension:immSext"
 Info (12128): Elaborating entity "Regfile" for hierarchy "Regfile:regfile"
-Info (12128): Elaborating entity "SevenSeg" for hierarchy "SevenSeg:comb_140"
 Info (12128): Elaborating entity "Alu" for hierarchy "Alu:alu"
+Info (12128): Elaborating entity "UiController" for hierarchy "UiController:uiController"
+Info (12128): Elaborating entity "SevenSeg" for hierarchy "UiController:uiController|SevenSeg:comb_13"
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "regfileOut1[31]" is missing source, defaulting to GND
     Warning (12110): Net "regfileOut1[30]" is missing source, defaulting to GND
@@ -825,32 +863,10 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "regfileOut1[2]" is missing source, defaulting to GND
     Warning (12110): Net "regfileOut1[1]" is missing source, defaulting to GND
     Warning (12110): Net "regfileOut1[0]" is missing source, defaulting to GND
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND
-    Warning (13410): Pin "LEDR[1]" is stuck at GND
-    Warning (13410): Pin "LEDR[2]" is stuck at GND
-    Warning (13410): Pin "LEDR[3]" is stuck at GND
-    Warning (13410): Pin "LEDR[4]" is stuck at GND
-    Warning (13410): Pin "LEDR[5]" is stuck at GND
-    Warning (13410): Pin "LEDR[6]" is stuck at GND
-    Warning (13410): Pin "LEDR[7]" is stuck at GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND
     Warning (13410): Pin "LEDR[9]" is stuck at GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND
-    Warning (13410): Pin "HEX0[1]" is stuck at GND
-    Warning (13410): Pin "HEX0[2]" is stuck at GND
-    Warning (13410): Pin "HEX0[3]" is stuck at GND
-    Warning (13410): Pin "HEX0[4]" is stuck at GND
-    Warning (13410): Pin "HEX0[5]" is stuck at GND
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC
-    Warning (13410): Pin "HEX1[0]" is stuck at GND
-    Warning (13410): Pin "HEX1[1]" is stuck at GND
-    Warning (13410): Pin "HEX1[2]" is stuck at GND
-    Warning (13410): Pin "HEX1[3]" is stuck at GND
-    Warning (13410): Pin "HEX1[4]" is stuck at GND
-    Warning (13410): Pin "HEX1[5]" is stuck at GND
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC
     Warning (13410): Pin "HEX2[0]" is stuck at GND
     Warning (13410): Pin "HEX2[1]" is stuck at GND
     Warning (13410): Pin "HEX2[2]" is stuck at GND
@@ -865,49 +881,47 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[4]" is stuck at GND
     Warning (13410): Pin "HEX3[5]" is stuck at GND
     Warning (13410): Pin "HEX3[6]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
 Info (128000): Starting physical synthesis optimizations for speed
 Info (332104): Reading SDC File: 'Timing.sdc'
+Info (332110): Deriving PLL clocks
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|refclk} -divide_by 5 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: refclk  to: divclk
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Warning (332056): PLL cross checking found inconsistent PLL clock settings:
+    Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk does not match the master clock period requirement: 20.000
 Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
-Info (332111): Found 1 clocks
+Info (332111): Found 2 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):  100.000      Clock10
+    Info (332111):  500.000 PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
-Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:04
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:07
 Info (144001): Generated suppressed messages file C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]"
-    Warning (15610): No output dependent on input pin "SW[1]"
-    Warning (15610): No output dependent on input pin "SW[2]"
-    Warning (15610): No output dependent on input pin "SW[3]"
-    Warning (15610): No output dependent on input pin "SW[4]"
-    Warning (15610): No output dependent on input pin "SW[5]"
-    Warning (15610): No output dependent on input pin "SW[6]"
-    Warning (15610): No output dependent on input pin "SW[7]"
-    Warning (15610): No output dependent on input pin "SW[8]"
-    Warning (15610): No output dependent on input pin "SW[9]"
+    Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]"
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-    Warning (15610): No output dependent on input pin "CLOCK_50"
-    Warning (15610): No output dependent on input pin "FPGA_RESET_N"
-Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 87 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 38 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 136 warnings
-    Info: Peak virtual memory: 739 megabytes
-    Info: Processing ended: Mon Nov 13 21:29:03 2017
-    Info: Elapsed time: 00:00:06
+    Info (21061): Implemented 32 logic cells
+    Info (21065): Implemented 1 PLLs
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 100 warnings
+    Info: Peak virtual memory: 953 megabytes
+    Info: Processing ended: Wed Nov 15 14:10:25 2017
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:05
 
 

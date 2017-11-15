@@ -107,11 +107,7 @@ module Project2(
     regfileOut1,
     regfileOut2
   );
-<<<<<<< e145fa4fbd1fd02def7b58013d2d233641276c32
   
-=======
-
->>>>>>> created UiController and teseted on-board.
   // mux alu second input
   wire [DBITS - 1 : 0] aluIn2 = alu_in2_sel == `ALUIN2SEL_REG ? regfileOut2 :
                                 alu_in2_sel == `ALUIN2SEL_IMM ? imm :

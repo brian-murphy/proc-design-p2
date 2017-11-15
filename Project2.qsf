@@ -529,6 +529,8 @@ set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name VERILOG_INCLUDE_FILE UiController.vh
+set_global_assignment -name VERILOG_FILE UiController.v
 set_global_assignment -name VERILOG_INCLUDE_FILE PcApparatus.vh
 set_global_assignment -name VERILOG_FILE PcApparatus.v
 set_global_assignment -name VERILOG_FILE "SCProc-Controller.v"
