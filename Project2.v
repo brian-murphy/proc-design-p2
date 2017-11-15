@@ -107,14 +107,7 @@ module Project2(
     regfileOut1,
     regfileOut2
   );
-
-  SevenSeg(regfileOut1[3:0], HEX0);
-  SevenSeg(regfileOut1[7:4], HEX1);
-  SevenSeg(regfileOut1[11:8], HEX2);
-  SevenSeg(regfileOut1[15:12], HEX3);
-  SevenSeg(regfileOut1[19:16], HEX4);
-  SevenSeg(regfileOut1[23:20], HEX5);
-
+  
   // mux alu second input
   wire [DBITS - 1 : 0] aluIn2 = alu_in2_sel == `ALUIN2SEL_REG ? regfileOut2 :
                                 alu_in2_sel == `ALUIN2SEL_IMM ? imm :
@@ -129,6 +122,6 @@ module Project2(
   // Put the code for data memory and I/O here
   
   // KEYS, SWITCHES, HEXS, and LEDS are memory mapped IO
-    
+
 endmodule
 
