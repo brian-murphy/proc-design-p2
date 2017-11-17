@@ -11,7 +11,9 @@ module Project2(
   output [6:0] HEX0,
   output [6:0] HEX1,
   output [6:0] HEX2,
-  output [6:0] HEX3
+  output [6:0] HEX3,
+  output [6:0] HEX4,
+  output [6:0] HEX5 
  );
   parameter DBITS         				 = 32;
   parameter INST_SIZE      			 = 32'd4;
@@ -24,7 +26,7 @@ module Project2(
   parameter ADDR_LEDR 					 = 32'hF0000004;
   parameter ADDR_LEDG 					 = 32'hF0000008;
   
-  parameter IMEM_INIT_FILE				 = "fib.mif";
+  parameter IMEM_INIT_FILE				 = "countTo7.mif";
   parameter IMEM_ADDR_BIT_WIDTH 		 = 11;
   parameter IMEM_DATA_BIT_WIDTH 		 = INST_BIT_WIDTH;
   parameter IMEM_PC_BITS_HI     		 = IMEM_ADDR_BIT_WIDTH + 2;
@@ -107,11 +109,11 @@ module Project2(
   );
 
   SevenSeg(regfileOut1[3:0], HEX0);
-  SevenSeg(regfileOut1[4:7], HEX1);
-  SevenSeg(regfileOut1[8:11], HEX2);
-  SevenSeg(regfileOut1[12:15], HEX3);
-  SevenSeg(regfileOut1[16:19], HEX4);
-  SevenSeg(regfileOut1[20:23], HEX5);
+  SevenSeg(regfileOut1[7:4], HEX1);
+  SevenSeg(regfileOut1[11:8], HEX2);
+  SevenSeg(regfileOut1[15:12], HEX3);
+  SevenSeg(regfileOut1[19:16], HEX4);
+  SevenSeg(regfileOut1[23:20], HEX5);
 
   // mux alu second input
   wire [DBITS - 1 : 0] aluIn2 = alu_in2_sel == `ALUIN2SEL_REG ? regfileOut2 :
