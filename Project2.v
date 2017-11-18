@@ -26,7 +26,7 @@ module Project2(
   parameter ADDR_LEDR 					 = 32'hF0000004;
   parameter ADDR_LEDG 					 = 32'hF0000008;
   
-  parameter IMEM_INIT_FILE				 = "countTo7.mif";
+  parameter IMEM_INIT_FILE				 = "produce7.mif";
   parameter IMEM_ADDR_BIT_WIDTH 		 = 11;
   parameter IMEM_DATA_BIT_WIDTH 		 = INST_BIT_WIDTH;
   parameter IMEM_PC_BITS_HI     		 = IMEM_ADDR_BIT_WIDTH + 2;
@@ -42,8 +42,10 @@ module Project2(
   //PLL, clock generation, and reset generation
   wire clk, lock;
   //Pll pll(.inclk0(CLOCK_50), .c0(clk), .locked(lock));
-  PLL	PLL_inst (.refclk (CLOCK_50), .rst(!FPGA_RESET_N), .outclk_0 (clk),.locked (lock));
-  wire reset = ~lock;
+  // PLL	PLL_inst (.refclk (CLOCK_50), .rst(!FPGA_RESET_N), .outclk_0 (clk),.locked (lock));
+  // wire reset = ~lock;
+  wire reset = FPGA_RESET_N == 1'b0 ? 1'b1 : 1'b0;
+  assign clk = SW[0];
 
 
   wire [DBITS - 1 : 0] imm;
@@ -59,6 +61,17 @@ module Project2(
   wire cmp;
 
   assign cmp = aluOut[0];
+
+  reg slowClk;
+  wire [24 : 0] counterOut;
+
+  always @ (posedge clk) begin
+    if (counterOut == 0) begin
+      slowClk <= ~slowClk;
+    end
+  end  
+
+  counter #(25, 25000000) slow_clock_counter(clk, reset, 1'b1, counterOut);
 
   PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, imm, pcSel, cmp, regfileOut1, pcOut);
 
@@ -108,12 +121,21 @@ module Project2(
     regfileOut2
   );
 
-  SevenSeg(regfileOut1[3:0], HEX0);
-  SevenSeg(regfileOut1[7:4], HEX1);
-  SevenSeg(regfileOut1[11:8], HEX2);
-  SevenSeg(regfileOut1[15:12], HEX3);
-  SevenSeg(regfileOut1[19:16], HEX4);
-  SevenSeg(regfileOut1[23:20], HEX5);
+  reg [23 : 0] hexOut;
+
+  always @(posedge clk) begin
+    hexOut <= {imm[3 : 0], 2'b0, pcSel, pcOut[15 : 0]};
+  end
+
+  assign LEDR[0] = slowClk;
+  assign LEDR[1] = clk;
+
+  SevenSeg(hexOut[3:0], HEX0);
+  SevenSeg(hexOut[7:4], HEX1);
+  SevenSeg(hexOut[11:8], HEX2);
+  SevenSeg(hexOut[15:12], HEX3);
+  SevenSeg(hexOut[19:16], HEX4);
+  SevenSeg(hexOut[23:20], HEX5);
 
   // mux alu second input
   wire [DBITS - 1 : 0] aluIn2 = alu_in2_sel == `ALUIN2SEL_REG ? regfileOut2 :
