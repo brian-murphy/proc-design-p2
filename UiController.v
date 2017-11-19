@@ -27,21 +27,21 @@ module UiController #(
     SevenSeg(hexValue[11:8], I_HEX2);
     SevenSeg(hexValue[15:12], I_HEX3);
 
-    assign out = (uiDevice == `KEY) ? {{DBITS-4{1'b0}}, KEYS} :
-                 (uiDevice == `SW) ? {{DBITS-10{1'b0}}, SWITCHES} :
-                 (uiDevice == `LEDR) ? {{DBITS-10{1'b0}}, ledValue} :
-                 (uiDevice == `HEX) ? {{DBITS-16{1'b0}}, hexValue} :
+    assign out = (uiDevice == `UI_KEY) ? {{DBITS-4{1'b0}}, KEYS} :
+                 (uiDevice == `UI_SW) ? {{DBITS-10{1'b0}}, SWITCHES} :
+                 (uiDevice == `UI_LEDR) ? {{DBITS-10{1'b0}}, ledValue} :
+                 (uiDevice == `UI_HEX) ? {{DBITS-16{1'b0}}, hexValue} :
                  {DBITS{1'bz}};
 
 
-    always @(posedge clk) begin
+    always @(negedge clk) begin
         if (reset == 1'b1) begin
             ledValue <= 0;
             hexValue <= 0;
         end else if (wrtEn == 1'b1) begin
-            if (uiDevice == `LEDR) begin
+            if (uiDevice == `UI_LEDR) begin
                 ledValue <= in[9 : 0];
-            end else if (uiDevice == `HEX) begin
+            end else if (uiDevice == `UI_HEX) begin
                 hexValue <= in[15 : 0];
             end
         end
