@@ -3,7 +3,7 @@
 
 module IoController #(
     parameter DBITS = 32,
-    parameter DMEM_ADDR_BITS = 13,
+    parameter DMEMADDRBITS = 13,
     parameter DMEMWORDBITS = 2,
     parameter ADDR_KEY = 32'hf0000010,
     parameter ADDR_SW = 32'hf0000014,
@@ -20,7 +20,7 @@ module IoController #(
     output uiWrtEn,
     output [1 : 0] uiDevice,
     output [DBITS - 1 : 0] dMemOut,
-    output [DMEM_ADDR_BITS - DMEMWORDBITS - 1 : 0] dMemAddr,
+    output [DMEMADDRBITS - DMEMWORDBITS - 1 : 0] dMemAddr,
     output dMemWrtEn,
     output [DBITS - 1 : 0] dataOut
 );
@@ -36,11 +36,11 @@ assign uiDevice = addr == ADDR_HEX ? `UI_HEX :
                   2'bzz;
 
 assign dMemOut = dataIn;
-assign dMemAddr = addr[DMEM_ADDR_BITS - DMEMWORDBITS - 1 : 0];
+assign dMemAddr = addr[DMEMADDRBITS - DMEMWORDBITS - 1 : 0];
 assign dMemWrtEn = isUiAddr == 1'b0 && load_store == `IO_STORE ? 1'b1 : 1'b0;
 
 assign dataOut = isUiAddr ? uiIn :
-                 addr < (1 << DMEM_ADDR_BITS) ? dMemIn :
+                 addr < (1 << DMEMADDRBITS) ? dMemIn :
                 {DBITS{1'bz}};
 
 endmodule

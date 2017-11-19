@@ -14,7 +14,8 @@ module Decoder (
     output [3 : 0] regno2,
     output [`WORD_SIZE - 1 : 0] immOut,
     output regfile_wrtEn,
-    output [3 : 0] regfile_wrtRegno
+    output [3 : 0] regfile_wrtRegno,
+    output isStore
 );
 
 wire [3 : 0] rd, rs1, rs2;
@@ -111,6 +112,8 @@ assign regfile_in_mux = opcode == `ALUR || opcode == `ALUI || opcode == `CMPR ||
 assign regfile_wrtEn = opcode == `ALUR || opcode == `ALUI || opcode == `CMPR || opcode == `CMPI
                         ? 1'b1 : 1'bz;
 assign regfile_wrtRegno = rd;
+
+assign isStore = opcode == `STORE ? 1'b1 : 1'b0;
 
 SignExtension #(.IN_BIT_WIDTH(16), .OUT_BIT_WIDTH(`WORD_SIZE)) immSext(imm, immOut);
 

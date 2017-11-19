@@ -74,6 +74,7 @@ module Project2(
   wire regfile_wrtEn;
   wire [DBITS - 1 : 0] regfile_dataIn;
   wire [1 : 0] regfileIn_sel;
+  wire isStore;
 
   Decoder decoder(
     instWord, 
@@ -86,7 +87,8 @@ module Project2(
     regno2, 
     imm, 
     regfile_wrtEn, 
-    regfile_wrtRegno
+    regfile_wrtRegno,
+    isStore
   );
 
   assign regfile_dataIn = regfileIn_sel == `REGFILEINSEL_ALUOUT ? aluOut :
@@ -123,5 +125,70 @@ module Project2(
   
   // KEYS, SWITCHES, HEXS, and LEDS are memory mapped IO
 
-endmodule
 
+  wire [DBITS - 1 : 0] ioAddr = imm + regfileOut1;
+  wire [DBITS - 1 : 0] uiOut;
+  wire [DBITS - 1 : 0] dMemOut;
+  wire [DBITS - 1 : 0] uiIn;
+  wire uiWrtEn;
+  wire [1 : 0] uiDevice;
+  wire [DBITS - 1 : 0] dMemIn;
+  wire [DMEMADDRBITS - DMEMWORDBITS - 1 : 0] dMemIndex;
+  wire dMemWrtEn;
+
+  IoController #(
+    .DBITS(DBITS),
+    .DMEMADDRBITS(DMEMADDRBITS),
+    .DMEMWORDBITS(DMEMWORDBITS)
+    .ADDR_KEY(ADDR_KEY),
+    .ADDR_SW(ADDR_SW),
+    .ADDR_HEX(ADDR_HEX),
+    .ADDR_LEDR(ADDR_LEDR)
+  ) ioController(
+    ioAddr,
+    regfileOut2,
+    isStore,
+    uiOut,
+    dMemOut,
+
+    uiIn,
+    uiWrtEn,
+    uiDevice,
+    dMemIn,
+    dMemIndex,
+    dMemWrtEn,
+    ioOut
+  );
+
+  UiController #(DBITS) uiController(
+    clk,
+    reset,
+    wrtEn,
+    uiIn,
+    uiDevice,
+    KEY,
+    SW,
+
+    uiOut,
+    LEDR,
+    HEX0,
+    HEX1,
+    HEX2,
+    HEX3
+  );
+
+  DMemController #(
+    .DMEMADDRBITS(DMEMADDRBITS),
+    .DMEMWORDBITS(DMEMWORDBITS),
+    .DMEMWORDS(DMEMWORDS),
+    .DBITS(DBITS)
+  ) dMemController (
+    clk,
+    reset,
+    wrtEn,
+    dMemIn,
+    dMemIndex,
+    dMemOut
+  );
+
+endmodule
