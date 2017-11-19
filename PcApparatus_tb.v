@@ -11,7 +11,7 @@ module PcApparatus_tb();
     reg [DBITS - 1 : 0] reg1;
     wire [DBITS - 1 : 0] pcOut;
 
-    PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, imm, pcSel, cmp, reg1, pcOut);
+    PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, cmp, imm, pcSel, reg1, pcOut);
 
     initial begin
 

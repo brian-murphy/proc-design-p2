@@ -40,10 +40,14 @@ module Project2(
   // Add parameters for various secondary opcode values
   
   //PLL, clock generation, and reset generation
-  wire clk, lock;
+  wire clk, lock, debugClk;
   //Pll pll(.inclk0(CLOCK_50), .c0(clk), .locked(lock));
   PLL	PLL_inst (.refclk (CLOCK_50), .rst(!FPGA_RESET_N), .outclk_0 (clk),.locked (lock));
   wire reset = ~lock;
+
+  // Debouncer #(18) (debugClk, reset, SW[9], clk);
+
+  // assign LEDR[0] = clk;
 
 
   wire [DBITS - 1 : 0] imm;
@@ -54,14 +58,20 @@ module Project2(
 
 
   // Create PC and its logic
-  wire[DBITS - 1: 0] pcOut;
+  wire[DBITS - 1 : 0] pcOut;
   wire[1 : 0] pcSel;
   wire cmp;
 
   assign cmp = aluOut[0];
 
-  PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, imm, pcSel, cmp, regfileOut1, pcOut);
+  PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, 1'b0, {DBITS{1'b0}}, `PCSEL_PCPLUSFOUR, {DBITS{1'b0}}, pcOut);
 
+  SevenSeg(pcOut[3:0], HEX0);
+  SevenSeg(pcOut[7:4], HEX1);
+  SevenSeg(pcOut[11:8], HEX2);
+  SevenSeg(pcOut[15:12], HEX3);
+  SevenSeg(pcOut[19:16], HEX4);
+  SevenSeg(pcOut[23:20], HEX5);
 
   // Creat instruction memeory
   wire[IMEM_DATA_BIT_WIDTH - 1: 0] instWord;
@@ -162,21 +172,29 @@ module Project2(
     ioOut
   );
 
+  wire [9:0]NOT_SW;
+  wire [9:0]NOT_LEDR;
+  wire [6:0]NOT_HEX0;
+  wire [6:0]NOT_HEX1;
+  wire [6:0]NOT_HEX2;
+  wire [6:0]NOT_HEX3;
+  wire [3:0]NOT_KEY;
+  
   UiController #(DBITS) uiController(
     clk,
     reset,
     uiWrtEn,
     uiIn,
     uiDevice,
-    KEY,
-    SW,
+    NOT_KEY, /////////////////////// TODO Fix!
+    NOT_SW,
 
     uiOut,
-    LEDR,
-    HEX0,
-    HEX1,
-    HEX2,
-    HEX3
+    NOT_LEDR,
+    NOT_HEX0,
+    NOT_HEX1,
+    NOT_HEX2,
+    NOT_HEX3
   );
 
   DMemController #(

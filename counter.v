@@ -16,7 +16,7 @@ module counter #(
             if (count == MAX_VALUE)
                 count <= 0;
             else
-                count <= count + 1;
+                count <= count + 1'b1;
         end
     end
 endmodule
