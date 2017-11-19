@@ -69,6 +69,7 @@ module Project2(
   
   // Put the code for getting opcode1, rd, rs, rt, imm, etc. here 
   wire [`FUNC_BITS - 1 : 0] alu_func;
+  wire alu_in1_sel;
   wire alu_in2_sel;
   wire [REG_INDEX_BIT_WIDTH - 1 : 0] regno1, regno2, regfile_wrtRegno;
   wire regfile_wrtEn;
@@ -102,8 +103,9 @@ module Project2(
   ) regfile (
     clk,
     reset,
+    regfile_wrtEn,
     regfile_wrtRegno,
-    aluOut,
+    regfile_dataIn,
     regno1,
     regno2,
     regfileOut1,
@@ -139,7 +141,7 @@ module Project2(
   IoController #(
     .DBITS(DBITS),
     .DMEMADDRBITS(DMEMADDRBITS),
-    .DMEMWORDBITS(DMEMWORDBITS)
+    .DMEMWORDBITS(DMEMWORDBITS),
     .ADDR_KEY(ADDR_KEY),
     .ADDR_SW(ADDR_SW),
     .ADDR_HEX(ADDR_HEX),
@@ -163,7 +165,7 @@ module Project2(
   UiController #(DBITS) uiController(
     clk,
     reset,
-    wrtEn,
+    uiWrtEn,
     uiIn,
     uiDevice,
     KEY,
@@ -185,7 +187,7 @@ module Project2(
   ) dMemController (
     clk,
     reset,
-    wrtEn,
+    dMemWrtEn,
     dMemIn,
     dMemIndex,
     dMemOut

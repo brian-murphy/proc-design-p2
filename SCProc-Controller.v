@@ -5,7 +5,7 @@
 module Decoder (
     input [`WORD_SIZE - 1 : 0] instruction,
 
-    output [`FUNC_BITS : 0] alu_func,
+    output [`FUNC_BITS - 1 : 0] alu_func,
     output [1 : 0]pc_mux,
     output alu_in1_mux,
     output alu_in2_mux,
@@ -31,7 +31,7 @@ assign rs1 = instruction[7:4];
 assign rd = instruction[3:0];
 
 
-assign alu_func = opcode == `ALUR || opcode == `ALUI ? (
+assign alu_func = (opcode == `ALUR || opcode == `ALUI) ? (
     fn == `INSTR_ADD ? `ADD :
     fn == `INSTR_SUB ? `SUB :
     fn == `INSTR_AND ? `AND :
@@ -42,7 +42,7 @@ assign alu_func = opcode == `ALUR || opcode == `ALUI ? (
     fn == `INSTR_XNOR ? `XNOR :
     fn == `INSTR_MVHI ? `MVHI :
     5'bzzzzz
-) : opcode == `CMPR || opcode == `CMPI ? (
+) : (opcode == `CMPR || opcode == `CMPI) ? (
     fn == `INSTR_F ? `F :
     fn == `INSTR_EQ ? `EQ :
     fn == `INSTR_LT ? `LT :
