@@ -7,7 +7,7 @@ module PcApparatus #(
     input clk,
     input reset,
     input [DBITS - 1 : 0] imm,
-    input pcSel,
+    input [1 : 0] pcSel,
     input cmp,
     input [DBITS - 1 : 0] reg1,
     output [DBITS - 1 : 0] pcOut

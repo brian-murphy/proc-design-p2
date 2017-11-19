@@ -51,7 +51,7 @@ module PcApparatus_tb();
         reg1 = 32'h50;
         @(posedge clk);
         @(negedge clk);
-        $display("expected pc: 0x64, actual: %h", pcOut);
+        $display("expected pc: 0x60, actual: %h", pcOut);
     end
 
     always #2 clk = ~clk;
