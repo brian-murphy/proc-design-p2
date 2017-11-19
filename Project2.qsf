@@ -529,6 +529,7 @@ set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name VERILOG_FILE Debouncer.v
 set_global_assignment -name VERILOG_INCLUDE_FILE IoController.vh
 set_global_assignment -name VERILOG_FILE IoController.v
 set_global_assignment -name VERILOG_FILE DMemController.v
