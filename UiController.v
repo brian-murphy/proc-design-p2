@@ -22,10 +22,10 @@ module UiController #(
     assign LED = ledValue;
 
     reg [15 : 0] hexValue;
-    SevenSeg(hexValue[3:0], I_HEX0);
-    SevenSeg(hexValue[7:4], I_HEX1);
-    SevenSeg(hexValue[11:8], I_HEX2);
-    SevenSeg(hexValue[15:12], I_HEX3);
+    SevenSeg ss1(hexValue[3:0], I_HEX0);
+    SevenSeg ss2(hexValue[7:4], I_HEX1);
+    SevenSeg ss3(hexValue[11:8], I_HEX2);
+    SevenSeg ss4(hexValue[15:12], I_HEX3);
 
     assign out = (uiDevice == `UI_KEY) ? {{DBITS-4{1'b0}}, KEYS} :
                  (uiDevice == `UI_SW) ? {{DBITS-10{1'b0}}, SWITCHES} :

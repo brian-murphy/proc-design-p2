@@ -17,7 +17,7 @@ module PcApparatus #(
 
     assign pcIn = (pcSel == `PCSEL_PCPLUSFOUR) ? (pcOut + 4) : 
                   (pcSel == `PCSEL_PCOFFSET) ? (
-                      (cmp == 1'b1) ? (pcOut + 4 + (imm << 2)) : (pcOut + 4)
+                      (cmp == 1'b1) ? (pcOut + 32'h4 + (imm << 2)) : (pcOut + 32'h4)
                   ) : 
                   (pcSel == `PCSEL_REGOFFSET) ? (reg1 + (imm << 2)) : 
                   {DBITS{1'bz}};

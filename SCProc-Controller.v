@@ -78,7 +78,11 @@ assign pc_mux =
     2'bzz;
 
 assign regno1 = rs1;
-assign regno2 = rs2;
+assign regno2 = opcode == `ALUR || opcode == `CMPR ? rs2 :
+                opcode == `ALUI || opcode == `CMPI ||
+                opcode == `BRANCH || opcode == `JAL ||
+                opcode == `LOAD ? rd :
+                4'bzzzz;
 
 assign alu_in1_mux = 
 opcode == `ALUR || opcode == `ALUI || opcode == `CMPR || opcode == `CMPI ? `ALUIN1SEL_REG : 
@@ -100,7 +104,7 @@ opcode == `BRANCH ? (
     1'bz
 ) : 1'bz;
 
-assign alu_in2_mux = opcode == `ALUR || opcode == `CMPR ? `ALUIN2SEL_REG :
+assign alu_in2_mux = opcode == `ALUR || opcode == `CMPR || opcode == `BRANCH ? `ALUIN2SEL_REG :
                      opcode == `ALUI || opcode == `CMPI ? `ALUIN2SEL_IMM :
                      1'bz;
 
