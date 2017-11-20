@@ -69,11 +69,23 @@ module Processor_tb();
         end
 
         program[START_PC] = 32'h2f000000;
-        program[START_PC + 4] = 32'h3b000700;
-        program[START_PC + 8] = 32'hc0fffd00;
+        program[START_PC + 4] = 32'hfbf00001;
+        program[START_PC + 8] = 32'h3b000f02;
+        program[START_PC + 12] = 32'h08000021;
+        program[START_PC + 16] = 32'h08000421;
+        program[START_PC + 20] = 32'h09001413;
+        program[START_PC + 24] = 32'h09001014;
+        program[START_PC + 28] = 32'h08000030;
+        program[START_PC + 32] = 32'h08000440;
+        program[START_PC + 36] = 32'hc0ffff00;
 
         FPGA_RESET_N = 1'b1;
         CLOCK_50 = 1'b0;
+
+        SW = 10'b1010101010;
+        KEY = 4'b1010;
+
+
         @(posedge CLOCK_50);
         @(posedge CLOCK_50);
         FPGA_RESET_N = 1'b0;

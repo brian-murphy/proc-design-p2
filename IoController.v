@@ -36,7 +36,7 @@ assign uiDevice = addr == ADDR_HEX ? `UI_HEX :
                   2'bzz;
 
 assign dMemOut = dataIn;
-assign dMemAddr = addr[DMEMADDRBITS - DMEMWORDBITS - 1 : 0];
+assign dMemAddr = addr[DMEMADDRBITS - 1 : DMEMWORDBITS];
 assign dMemWrtEn = isUiAddr == 1'b0 && load_store == `IO_STORE ? 1'b1 : 1'b0;
 
 assign dataOut = isUiAddr ? uiIn :

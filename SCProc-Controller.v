@@ -77,11 +77,11 @@ assign pc_mux =
     opcode == `JAL ? `PCSEL_REGOFFSET : 
     2'bzz;
 
-assign regno1 = rs1;
+assign regno1 = opcode == `STORE ? rd : rs1;
 assign regno2 = opcode == `ALUR || opcode == `CMPR ? rs2 :
+                opcode == `STORE ? rs1 :
                 opcode == `ALUI || opcode == `CMPI ||
-                opcode == `BRANCH || opcode == `JAL ||
-                opcode == `LOAD ? rd :
+                opcode == `BRANCH || opcode == `JAL ? rd :
                 4'bzzzz;
 
 assign alu_in1_mux = 
@@ -113,8 +113,9 @@ assign regfile_in_mux = opcode == `ALUR || opcode == `ALUI || opcode == `CMPR ||
                         opcode == `JAL ? `REGFILEINSEL_PCPLUS4 : 
                         opcode == `LOAD ? `REGFILEINSEL_IO :
                         2'bzz;
-assign regfile_wrtEn = opcode == `ALUR || opcode == `ALUI || opcode == `CMPR || opcode == `CMPI
-                        ? 1'b1 : 1'bz;
+assign regfile_wrtEn = opcode == `ALUR || opcode == `ALUI || opcode == `CMPR || 
+                       opcode == `CMPI || opcode == `LOAD || opcode == `JAL 
+                       ? 1'b1 : 1'b0;
 assign regfile_wrtRegno = rd;
 
 assign isStore = opcode == `STORE ? 1'b1 : 1'b0;

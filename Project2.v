@@ -73,13 +73,6 @@ module Project2(
 
   PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, cmp, imm, pcSel, regfileOut1, pcOut);
 
-  SevenSeg ss1(pcOut[3:0], HEX0);
-  SevenSeg ss2(pcOut[7:4], HEX1);
-  SevenSeg ss3(pcOut[11:8], HEX2);
-  SevenSeg ss4(pcOut[15:12], HEX3);
-  SevenSeg ss5(pcOut[19:16], HEX4);
-  SevenSeg ss6(pcOut[23:20], HEX5);
-
   // Creat instruction memeory
   // wire[IMEM_DATA_BIT_WIDTH - 1: 0] instWord;
   // InstMemory #(IMEM_INIT_FILE, IMEM_ADDR_BIT_WIDTH, IMEM_DATA_BIT_WIDTH) instMem (pcOut[IMEM_PC_BITS_HI - 1: IMEM_PC_BITS_LO], instWord);
@@ -193,15 +186,15 @@ module Project2(
     uiWrtEn,
     uiIn,
     uiDevice,
-    NOT_KEY, /////////////////////// TODO Fix!
-    NOT_SW,
+    KEY,
+    SW,
 
     uiOut,
-    NOT_LEDR,
-    NOT_HEX0,
-    NOT_HEX1,
-    NOT_HEX2,
-    NOT_HEX3
+    LEDR,
+    HEX0,
+    HEX1,
+    HEX2,
+    HEX3
   );
 
   DMemController #(

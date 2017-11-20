@@ -8,7 +8,7 @@ module DMemController #(
     input reset,
     input wrtEn,
     input [DBITS - 1 : 0] in,
-    input [DMEMADDRBITS - DMEMWORDS - 1 : 0] addr,
+    input [DMEMADDRBITS - DMEMWORDBITS - 1 : 0] addr,
     output reg [DBITS - 1 : 0] out
 );
 
