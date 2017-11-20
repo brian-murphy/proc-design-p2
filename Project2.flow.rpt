@@ -1,5 +1,5 @@
 Flow report for Project2
-Sun Nov 19 17:03:24 2017
+Sun Nov 19 23:44:04 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,16 +40,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +-------------------------------------+-------------------------------------------------+
-; Flow Status                         ; Successful - Sun Nov 19 17:03:13 2017           ;
+; Flow Status                         ; Analyzed - Sun Nov 19 23:44:04 2017             ;
 ; Quartus II 32-bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                       ; Project2                                        ;
 ; Top-level Entity Name               ; Project2                                        ;
 ; Family                              ; Cyclone V                                       ;
 ; Device                              ; 5CEBA4F23C7                                     ;
 ; Timing Models                       ; Final                                           ;
-; Logic utilization (in ALMs)         ; 87 / 18,480 ( < 1 % )                           ;
-; Total registers                     ; 68                                              ;
-; Total pins                          ; 68 / 224 ( 30 % )                               ;
+; Logic utilization (in ALMs)         ; 1 / 18,480 ( < 1 % )                            ;
+; Total registers                     ; 0                                               ;
+; Total pins                          ; 54 / 224 ( 24 % )                               ;
 ; Total virtual pins                  ; 0                                               ;
 ; Total block memory bits             ; 0 / 3,153,920 ( 0 % )                           ;
 ; Total DSP Blocks                    ; 0 / 66 ( 0 % )                                  ;
@@ -59,7 +59,7 @@ applicable agreement for further details.
 ; Total HSSI TX PCSs                  ; 0                                               ;
 ; Total HSSI PMA TX Serializers       ; 0                                               ;
 ; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
-; Total PLLs                          ; 1 / 4 ( 25 % )                                  ;
+; Total PLLs                          ; 0 / 4 ( 0 % )                                   ;
 ; Total DLLs                          ; 0 / 4 ( 0 % )                                   ;
 +-------------------------------------+-------------------------------------------------+
 
@@ -69,47 +69,55 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/19/2017 17:02:15 ;
+; Start date & time ; 11/19/2017 23:42:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Project2            ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                               ;
-+---------------------------------------------------+---------------------------------+---------------+-------------+------------+
-; Assignment Name                                   ; Value                           ; Default Value ; Entity Name ; Section Id ;
-+---------------------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                             ; 123745747104029.151112893508308 ; --            ; --          ; --         ;
-; FITTER_EFFORT                                     ; Standard Fit                    ; Auto Fit      ; --          ; --         ;
-; IP_TOOL_ENV                                       ; mwpim                           ; --            ; PLL         ; --         ;
-; IP_TOOL_ENV                                       ; mwpim                           ; --            ; PLL         ; --         ;
-; IP_TOOL_ENV                                       ; mwpim                           ; --            ; PLL_0002    ; --         ;
-; IP_TOOL_NAME                                      ; altera_pll                      ; --            ; PLL         ; --         ;
-; IP_TOOL_NAME                                      ; altera_pll                      ; --            ; PLL         ; --         ;
-; IP_TOOL_NAME                                      ; altera_pll                      ; --            ; PLL_0002    ; --         ;
-; IP_TOOL_VERSION                                   ; 13.0sp1                         ; --            ; PLL         ; --         ;
-; IP_TOOL_VERSION                                   ; 13.0sp1                         ; --            ; PLL         ; --         ;
-; IP_TOOL_VERSION                                   ; 13.0                            ; --            ; PLL_0002    ; --         ;
-; MAX_CORE_JUNCTION_TEMP                            ; 85                              ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP                            ; 0                               ; --            ; --          ; --         ;
-; MISC_FILE                                         ; PLL.cmp                         ; --            ; --          ; --         ;
-; MISC_FILE                                         ; PLL_sim/PLL.vo                  ; --            ; --          ; --         ;
-; PARTITION_COLOR                                   ; 16764057                        ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL               ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE                            ; SOURCE                          ; --            ; --          ; Top        ;
-; PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ; On                              ; Off           ; --          ; --         ;
-; PHYSICAL_SYNTHESIS_COMBO_LOGIC                    ; On                              ; Off           ; --          ; --         ;
-; PHYSICAL_SYNTHESIS_EFFORT                         ; Extra                           ; Normal        ; --          ; --         ;
-; PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION           ; On                              ; Off           ; --          ; --         ;
-; PHYSICAL_SYNTHESIS_REGISTER_RETIMING              ; On                              ; Off           ; --          ; --         ;
-; POWER_AUTO_COMPUTE_TJ                             ; Off                             ; On            ; --          ; --         ;
-; SAVE_DISK_SPACE                                   ; Off                             ; On            ; --          ; --         ;
-; SMART_RECOMPILE                                   ; On                              ; Off           ; --          ; --         ;
-; SPD_FILE                                          ; PLL.spd                         ; --            ; --          ; --         ;
-; SYNTHESIS_ONLY_QIP                                ; On                              ; --            ; --          ; --         ;
-; TIMEQUEST_DO_REPORT_TIMING                        ; On                              ; Off           ; --          ; --         ;
-+---------------------------------------------------+---------------------------------+---------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                              ;
++---------------------------------------------------+--------------------------------+---------------+-------------+------------+
+; Assignment Name                                   ; Value                          ; Default Value ; Entity Name ; Section Id ;
++---------------------------------------------------+--------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID                             ; 27332939551934.151115296819484 ; --            ; --          ; --         ;
+; ENABLE_DRC_SETTINGS                               ; On                             ; Off           ; --          ; --         ;
+; FITTER_EFFORT                                     ; Standard Fit                   ; Auto Fit      ; --          ; --         ;
+; IP_TOOL_ENV                                       ; mwpim                          ; --            ; PLL         ; --         ;
+; IP_TOOL_ENV                                       ; mwpim                          ; --            ; PLL         ; --         ;
+; IP_TOOL_ENV                                       ; mwpim                          ; --            ; PLL_0002    ; --         ;
+; IP_TOOL_NAME                                      ; altera_pll                     ; --            ; PLL         ; --         ;
+; IP_TOOL_NAME                                      ; altera_pll                     ; --            ; PLL         ; --         ;
+; IP_TOOL_NAME                                      ; altera_pll                     ; --            ; PLL_0002    ; --         ;
+; IP_TOOL_VERSION                                   ; 13.0sp1                        ; --            ; PLL         ; --         ;
+; IP_TOOL_VERSION                                   ; 13.0sp1                        ; --            ; PLL         ; --         ;
+; IP_TOOL_VERSION                                   ; 13.0                           ; --            ; PLL_0002    ; --         ;
+; MAX_CORE_JUNCTION_TEMP                            ; 85                             ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP                            ; 0                              ; --            ; --          ; --         ;
+; MISC_FILE                                         ; PLL.cmp                        ; --            ; --          ; --         ;
+; MISC_FILE                                         ; PLL_sim/PLL.vo                 ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS                    ; Half Signal Swing              ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS                    ; Half Signal Swing              ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS                   ; Half Vccio                     ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS                   ; Half Vccio                     ; --            ; --          ; --         ;
+; PARTITION_COLOR                                   ; 16764057                       ; --            ; DE0_CV      ; Top        ;
+; PARTITION_COLOR                                   ; 16764057                       ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL               ; PLACEMENT_AND_ROUTING          ; --            ; DE0_CV      ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL               ; PLACEMENT_AND_ROUTING          ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE                            ; SOURCE                         ; --            ; DE0_CV      ; Top        ;
+; PARTITION_NETLIST_TYPE                            ; SOURCE                         ; --            ; --          ; Top        ;
+; PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ; On                             ; Off           ; --          ; --         ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC                    ; On                             ; Off           ; --          ; --         ;
+; PHYSICAL_SYNTHESIS_EFFORT                         ; Extra                          ; Normal        ; --          ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION           ; On                             ; Off           ; --          ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING              ; On                             ; Off           ; --          ; --         ;
+; POWER_AUTO_COMPUTE_TJ                             ; Off                            ; On            ; --          ; --         ;
+; SAVE_DISK_SPACE                                   ; Off                            ; On            ; --          ; --         ;
+; SMART_RECOMPILE                                   ; On                             ; Off           ; --          ; --         ;
+; SPD_FILE                                          ; PLL.spd                        ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                                ; On                             ; --            ; --          ; --         ;
+; TIMEQUEST_DO_REPORT_TIMING                        ; On                             ; Off           ; --          ; --         ;
++---------------------------------------------------+--------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -117,11 +125,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 779 MB              ; 00:00:06                           ;
-; Fitter                    ; 00:00:44     ; 1.0                     ; 1156 MB             ; 00:00:43                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 499 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:10     ; 1.0                     ; 830 MB              ; 00:00:10                           ;
-; Total                     ; 00:01:06     ; --                      ; --                  ; 00:01:05                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 772 MB              ; 00:00:08                           ;
+; Fitter                    ; 00:00:42     ; 1.0                     ; 1090 MB             ; 00:00:41                           ;
+; Assembler                 ; 00:00:08     ; 1.0                     ; 492 MB              ; 00:00:08                           ;
+; TimeQuest Timing Analyzer ; 00:00:11     ; 1.0                     ; 806 MB              ; 00:00:11                           ;
+; Design Assistant          ; 00:00:02     ; 1.0                     ; 405 MB              ; 00:00:02                           ;
+; Total                     ; 00:01:11     ; --                      ; --                  ; 00:01:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -130,10 +139,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-3AVM13T  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-3AVM13T  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-3AVM13T  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-3AVM13T  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; LAPTOP-AAINQJAL  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-AAINQJAL  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-AAINQJAL  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-AAINQJAL  ; Windows 7 ; 6.2        ; x86_64         ;
+; Design Assistant          ; LAPTOP-AAINQJAL  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -144,6 +154,7 @@ quartus_map --read_settings_files=on --write_settings_files=off Project2 -c Proj
 quartus_fit --read_settings_files=off --write_settings_files=off Project2 -c Project2
 quartus_asm --read_settings_files=off --write_settings_files=off Project2 -c Project2
 quartus_sta Project2 -c Project2
+quartus_drc --read_settings_files=off --write_settings_files=off Project2 -c Project2
 
 
 
