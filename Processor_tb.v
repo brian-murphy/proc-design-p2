@@ -77,7 +77,7 @@ module Processor_tb();
         program[START_PC + 24] = 32'h09001014;
         program[START_PC + 28] = 32'h08000030;
         program[START_PC + 32] = 32'h08000440;
-        program[START_PC + 36] = 32'hc0ffff00;
+        program[START_PC + 36] = 32'h01001905;
 
         FPGA_RESET_N = 1'b1;
         CLOCK_50 = 1'b0;
