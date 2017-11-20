@@ -11,11 +11,7 @@ module Project2(
   output [6:0] HEX0,
   output [6:0] HEX1,
   output [6:0] HEX2,
-  output [6:0] HEX3,
-  output [6:0] HEX4,
-  output [6:0] HEX5,
-  input [31:0] pcOut,
-  output [31:0] instWord
+  output [6:0] HEX3
  );
   parameter DBITS         				 = 32;
   parameter INST_SIZE      			 = 32'd4;
@@ -42,20 +38,10 @@ module Project2(
   // Add parameters for various secondary opcode values
   
   //PLL, clock generation, and reset generation
-  wire clk, reset;
+  wire clk, lock, reset;
   //Pll pll(.inclk0(CLOCK_50), .c0(clk), .locked(lock));
-  // PLL	PLL_inst (.refclk (CLOCK_50), .rst(!FPGA_RESET_N), .outclk_0 (clk),.locked (lock));
-  // wire reset = ~lock;
-
-  assign reset = FPGA_RESET_N;
-
-
-  // Debouncer #(18) (debugClk, reset, SW[9], clk);
-
-  // assign LEDR[0] = clk;
-
-  assign clk = CLOCK_50;
-
+  PLL	PLL_inst (.refclk (CLOCK_50), .rst(!FPGA_RESET_N), .outclk_0 (clk),.locked (lock));
+  wire reset = ~lock;
 
   wire [DBITS - 1 : 0] imm;
   wire [DBITS - 1 : 0] regfileOut1, regfileOut2;
@@ -74,8 +60,8 @@ module Project2(
   PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, cmp, imm, pcSel, regfileOut1, pcOut);
 
   // Creat instruction memeory
-  // wire[IMEM_DATA_BIT_WIDTH - 1: 0] instWord;
-  // InstMemory #(IMEM_INIT_FILE, IMEM_ADDR_BIT_WIDTH, IMEM_DATA_BIT_WIDTH) instMem (pcOut[IMEM_PC_BITS_HI - 1: IMEM_PC_BITS_LO], instWord);
+  wire[IMEM_DATA_BIT_WIDTH - 1: 0] instWord;
+  InstMemory #(IMEM_INIT_FILE, IMEM_ADDR_BIT_WIDTH, IMEM_DATA_BIT_WIDTH) instMem (pcOut[IMEM_PC_BITS_HI - 1: IMEM_PC_BITS_LO], instWord);
   
   // Put the code for getting opcode1, rd, rs, rt, imm, etc. here 
   wire [`FUNC_BITS - 1 : 0] alu_func;
@@ -171,14 +157,6 @@ module Project2(
     dMemWrtEn,
     ioOut
   );
-
-  wire [9:0]NOT_SW;
-  wire [9:0]NOT_LEDR;
-  wire [6:0]NOT_HEX0;
-  wire [6:0]NOT_HEX1;
-  wire [6:0]NOT_HEX2;
-  wire [6:0]NOT_HEX3;
-  wire [3:0]NOT_KEY;
   
   UiController #(DBITS) uiController(
     clk,
