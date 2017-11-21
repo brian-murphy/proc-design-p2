@@ -1,0 +1,319 @@
+Design Assistant report for Project2
+Tue Nov 21 10:19:28 2017
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Design Assistant Summary
+  3. Design Assistant Settings
+  4. Medium Violations
+  5. Information only Violations
+  6. Design Assistant Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Design Assistant Summary                                                ;
++-----------------------------------+-------------------------------------+
+; Design Assistant Status           ; Analyzed - Tue Nov 21 10:19:28 2017 ;
+; Revision Name                     ; Project2                            ;
+; Top-level Entity Name             ; Project2                            ;
+; Family                            ; Cyclone V                           ;
+; Total Critical Violations         ; 0                                   ;
+; Total High Violations             ; 0                                   ;
+; Total Medium Violations           ; 1                                   ;
+; - Rule C106                       ; 1                                   ;
+; Total Information only Violations ; 78                                  ;
+; - Rule T101                       ; 28                                  ;
+; - Rule T102                       ; 50                                  ;
++-----------------------------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Design Assistant Settings                                                                                                                                                                                                                                                                                ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
+; Option                                                                                                                                                                                                                                                                               ; Setting      ; To ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
+; Design Assistant mode                                                                                                                                                                                                                                                                ; Post-Fitting ;    ;
+; Threshold value for clock net not mapped to clock spines rule                                                                                                                                                                                                                        ; 25           ;    ;
+; Minimum number of clock port feed by gated clocks                                                                                                                                                                                                                                    ; 30           ;    ;
+; Minimum number of node fan-out                                                                                                                                                                                                                                                       ; 30           ;    ;
+; Maximum number of nodes to report                                                                                                                                                                                                                                                    ; 50           ;    ;
+; Rule C101: Gated clock should be implemented according to the Altera standard scheme                                                                                                                                                                                                 ; On           ;    ;
+; Rule C102: Logic cell should not be used to generate an inverted clock signal                                                                                                                                                                                                        ; On           ;    ;
+; Rule C103: Gated clock does not feed at least a pre-defined number of clock ports to effectively save power                                                                                                                                                                          ; On           ;    ;
+; Rule C104: Clock signal source should drive only clock input ports                                                                                                                                                                                                                   ; On           ;    ;
+; Rule C105: Clock signal should be a global signal (Rule applies during post-fitting analysis. This rule applies during both post-fitting analysis and post-synthesis analysis if the design targets a MAX 3000 or MAX 7000 device. For more information, see the Help for the rule.) ; On           ;    ;
+; Rule C106: Clock signal source should not drive registers triggered by different clock edges                                                                                                                                                                                         ; On           ;    ;
+; Rule R101: Combinational logic used as a reset signal should be synchronized                                                                                                                                                                                                         ; On           ;    ;
+; Rule R102: External reset signals should be synchronized using two cascaded registers                                                                                                                                                                                                ; On           ;    ;
+; Rule R103: External reset signal should be correctly synchronized                                                                                                                                                                                                                    ; On           ;    ;
+; Rule R104: The reset signal that is generated in one clock domain and used in another clock domain should be correctly synchronized                                                                                                                                                  ; On           ;    ;
+; Rule R105: The reset signal that is generated in one clock domain and used in another clock domain should be synchronized                                                                                                                                                            ; On           ;    ;
+; Rule T101: Nodes with more than the specified number of fan-outs                                                                                                                                                                                                                     ; On           ;    ;
+; Rule T102: Top nodes with the highest number of fan-outs                                                                                                                                                                                                                             ; On           ;    ;
+; Rule A101: Design should not contain combinational loops                                                                                                                                                                                                                             ; On           ;    ;
+; Rule A102: Register output should not drive its own control signal directly or through combinational logic                                                                                                                                                                           ; On           ;    ;
+; Rule A103: Design should not contain delay chains                                                                                                                                                                                                                                    ; On           ;    ;
+; Rule A104: Design should not contain ripple clock structures                                                                                                                                                                                                                         ; On           ;    ;
+; Rule A105: Pulses should not be implemented asynchronously                                                                                                                                                                                                                           ; On           ;    ;
+; Rule A106: Multiple pulses should not be generated in design                                                                                                                                                                                                                         ; On           ;    ;
+; Rule A107: Design should not contain SR latches                                                                                                                                                                                                                                      ; On           ;    ;
+; Rule A108: Design should not contain latches                                                                                                                                                                                                                                         ; On           ;    ;
+; Rule S101: Output enable and input of the same tri-state node should not be driven by same signal source                                                                                                                                                                             ; On           ;    ;
+; Rule S102: Synchronous port and asynchronous port of the same register should not be driven by the same signal source                                                                                                                                                                ; On           ;    ;
+; Rule S103: More than one asynchronous port of a register should not be driven by the same signal source                                                                                                                                                                              ; On           ;    ;
+; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                                                                                                                                                                                ; On           ;    ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains                                                                                                                                                                                        ; On           ;    ;
+; Rule D102: Multiple data bits that are transferred across asynchronous clock domains are synchronized, but not all bits may be aligned in the receiving clock domain                                                                                                                 ; On           ;    ;
+; Rule D103: Data bits are not correctly synchronized when transferred between asynchronous clock domains                                                                                                                                                                              ; On           ;    ;
+; Rule M101: Data bits are not synchronized when transferred to the state machine of asynchronous clock domains                                                                                                                                                                        ; Off          ;    ;
+; Rule M102: No reset signal defined to initialize the state machine                                                                                                                                                                                                                   ; Off          ;    ;
+; Rule M103: State machine should not contain an unreachable state                                                                                                                                                                                                                     ; Off          ;    ;
+; Rule M104: State machine should not contain a deadlock state                                                                                                                                                                                                                         ; Off          ;    ;
+; Rule M105: State machine should not contain a dead transition                                                                                                                                                                                                                        ; Off          ;    ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Medium Violations                                                                                                                                                                                                   ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+; Rule name                                                                                    ; Name                                                                                                                 ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+; Rule C106: Clock signal source should not drive registers triggered by different clock edges ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL_O_VCOPH0                       ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[8][0]                                                                                           ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[9][0]                                                                                           ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[10][0]                                                                                          ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[1][0]                                                                                           ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[0][0]                                                                                           ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[3][0]                                                                                           ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[2][0]                                                                                           ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[11][0]                                                                                          ;
+;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[6]                                                                       ;
+;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[11]                                                                      ;
+;  Negative edge destination node(s) list                                                      ; UiController:uiController|ledValue[0]                                                                                ;
+;  Negative edge destination node(s) list                                                      ; UiController:uiController|ledValue[7]                                                                                ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a23~portb_address_reg10 ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a23~portb_address_reg0  ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a23~porta_address_reg0  ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a23~porta_address_reg10 ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a23~porta_address_reg1  ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a23~porta_datain_reg3   ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a23~porta_datain_reg4   ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a23~porta_datain_reg1   ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Information only Violations                                                                                                                                ;
++------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+
+; Rule name                                                        ; Name                                                                          ; Fan-Out ;
++------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+
+; Rule T101: Nodes with more than the specified number of fan-outs ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; 383     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno1[0]~1                                                   ; 66      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[9]~1                              ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Alu:alu|out[0]~8                                                              ; 31      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|Mux46~1                                                       ; 55      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno2[1]~1                                                   ; 66      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|Equal6~1                                                      ; 86      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[3][7]~7                                                  ; 34      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[12]                               ; 40      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[9]~0                              ; 48      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; InstMemory:instMem|data~27                                                    ; 136     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; InstMemory:instMem|data~30                                                    ; 42      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[0][7]~9                                                  ; 36      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[1][5]~8                                                  ; 33      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; UiController:uiController|hexValue[2]~0                                       ; 44      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno1[1]~0                                                   ; 66      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[11][10]~5                                                ; 33      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|alu_in2_mux~0                                                 ; 60      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno2[0]~0                                                   ; 66      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[10][10]~4                                                ; 36      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[8][22]~1                                                 ; 36      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[9][10]~2                                                 ; 33      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|Mux46~2                                                       ; 55      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[2][18]~6                                                 ; 36      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|Mux19~0                                                       ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|Mux19~1                                                       ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|alu_in2_mux~2                                                 ; 53      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|pcIn[6]~0                                             ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; 383     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~27                                                    ; 136     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|Equal6~1                                                      ; 86      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[1]~1                                                   ; 66      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno1[1]~0                                                   ; 66      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno1[0]~1                                                   ; 66      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[0]~0                                                   ; 66      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_in2_mux~0                                                 ; 60      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux46~1                                                       ; 55      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux46~2                                                       ; 55      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_in2_mux~2                                                 ; 53      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[9]~0                              ; 48      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; UiController:uiController|hexValue[2]~0                                       ; 44      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~30                                                    ; 42      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[12]                               ; 40      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[0][7]~9                                                  ; 36      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[2][18]~6                                                 ; 36      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[10][10]~4                                                ; 36      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[8][22]~1                                                 ; 36      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[3][7]~7                                                  ; 34      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[11][10]~5                                                ; 33      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[9][10]~2                                                 ; 33      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[1][5]~8                                                  ; 33      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux19~0                                                       ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|pcIn[6]~0                                             ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[9]~1                              ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux19~1                                                       ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Alu:alu|out[0]~8                                                              ; 31      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Equal1~0                                              ; 29      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~5                                                                        ; 27      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~1                                                                        ; 27      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Alu:alu|Equal1~0                                                              ; 26      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_func[1]~1                                                 ; 22      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[7]~DUPLICATE                      ; 20      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[10]~DUPLICATE                     ; 19      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; regfile_dataIn[16]~8                                                          ; 19      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[4]~DUPLICATE                      ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~125                                                                      ; 17      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~117                                                                      ; 17      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~121                                                                      ; 17      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~113                                                                      ; 17      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; regfile_dataIn[0]~1                                                           ; 17      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; regfile_dataIn[16]~51                                                         ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux61~2                                                       ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~45                                                                       ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[11]                               ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux54~2                                                       ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux58~2                                                       ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~61                                                                       ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux63~2                                                       ; 15      ;
++------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+
+
+
++---------------------------+
+; Design Assistant Messages ;
++---------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Design Assistant
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 21 10:19:27 2017
+Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off Project2 -c Project2
+Info (332104): Reading SDC File: 'Timing.sdc'
+Info (332110): Deriving PLL clocks
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -multiply_by 6 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -multiply_by 6 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[1]} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[1]}
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -multiply_by 6 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[2]} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[2]}
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -multiply_by 6 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[3]} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[3]}
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -multiply_by 6 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[4]} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[4]}
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -multiply_by 6 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[5]} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[5]}
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -multiply_by 6 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[6]} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[6]}
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -multiply_by 6 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[7]} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[7]}
+    Info (332110): create_generated_clock -source {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 30 -duty_cycle 50.00 -name {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} {PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Warning (332056): PLL cross checking found inconsistent PLL clock settings:
+    Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] does not match the master clock period requirement: 20.000
+    Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[1] with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[1] does not match the master clock period requirement: 20.000
+    Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[2] with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[2] does not match the master clock period requirement: 20.000
+    Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[3] with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[3] does not match the master clock period requirement: 20.000
+    Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[4] with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[4] does not match the master clock period requirement: 20.000
+    Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[5] with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[5] does not match the master clock period requirement: 20.000
+    Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[6] with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[6] does not match the master clock period requirement: 20.000
+    Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[7] with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[7] does not match the master clock period requirement: 20.000
+Warning (308022): (Medium) Rule C106: Clock signal source should not drive registers triggered by different clock edges. Found 1 node(s) related to this rule.
+    Warning (308010): Node  "PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL_O_VCOPH0"
+Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 28 node(s) with highest fan-out.
+    Info (308011): Node  "PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0"
+    Info (308011): Node  "Decoder:decoder|regno1[0]~1"
+    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[9]~1"
+    Info (308011): Node  "Alu:alu|out[0]~8"
+    Info (308011): Node  "Regfile:regfile|Mux46~1"
+    Info (308011): Node  "Decoder:decoder|regno2[1]~1"
+    Info (308011): Node  "Decoder:decoder|Equal6~1"
+    Info (308011): Node  "Regfile:regfile|data[3][7]~7"
+    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[12]"
+    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[9]~0"
+    Info (308011): Node  "InstMemory:instMem|data~27"
+    Info (308011): Node  "InstMemory:instMem|data~30"
+    Info (308011): Node  "Regfile:regfile|data[0][7]~9"
+    Info (308011): Node  "Regfile:regfile|data[1][5]~8"
+    Info (308011): Node  "UiController:uiController|hexValue[2]~0"
+    Info (308011): Node  "Decoder:decoder|regno1[1]~0"
+    Info (308011): Node  "Regfile:regfile|data[11][10]~5"
+    Info (308011): Node  "Decoder:decoder|alu_in2_mux~0"
+    Info (308011): Node  "Decoder:decoder|regno2[0]~0"
+    Info (308011): Node  "Regfile:regfile|data[10][10]~4"
+    Info (308011): Node  "Regfile:regfile|data[8][22]~1"
+    Info (308011): Node  "Regfile:regfile|data[9][10]~2"
+    Info (308011): Node  "Regfile:regfile|Mux46~2"
+    Info (308011): Node  "Regfile:regfile|data[2][18]~6"
+    Info (308011): Node  "Regfile:regfile|Mux19~0"
+    Info (308011): Node  "Regfile:regfile|Mux19~1"
+    Info (308011): Node  "Decoder:decoder|alu_in2_mux~2"
+    Info (308011): Node  "PcApparatus:pcApparatus|pcIn[6]~0"
+Info (308044): (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 50 node(s) with highest fan-out.
+    Info (308011): Node  "PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0"
+    Info (308011): Node  "InstMemory:instMem|data~27"
+    Info (308011): Node  "Decoder:decoder|Equal6~1"
+    Info (308011): Node  "Decoder:decoder|regno2[1]~1"
+    Info (308011): Node  "Decoder:decoder|regno1[1]~0"
+    Info (308011): Node  "Decoder:decoder|regno1[0]~1"
+    Info (308011): Node  "Decoder:decoder|regno2[0]~0"
+    Info (308011): Node  "Decoder:decoder|alu_in2_mux~0"
+    Info (308011): Node  "Regfile:regfile|Mux46~1"
+    Info (308011): Node  "Regfile:regfile|Mux46~2"
+    Info (308011): Node  "Decoder:decoder|alu_in2_mux~2"
+    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[9]~0"
+    Info (308011): Node  "UiController:uiController|hexValue[2]~0"
+    Info (308011): Node  "InstMemory:instMem|data~30"
+    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[12]"
+    Info (308011): Node  "Regfile:regfile|data[0][7]~9"
+    Info (308011): Node  "Regfile:regfile|data[2][18]~6"
+    Info (308011): Node  "Regfile:regfile|data[10][10]~4"
+    Info (308011): Node  "Regfile:regfile|data[8][22]~1"
+    Info (308011): Node  "Regfile:regfile|data[3][7]~7"
+    Info (308011): Node  "Regfile:regfile|data[11][10]~5"
+    Info (308011): Node  "Regfile:regfile|data[9][10]~2"
+    Info (308011): Node  "Regfile:regfile|data[1][5]~8"
+    Info (308011): Node  "Regfile:regfile|Mux19~0"
+    Info (308011): Node  "PcApparatus:pcApparatus|pcIn[6]~0"
+    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[9]~1"
+    Info (308011): Node  "Regfile:regfile|Mux19~1"
+    Info (308011): Node  "Alu:alu|out[0]~8"
+    Info (308011): Node  "PcApparatus:pcApparatus|Equal1~0"
+    Info (308011): Node  "Add1~5"
+    Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
+Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 78 information messages and 1 warning messages
+Info: Quartus II 32-bit Design Assistant was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 449 megabytes
+    Info: Processing ended: Tue Nov 21 10:19:28 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
