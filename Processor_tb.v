@@ -47,8 +47,6 @@ module Processor_tb();
         HEX1,
         HEX2,
         HEX3,
-        HEX4,
-        HEX5,
 
         pcOut,
         instWord
@@ -70,14 +68,11 @@ module Processor_tb();
 
         program[START_PC] = 32'h2f000000;
         program[START_PC + 4] = 32'hfbf00001;
-        program[START_PC + 8] = 32'h3b000f02;
-        program[START_PC + 12] = 32'h08000021;
-        program[START_PC + 16] = 32'h08000421;
-        program[START_PC + 20] = 32'h09001413;
-        program[START_PC + 24] = 32'h09001014;
-        program[START_PC + 28] = 32'h08000030;
-        program[START_PC + 32] = 32'h08000440;
-        program[START_PC + 36] = 32'h01001905;
+        program[START_PC + 8] = 32'h9001412;
+        program[START_PC + 12] = 32'h8000021;
+        program[START_PC + 16] = 32'h9001012;
+        program[START_PC + 20] = 32'h8000421;
+        program[START_PC + 24] = 32'hc0fffb00;
 
         FPGA_RESET_N = 1'b1;
         CLOCK_50 = 1'b0;
@@ -105,6 +100,8 @@ module Processor_tb();
         @(posedge CLOCK_50);
         @(posedge CLOCK_50);
         @(posedge CLOCK_50);
+        SW = 10'b1111000001;
+        KEY = 4'b1111;
         @(posedge CLOCK_50);
         @(posedge CLOCK_50);
         
