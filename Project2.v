@@ -23,13 +23,8 @@ module Project2(
   parameter ADDR_HEX  					 = 32'hF0000000;
   parameter ADDR_LEDR 					 = 32'hF0000004;
   parameter ADDR_LEDG 					 = 32'hF0000008;
-<<<<<<< HEAD
-  
-  parameter IMEM_INIT_FILE				 = "countTo7.mif";
-=======
 
   parameter IMEM_INIT_FILE				 = "io.mif";
->>>>>>> 1175fe5... Made the processor load io demo into IMem
   parameter IMEM_ADDR_BIT_WIDTH 		 = 11;
   parameter IMEM_DATA_BIT_WIDTH 		 = INST_BIT_WIDTH;
   parameter IMEM_PC_BITS_HI     		 = IMEM_ADDR_BIT_WIDTH + 2;
@@ -43,7 +38,7 @@ module Project2(
   // Add parameters for various secondary opcode values
   
   //PLL, clock generation, and reset generation
-  wire clk, lock, reset;
+  wire clk, lock;
   //Pll pll(.inclk0(CLOCK_50), .c0(clk), .locked(lock));
   PLL	PLL_inst (.refclk (CLOCK_50), .rst(!FPGA_RESET_N), .outclk_0 (clk),.locked (lock));
   wire reset = ~lock;
@@ -63,11 +58,7 @@ module Project2(
   assign cmp = aluOut[0];
 
   PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, cmp, imm, pcSel, regfileOut1, pcOut);
-<<<<<<< HEAD
-
-=======
 	
->>>>>>> 1175fe5... Made the processor load io demo into IMem
   // Creat instruction memeory
   wire[IMEM_DATA_BIT_WIDTH - 1: 0] instWord;
   InstMemory #(IMEM_INIT_FILE, IMEM_ADDR_BIT_WIDTH, IMEM_DATA_BIT_WIDTH) instMem (pcOut[IMEM_PC_BITS_HI - 1: IMEM_PC_BITS_LO], instWord);

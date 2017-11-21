@@ -27,8 +27,14 @@ module UiController #(
     SevenSeg ss3(hexValue[11:8], I_HEX2);
     SevenSeg ss4(hexValue[15:12], I_HEX3);
 
-    assign out = (uiDevice == `UI_KEY) ? {{DBITS-4{1'b0}}, KEYS} :
-                 (uiDevice == `UI_SW) ? {{DBITS-10{1'b0}}, SWITCHES} :
+    wire [9 : 0] switchValue;
+    Debouncer #(15) [9 : 0] switchDebouncers(SWITCHES[9:0], switchValue[9:0]);
+
+    wire [3 : 0] keyValue;
+    Debouncer #(15) [3 : 0] keyDebouncers(KEYS[3:0], keyValue);
+
+    assign out = (uiDevice == `UI_KEY) ? {{DBITS-4{1'b0}}, keyValue} :
+                 (uiDevice == `UI_SW) ? {{DBITS-10{1'b0}}, switchValue} :
                  (uiDevice == `UI_LEDR) ? {{DBITS-10{1'b0}}, ledValue} :
                  (uiDevice == `UI_HEX) ? {{DBITS-16{1'b0}}, hexValue} :
                  {DBITS{1'bz}};
