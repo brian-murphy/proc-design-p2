@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Project2
-Tue Nov 21 10:18:08 2017
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Nov 21 12:19:25 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -16,27 +16,71 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Physical Synthesis Netlist Optimizations
- 13. Registers Packed Into Inferred Megafunctions
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated
- 16. Parameter Settings for User Entity Instance: Top-level Entity: |Project2
- 17. Parameter Settings for User Entity Instance: PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i
- 18. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus
- 19. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus|Register:pc
- 20. Parameter Settings for User Entity Instance: InstMemory:instMem
- 21. Parameter Settings for User Entity Instance: Decoder:decoder|SignExtension:immSext
- 22. Parameter Settings for User Entity Instance: Regfile:regfile
- 23. Parameter Settings for User Entity Instance: IoController:ioController
- 24. Parameter Settings for User Entity Instance: UiController:uiController
- 25. Parameter Settings for User Entity Instance: DMemController:dMemController
- 26. Parameter Settings for Inferred Entity Instance: DMemController:dMemController|altsyncram:data_rtl_0
- 27. altsyncram Parameter Settings by Entity Instance
- 28. Port Connectivity Checks: "PcApparatus:pcApparatus|Register:pc"
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
- 31. Analysis & Synthesis Suppressed Messages
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Physical Synthesis Netlist Optimizations
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated
+ 17. Parameter Settings for User Entity Instance: Top-level Entity: |Project2
+ 18. Parameter Settings for User Entity Instance: PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i
+ 19. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus
+ 20. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus|Register:pc
+ 21. Parameter Settings for User Entity Instance: InstMemory:instMem
+ 22. Parameter Settings for User Entity Instance: Decoder:decoder|SignExtension:immSext
+ 23. Parameter Settings for User Entity Instance: Regfile:regfile
+ 24. Parameter Settings for User Entity Instance: IoController:ioController
+ 25. Parameter Settings for User Entity Instance: UiController:uiController
+ 26. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[0]
+ 27. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[0]|counter:count
+ 28. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[1]
+ 29. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[1]|counter:count
+ 30. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[2]
+ 31. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[2]|counter:count
+ 32. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[3]
+ 33. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[3]|counter:count
+ 34. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[4]
+ 35. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[4]|counter:count
+ 36. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[5]
+ 37. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[5]|counter:count
+ 38. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[6]
+ 39. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[6]|counter:count
+ 40. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[7]
+ 41. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[7]|counter:count
+ 42. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[8]
+ 43. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[8]|counter:count
+ 44. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[9]
+ 45. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[9]|counter:count
+ 46. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[0]
+ 47. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[0]|counter:count
+ 48. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[1]
+ 49. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[1]|counter:count
+ 50. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[2]
+ 51. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[2]|counter:count
+ 52. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[3]
+ 53. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[3]|counter:count
+ 54. Parameter Settings for User Entity Instance: DMemController:dMemController
+ 55. Parameter Settings for Inferred Entity Instance: DMemController:dMemController|altsyncram:data_rtl_0
+ 56. altsyncram Parameter Settings by Entity Instance
+ 57. Port Connectivity Checks: "UiController:uiController|Debouncer:keyDebouncers[3]"
+ 58. Port Connectivity Checks: "UiController:uiController|Debouncer:keyDebouncers[2]"
+ 59. Port Connectivity Checks: "UiController:uiController|Debouncer:keyDebouncers[1]"
+ 60. Port Connectivity Checks: "UiController:uiController|Debouncer:keyDebouncers[0]"
+ 61. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[9]"
+ 62. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[8]"
+ 63. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[7]"
+ 64. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[6]"
+ 65. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[5]"
+ 66. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[4]"
+ 67. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[3]"
+ 68. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[2]"
+ 69. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[1]"
+ 70. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[0]|counter:count"
+ 71. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[0]"
+ 72. Port Connectivity Checks: "PcApparatus:pcApparatus|Register:pc"
+ 73. Elapsed Time Per Partition
+ 74. Analysis & Synthesis Messages
+ 75. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -62,13 +106,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +-------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Tue Nov 21 10:18:08 2017           ;
-; Quartus II 32-bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status         ; Successful - Tue Nov 21 12:19:25 2017           ;
+; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                       ; Project2                                        ;
 ; Top-level Entity Name               ; Project2                                        ;
 ; Family                              ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)         ; N/A                                             ;
-; Total registers                     ; 342                                             ;
+; Total registers                     ; 214                                             ;
 ; Total pins                          ; 54                                              ;
 ; Total virtual pins                  ; 0                                               ;
 ; Total block memory bits             ; 65,536                                          ;
@@ -187,9 +231,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; Debouncer.v                      ; yes             ; User Verilog HDL File        ; C:/Users/Brian/dev/proc-design/project2/modelsim/Debouncer.v            ;         ;
 ; IoController.vh                  ; yes             ; User Unspecified File        ; C:/Users/Brian/dev/proc-design/project2/modelsim/IoController.vh        ;         ;
 ; IoController.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Brian/dev/proc-design/project2/modelsim/IoController.v         ;         ;
 ; DMemController.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Brian/dev/proc-design/project2/modelsim/DMemController.v       ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File        ; C:/Users/Brian/dev/proc-design/project2/modelsim/counter.v              ;         ;
 ; UiController.vh                  ; yes             ; User Unspecified File        ; C:/Users/Brian/dev/proc-design/project2/modelsim/UiController.vh        ;         ;
 ; UiController.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Brian/dev/proc-design/project2/modelsim/UiController.v         ;         ;
 ; PcApparatus.vh                   ; yes             ; User Unspecified File        ; C:/Users/Brian/dev/proc-design/project2/modelsim/PcApparatus.vh         ;         ;
@@ -225,16 +271,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 527                                                                   ;
+; Estimate of Logic utilization (ALMs needed) ; 490                                                                   ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 798                                                                   ;
-;     -- 7 input functions                    ; 35                                                                    ;
-;     -- 6 input functions                    ; 190                                                                   ;
-;     -- 5 input functions                    ; 279                                                                   ;
-;     -- 4 input functions                    ; 131                                                                   ;
-;     -- <=3 input functions                  ; 163                                                                   ;
+; Combinational ALUT usage for logic          ; 747                                                                   ;
+;     -- 7 input functions                    ; 17                                                                    ;
+;     -- 6 input functions                    ; 200                                                                   ;
+;     -- 5 input functions                    ; 270                                                                   ;
+;     -- 4 input functions                    ; 113                                                                   ;
+;     -- <=3 input functions                  ; 147                                                                   ;
 ;                                             ;                                                                       ;
-; Dedicated logic registers                   ; 342                                                                   ;
+; Dedicated logic registers                   ; 214                                                                   ;
 ;                                             ;                                                                       ;
 ; I/O pins                                    ; 54                                                                    ;
 ; Total MLAB memory bits                      ; 0                                                                     ;
@@ -244,9 +290,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1                                                                     ;
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 389                                                                   ;
-; Total fan-out                               ; 5341                                                                  ;
-; Average fan-out                             ; 4.16                                                                  ;
+; Maximum fan-out                             ; 257                                                                   ;
+; Total fan-out                               ; 4766                                                                  ;
+; Average fan-out                             ; 4.31                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
@@ -255,20 +301,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
-; |Project2                                 ; 798 (155)         ; 342 (0)      ; 65536             ; 0          ; 54   ; 0            ; |Project2                                                                                    ; work         ;
-;    |Alu:alu|                              ; 166 (166)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Alu:alu                                                                            ; work         ;
+; |Project2                                 ; 747 (189)         ; 214 (0)      ; 65536             ; 0          ; 54   ; 0            ; |Project2                                                                                    ; work         ;
+;    |Alu:alu|                              ; 164 (164)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Alu:alu                                                                            ; work         ;
 ;    |DMemController:dMemController|        ; 1 (1)             ; 0 (0)        ; 65536             ; 0          ; 0    ; 0            ; |Project2|DMemController:dMemController                                                      ; work         ;
 ;       |altsyncram:data_rtl_0|             ; 0 (0)             ; 0 (0)        ; 65536             ; 0          ; 0    ; 0            ; |Project2|DMemController:dMemController|altsyncram:data_rtl_0                                ; work         ;
 ;          |altsyncram_acn1:auto_generated| ; 0 (0)             ; 0 (0)        ; 65536             ; 0          ; 0    ; 0            ; |Project2|DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated ; work         ;
-;    |Decoder:decoder|                      ; 17 (17)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Decoder:decoder                                                                    ; work         ;
-;    |InstMemory:instMem|                   ; 44 (44)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|InstMemory:instMem                                                                 ; work         ;
-;    |IoController:ioController|            ; 15 (15)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|IoController:ioController                                                          ; work         ;
+;    |Decoder:decoder|                      ; 21 (21)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Decoder:decoder                                                                    ; work         ;
+;    |InstMemory:instMem|                   ; 30 (30)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|InstMemory:instMem                                                                 ; work         ;
+;    |IoController:ioController|            ; 12 (12)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|IoController:ioController                                                          ; work         ;
 ;    |PLL:PLL_inst|                         ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst                                                                       ; PLL          ;
 ;       |PLL_0002:pll_inst|                 ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst                                                     ; PLL          ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i                             ; work         ;
-;    |PcApparatus:pcApparatus|              ; 160 (97)          ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus                                                            ; work         ;
-;       |Register:pc|                       ; 63 (63)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus|Register:pc                                                ; work         ;
-;    |Regfile:regfile|                      ; 210 (210)         ; 256 (256)    ; 0                 ; 0          ; 0    ; 0            ; |Project2|Regfile:regfile                                                                    ; work         ;
+;    |PcApparatus:pcApparatus|              ; 162 (97)          ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus                                                            ; work         ;
+;       |Register:pc|                       ; 65 (65)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus|Register:pc                                                ; work         ;
+;    |Regfile:regfile|                      ; 138 (138)         ; 128 (128)    ; 0                 ; 0          ; 0    ; 0            ; |Project2|Regfile:regfile                                                                    ; work         ;
 ;    |UiController:uiController|            ; 30 (2)            ; 54 (26)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController                                                          ; work         ;
 ;       |SevenSeg:ss1|                      ; 7 (7)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|SevenSeg:ss1                                             ; work         ;
 ;       |SevenSeg:ss2|                      ; 7 (7)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|SevenSeg:ss2                                             ; work         ;
@@ -302,6 +348,262 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------------------------------------------+
 ; Register name                           ; Reason for Removal                          ;
 +-----------------------------------------+---------------------------------------------+
+; Regfile:regfile|data[4][30]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[10][31]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][1]              ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][3]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][18]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[4][25]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][6]              ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][5]              ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][5]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][4]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][11]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][10]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][14]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[4][1]              ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][21]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][8]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][9]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][19]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][10]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][27]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][31]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][18]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][12]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][3]              ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][7]              ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[11][1]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][11]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][10]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][14]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[3][17]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][16]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][19]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][23]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[11][2]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][27]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][26]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][30]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[2][17]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][21]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][20]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][24]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[13][3]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][27]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[10][9]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[11][4]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[13][9]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[13][27]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][7]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][15]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][19]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[12][26]            ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[11][3]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[13][4]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[5][4]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][4]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][31]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][20]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][15]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][4]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][4]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][26]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][4]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][13]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][12]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][15]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][28]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][20]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][20]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][20]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][20]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][25]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][20]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][23]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][20]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][9]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[12][11]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][13]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][8]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][31]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][5]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][16]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][1]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][24]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][3]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][0]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][3]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][12]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][12]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][28]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][28]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][12]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][28]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][28]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][13]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][12]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][30]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][28]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][0]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][12]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][2]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][28]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][3]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][25]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][30]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[12][13]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][9]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[12][17]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][29]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][6]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[12][25]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][7]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][10]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][8]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][14]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][16]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][18]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][17]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][22]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][11]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][26]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][2]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[11][30]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][11]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][0]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][15]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][8]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][8]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][16]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][19]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][24]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][16]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][0]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[13][24]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][8]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][24]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][16]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[12][0]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][24]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][27]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][0]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[5][15]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][8]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][7]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][16]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][9]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[3][24]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][27]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][0]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[10][25]            ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][8]              ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][29]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][16]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[4][31]             ; Merged with Regfile:regfile|data[13][1]     ;
+; Regfile:regfile|data[2][24]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[3][7]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][6]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][1]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[3][22]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[3][23]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[3][29]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[3][26]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[2][5]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[2][6]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][14]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[2][1]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[2][21]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[2][22]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][18]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[2][25]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][22]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][23]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][5]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][28]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][7]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][7]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][6]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][9]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][11]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][11]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][10]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][13]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][30]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][15]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][12]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][17]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][14]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][19]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][13]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][21]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][7]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][23]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][5]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][25]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][29]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][27]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][18]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][29]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][21]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[11][31]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][9]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][1]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][19]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][2]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][13]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][6]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][6]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][10]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][22]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][14]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][10]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][18]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][17]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][22]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][14]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][26]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][21]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][30]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][18]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][2]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][23]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][6]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][22]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][10]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][25]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][14]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][26]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][18]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][23]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][22]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][30]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][26]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][15]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][17]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[5][29]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[3][2]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][21]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][5]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][29]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][31]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][11]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][23]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][13]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][3]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][17]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][31]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][19]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][15]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][29]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][21]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[2][2]              ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[10][19]            ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[12][2]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[4][27]             ; Merged with Regfile:regfile|data[13][5]     ;
+; Regfile:regfile|data[13][1]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[13][5]             ; Merged with Regfile:regfile|data[13][0]     ;
+; Regfile:regfile|data[13][0]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[15][31]            ; Stuck at GND due to stuck port clock_enable ;
 ; Regfile:regfile|data[15][30]            ; Stuck at GND due to stuck port clock_enable ;
 ; Regfile:regfile|data[15][29]            ; Stuck at GND due to stuck port clock_enable ;
@@ -334,232 +636,120 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Regfile:regfile|data[15][2]             ; Stuck at GND due to stuck port clock_enable ;
 ; Regfile:regfile|data[15][1]             ; Stuck at GND due to stuck port clock_enable ;
 ; Regfile:regfile|data[15][0]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[4][31]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][31]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][31]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][31]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][31]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][31]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][31]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][30]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][30]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][30]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][30]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][30]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][30]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][30]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][29]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][29]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][29]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][29]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][29]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][29]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][29]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][28]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][28]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][28]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][28]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][28]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][28]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][28]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][27]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][27]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][27]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][27]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][27]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][27]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][27]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][26]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][26]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][26]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][26]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][26]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][26]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][26]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][25]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][25]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][25]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][25]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][25]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][25]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][25]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][24]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][24]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][24]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][24]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][24]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][24]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][24]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][23]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][23]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][23]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][23]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][23]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][23]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][23]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][22]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][22]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][22]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][22]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][22]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][22]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][22]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][21]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][21]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][21]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][21]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][21]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][21]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][21]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][20]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][20]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][20]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][20]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][20]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][20]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][20]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][19]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][19]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][19]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][19]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][19]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][19]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][19]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][18]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][18]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][18]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][18]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][18]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][18]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][18]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][17]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][17]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][17]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][17]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][17]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][17]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][17]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][16]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][16]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][16]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][16]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][16]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][16]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][16]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][15]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][15]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][15]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][15]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][15]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][15]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][15]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][14]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][14]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][14]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][14]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][14]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][14]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][14]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][13]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][13]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][13]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][13]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][13]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][13]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][13]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][12]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][12]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][12]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][12]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][12]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][12]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][12]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][11]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][11]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][11]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][11]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][11]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][11]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][11]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][10]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][10]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][10]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][10]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][10]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][10]            ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][10]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][9]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][9]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][9]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][9]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][9]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][9]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][9]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][8]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][8]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][8]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][8]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][8]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][8]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][8]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][7]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][7]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][7]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][7]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][7]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][7]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][7]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][6]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][6]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][6]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][6]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][6]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][6]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][6]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][5]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][5]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][5]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][5]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][5]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][5]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][5]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][4]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][4]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][4]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][4]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][4]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][4]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][4]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][3]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][3]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][3]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][3]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][3]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][3]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][3]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][2]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][2]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][2]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][2]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][2]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][2]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][2]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][1]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][1]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][1]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][1]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][1]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][1]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][1]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][0]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][0]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[6][0]              ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[7][0]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][0]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][0]             ; Stuck at GND due to stuck port data_in      ;
 ; Regfile:regfile|data[14][0]             ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 256 ;                                             ;
+; Total Number of Removed Registers = 384 ;                                             ;
 +-----------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                           ;
++-----------------------------+---------------------------+-------------------------------------------------------------+
+; Register name               ; Reason for Removal        ; Registers Removed due to This Register                      ;
++-----------------------------+---------------------------+-------------------------------------------------------------+
+; Regfile:regfile|data[13][0] ; Stuck at GND              ; Regfile:regfile|data[15][15], Regfile:regfile|data[15][14], ;
+;                             ; due to stuck port data_in ; Regfile:regfile|data[15][13], Regfile:regfile|data[15][12], ;
+;                             ;                           ; Regfile:regfile|data[15][11], Regfile:regfile|data[15][10], ;
+;                             ;                           ; Regfile:regfile|data[15][9], Regfile:regfile|data[15][8],   ;
+;                             ;                           ; Regfile:regfile|data[15][7], Regfile:regfile|data[15][6],   ;
+;                             ;                           ; Regfile:regfile|data[15][5], Regfile:regfile|data[15][4],   ;
+;                             ;                           ; Regfile:regfile|data[15][3], Regfile:regfile|data[15][2],   ;
+;                             ;                           ; Regfile:regfile|data[15][1], Regfile:regfile|data[15][0]    ;
++-----------------------------+---------------------------+-------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -567,12 +757,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 342   ;
-; Number of registers using Synchronous Clear  ; 339   ;
+; Total registers                              ; 214   ;
+; Number of registers using Synchronous Clear  ; 211   ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 312   ;
+; Number of registers using Clock Enable       ; 184   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -582,10 +772,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+------------------+---------------------+
 ; Node                                                              ; Action           ; Reason              ;
 +-------------------------------------------------------------------+------------------+---------------------+
-; PcApparatus:pcApparatus|Add3~9                                    ; Modified         ; Timing optimization ;
-; PcApparatus:pcApparatus|Add3~10                                   ; Modified         ; Timing optimization ;
-; PcApparatus:pcApparatus|Register:pc|dataOut~3                     ; Modified         ; Timing optimization ;
-; PcApparatus:pcApparatus|Register:pc|dataOut~35                    ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Add3~17                                   ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Add3~18                                   ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~5                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~39                    ; Modified         ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss1|dOut[0]~0                  ; Modified         ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss1|dOut[0]~0_OTERM49          ; Retimed Register ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss1|dOut[1]~1                  ; Modified         ; Timing optimization ;
@@ -662,7 +852,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UiController:uiController|SevenSeg:ss4|dOut[5]~5_OTERM13          ; Retimed Register ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss4|dOut[6]~6                  ; Modified         ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss4|dOut[6]~6_OTERM15          ; Retimed Register ; Timing optimization ;
-; regfile_dataIn[2]~13                                              ; Modified         ; Timing optimization ;
+; regfile_dataIn[2]~15                                              ; Modified         ; Timing optimization ;
 +-------------------------------------------------------------------+------------------+---------------------+
 
 
@@ -675,31 +865,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+------------------------------------------+------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Project2|UiController:uiController|ledValue[2]          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[0] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[0][7]                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[1][5]                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[2][18]                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[3][7]                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[8][22]                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[9][10]                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[10][10]                   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[11][10]                   ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |Project2|UiController:uiController|hexValue[2]          ;
-; 5:1                ; 29 bits   ; 87 LEs        ; 58 LEs               ; 29 LEs                 ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[9] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project2|Decoder:decoder|regno2[0]                      ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 192 LEs              ; 128 LEs                ; No         ; |Project2|Regfile:regfile|Mux19                          ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 192 LEs              ; 128 LEs                ; No         ; |Project2|Regfile:regfile|Mux46                          ;
-; 13:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[16]                             ;
-; 15:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[10]                             ;
-; 15:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[5]                              ;
-; 15:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[2]                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Project2|UiController:uiController|ledValue[9]           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[0]  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[0][4]                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[1][17]                     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[8][4]                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[9][19]                     ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |Project2|UiController:uiController|hexValue[12]          ;
+; 5:1                ; 29 bits   ; 87 LEs        ; 58 LEs               ; 29 LEs                 ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[30] ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |Project2|Regfile:regfile|Mux20                           ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 128 LEs              ; 192 LEs                ; No         ; |Project2|Regfile:regfile|Mux47                           ;
+; 13:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[23]                              ;
+; 15:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[15]                              ;
+; 15:1               ; 9 bits    ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[1]                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -726,7 +910,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ADDR_HEX            ; 11110000000000000000000000000000 ; Unsigned Binary ;
 ; ADDR_LEDR           ; 11110000000000000000000000000100 ; Unsigned Binary ;
 ; ADDR_LEDG           ; 11110000000000000000000000001000 ; Unsigned Binary ;
-; IMEM_INIT_FILE      ; io.mif                           ; String          ;
+; IMEM_INIT_FILE      ; integratedUi.mif                 ; String          ;
 ; IMEM_ADDR_BIT_WIDTH ; 11                               ; Signed Integer  ;
 ; IMEM_DATA_BIT_WIDTH ; 32                               ; Signed Integer  ;
 ; IMEM_PC_BITS_HI     ; 13                               ; Signed Integer  ;
@@ -986,14 +1170,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: InstMemory:instMem ;
-+----------------+--------+---------------------------------------+
-; Parameter Name ; Value  ; Type                                  ;
-+----------------+--------+---------------------------------------+
-; MEM_INIT_FILE  ; io.mif ; String                                ;
-; ADDR_BIT_WIDTH ; 11     ; Signed Integer                        ;
-; DATA_BIT_WIDTH ; 32     ; Signed Integer                        ;
-; N_WORDS        ; 2048   ; Signed Integer                        ;
-+----------------+--------+---------------------------------------+
++----------------+------------------+-----------------------------+
+; Parameter Name ; Value            ; Type                        ;
++----------------+------------------+-----------------------------+
+; MEM_INIT_FILE  ; integratedUi.mif ; String                      ;
+; ADDR_BIT_WIDTH ; 11               ; Signed Integer              ;
+; DATA_BIT_WIDTH ; 32               ; Signed Integer              ;
+; N_WORDS        ; 2048             ; Signed Integer              ;
++----------------+------------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1043,6 +1227,300 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------+
 ; DBITS          ; 32    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[0] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[0]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[1] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[1]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[2] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[2]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[3] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[3]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[4] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[4]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[5] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[5]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[6] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[6]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[7] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[7]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[8] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[8]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[9] ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[9]|counter:count ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[0] ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[0]|counter:count ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                         ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[1] ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[1]|counter:count ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                         ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[2] ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[2]|counter:count ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                         ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[3] ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; COUNTER_BITS   ; 15    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[3]|counter:count ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; SIZE           ; 15    ; Signed Integer                                                                         ;
+; MAX_VALUE      ; 32767 ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1140,6 +1618,169 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:keyDebouncers[3]"                                                                                             ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:keyDebouncers[2]"                                                                                             ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:keyDebouncers[1]"                                                                                             ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:keyDebouncers[0]"                                                                                             ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[9]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[8]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[7]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[6]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[5]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[4]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[3]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[2]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[1]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[0]|counter:count" ;
++--------+-------+----------+-----------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                               ;
++--------+-------+----------+-----------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                          ;
++--------+-------+----------+-----------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[0]"                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; debounced ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------+
 ; Port Connectivity Checks: "PcApparatus:pcApparatus|Register:pc" ;
 +-------+-------+----------+--------------------------------------+
@@ -1154,7 +1795,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -1162,9 +1803,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 21 10:17:56 2017
+    Info: Processing started: Tue Nov 21 12:19:15 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project2 -c Project2
 Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
     Info (12023): Found entity 1: Debouncer
@@ -1273,9 +1914,13 @@ Info (12128): Elaborating entity "Regfile" for hierarchy "Regfile:regfile"
 Info (12128): Elaborating entity "Alu" for hierarchy "Alu:alu"
 Info (12128): Elaborating entity "IoController" for hierarchy "IoController:ioController"
 Info (12128): Elaborating entity "UiController" for hierarchy "UiController:uiController"
+Warning (10030): Net "switchValue" at UiController.v(30) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "keyValue" at UiController.v(33) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "SevenSeg" for hierarchy "UiController:uiController|SevenSeg:ss1"
+Info (12128): Elaborating entity "Debouncer" for hierarchy "UiController:uiController|Debouncer:switchDebouncers[0]"
+Info (12128): Elaborating entity "counter" for hierarchy "UiController:uiController|Debouncer:switchDebouncers[0]|counter:count"
 Info (12128): Elaborating entity "DMemController" for hierarchy "DMemController:dMemController"
-Warning (113028): 30 out of 2048 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 10 warnings found, and 10 warnings are reported.
+Warning (113028): 21 out of 2048 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 7 warnings found, and 7 warnings are reported.
     Warning (113027): Addresses ranging from 65 to 67 are not initialized
     Warning (113027): Addresses ranging from 69 to 71 are not initialized
     Warning (113027): Addresses ranging from 73 to 75 are not initialized
@@ -1283,9 +1928,6 @@ Warning (113028): 30 out of 2048 addresses are uninitialized. The Quartus II sof
     Warning (113027): Addresses ranging from 81 to 83 are not initialized
     Warning (113027): Addresses ranging from 85 to 87 are not initialized
     Warning (113027): Addresses ranging from 89 to 91 are not initialized
-    Warning (113027): Addresses ranging from 93 to 95 are not initialized
-    Warning (113027): Addresses ranging from 97 to 99 are not initialized
-    Warning (113027): Addresses ranging from 101 to 103 are not initialized
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "aluIn1[0]" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "aluIn1[1]" feeding internal logic into a wire
@@ -1564,6 +2206,7 @@ Info (12133): Instantiated megafunction "DMemController:dMemController|altsyncra
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_acn1.tdf
     Info (12023): Found entity 1: altsyncram_acn1
+Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (128000): Starting physical synthesis optimizations for speed
 Info (332104): Reading SDC File: 'Timing.sdc'
@@ -1587,7 +2230,7 @@ Info (128002): Starting physical synthesis algorithm combinational resynthesis u
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
-Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:05
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:04
 Warning (20013): Ignored assignments for entity "DE0_CV" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV -section_id Top was ignored
@@ -1615,17 +2258,32 @@ Warning (20013): Ignored assignments for entity "DE0_CV" -- entity does not exis
 Info (144001): Generated suppressed messages file C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1171 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info (21057): Implemented 992 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 1084 logic cells
+    Info (21061): Implemented 905 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 279 warnings
-    Info: Peak virtual memory: 797 megabytes
-    Info: Processing ended: Tue Nov 21 10:18:08 2017
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:11
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 294 warnings
+    Info: Peak virtual memory: 1032 megabytes
+    Info: Processing ended: Tue Nov 21 12:19:25 2017
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +------------------------------------------+
