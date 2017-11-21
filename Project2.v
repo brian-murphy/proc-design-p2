@@ -24,11 +24,15 @@ module Project2(
   parameter ADDR_LEDR 					 = 32'hF0000004;
   parameter ADDR_LEDG 					 = 32'hF0000008;
 
+<<<<<<< daff1c5e05e86fa300badd798ef41c89b7e4e534
 <<<<<<< 113651e01c0d2b896f1f32c08b04a0dd64525b37
   parameter IMEM_INIT_FILE				 = "io.mif";
 =======
   parameter IMEM_INIT_FILE				 = "countTo7.mif";
 >>>>>>> making small fixes
+=======
+  parameter IMEM_INIT_FILE				 = "io.mif";
+>>>>>>> Made the processor load io demo into IMem
   parameter IMEM_ADDR_BIT_WIDTH 		 = 11;
   parameter IMEM_DATA_BIT_WIDTH 		 = INST_BIT_WIDTH;
   parameter IMEM_PC_BITS_HI     		 = IMEM_ADDR_BIT_WIDTH + 2;
@@ -62,11 +66,14 @@ module Project2(
   assign cmp = aluOut[0];
 
   PcApparatus #(DBITS, START_PC) pcApparatus(clk, reset, cmp, imm, pcSel, regfileOut1, pcOut);
+<<<<<<< daff1c5e05e86fa300badd798ef41c89b7e4e534
 <<<<<<< 113651e01c0d2b896f1f32c08b04a0dd64525b37
 =======
 
   wire[31 : 0] pcOut;
 >>>>>>> making small fixes
+=======
+>>>>>>> Made the processor load io demo into IMem
 	
   // Creat instruction memeory
   wire[IMEM_DATA_BIT_WIDTH - 1: 0] instWord;
