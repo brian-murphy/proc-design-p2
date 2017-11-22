@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Project2
-Tue Nov 21 13:58:06 2017
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Nov 21 19:09:58 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -92,14 +92,14 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +-------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Tue Nov 21 13:58:06 2017           ;
-; Quartus II 32-bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status         ; Successful - Tue Nov 21 19:09:58 2017           ;
+; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                       ; Project2                                        ;
 ; Top-level Entity Name               ; Project2                                        ;
 ; Family                              ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)         ; N/A                                             ;
-; Total registers                     ; 501                                             ;
-; Total pins                          ; 54                                              ;
+; Total registers                     ; 409                                             ;
+; Total pins                          ; 61                                              ;
 ; Total virtual pins                  ; 0                                               ;
 ; Total block memory bits             ; 65,536                                          ;
 ; Total DSP Blocks                    ; 0                                               ;
@@ -257,18 +257,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 622                                                                   ;
+; Estimate of Logic utilization (ALMs needed) ; 570                                                                   ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 1081                                                                  ;
-;     -- 7 input functions                    ; 0                                                                     ;
-;     -- 6 input functions                    ; 139                                                                   ;
-;     -- 5 input functions                    ; 390                                                                   ;
+; Combinational ALUT usage for logic          ; 960                                                                   ;
+;     -- 7 input functions                    ; 1                                                                     ;
+;     -- 6 input functions                    ; 155                                                                   ;
+;     -- 5 input functions                    ; 378                                                                   ;
 ;     -- 4 input functions                    ; 140                                                                   ;
-;     -- <=3 input functions                  ; 412                                                                   ;
+;     -- <=3 input functions                  ; 286                                                                   ;
 ;                                             ;                                                                       ;
-; Dedicated logic registers                   ; 501                                                                   ;
+; Dedicated logic registers                   ; 409                                                                   ;
 ;                                             ;                                                                       ;
-; I/O pins                                    ; 54                                                                    ;
+; I/O pins                                    ; 61                                                                    ;
 ; Total MLAB memory bits                      ; 0                                                                     ;
 ; Total block memory bits                     ; 65536                                                                 ;
 ; Total DSP Blocks                            ; 0                                                                     ;
@@ -276,9 +276,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1                                                                     ;
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 559                                                                   ;
-; Total fan-out                               ; 6412                                                                  ;
-; Average fan-out                             ; 3.71                                                                  ;
+; Maximum fan-out                             ; 476                                                                   ;
+; Total fan-out                               ; 5922                                                                  ;
+; Average fan-out                             ; 3.88                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
@@ -287,49 +287,49 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
-; |Project2                                 ; 1081 (181)        ; 501 (0)      ; 65536             ; 0          ; 54   ; 0            ; |Project2                                                                                    ; work         ;
-;    |Alu:alu|                              ; 163 (163)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Alu:alu                                                                            ; work         ;
+; |Project2                                 ; 960 (190)         ; 409 (4)      ; 65536             ; 0          ; 61   ; 0            ; |Project2                                                                                    ; work         ;
+;    |Alu:alu|                              ; 168 (168)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Alu:alu                                                                            ; work         ;
 ;    |DMemController:dMemController|        ; 1 (1)             ; 0 (0)        ; 65536             ; 0          ; 0    ; 0            ; |Project2|DMemController:dMemController                                                      ; work         ;
 ;       |altsyncram:data_rtl_0|             ; 0 (0)             ; 0 (0)        ; 65536             ; 0          ; 0    ; 0            ; |Project2|DMemController:dMemController|altsyncram:data_rtl_0                                ; work         ;
 ;          |altsyncram_acn1:auto_generated| ; 0 (0)             ; 0 (0)        ; 65536             ; 0          ; 0    ; 0            ; |Project2|DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated ; work         ;
-;    |Decoder:decoder|                      ; 20 (20)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Decoder:decoder                                                                    ; work         ;
-;    |InstMemory:instMem|                   ; 27 (27)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|InstMemory:instMem                                                                 ; work         ;
-;    |IoController:ioController|            ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|IoController:ioController                                                          ; work         ;
+;    |Decoder:decoder|                      ; 19 (19)           ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Decoder:decoder                                                                    ; work         ;
+;    |InstMemory:instMem|                   ; 28 (28)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|InstMemory:instMem                                                                 ; work         ;
+;    |IoController:ioController|            ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|IoController:ioController                                                          ; work         ;
 ;    |PLL:PLL_inst|                         ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst                                                                       ; PLL          ;
 ;       |PLL_0002:pll_inst|                 ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst                                                     ; PLL          ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i                             ; work         ;
-;    |PcApparatus:pcApparatus|              ; 132 (95)          ; 31 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus                                                            ; work         ;
-;       |Register:pc|                       ; 37 (37)           ; 31 (31)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus|Register:pc                                                ; work         ;
+;    |PcApparatus:pcApparatus|              ; 129 (95)          ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus                                                            ; work         ;
+;       |Register:pc|                       ; 34 (34)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus|Register:pc                                                ; work         ;
 ;    |Regfile:regfile|                      ; 211 (211)         ; 192 (192)    ; 0                 ; 0          ; 0    ; 0            ; |Project2|Regfile:regfile                                                                    ; work         ;
-;    |UiController:uiController|            ; 338 (2)           ; 278 (26)     ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController                                                          ; work         ;
-;       |Debouncer:keyDebouncers[0]|        ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]                               ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]|counter:count                 ; work         ;
-;       |Debouncer:keyDebouncers[1]|        ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[1]                               ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[1]|counter:count                 ; work         ;
-;       |Debouncer:keyDebouncers[2]|        ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[2]                               ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[2]|counter:count                 ; work         ;
-;       |Debouncer:keyDebouncers[3]|        ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[3]                               ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[3]|counter:count                 ; work         ;
-;       |Debouncer:switchDebouncers[0]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[0]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[0]|counter:count              ; work         ;
-;       |Debouncer:switchDebouncers[1]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[1]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[1]|counter:count              ; work         ;
-;       |Debouncer:switchDebouncers[2]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[2]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[2]|counter:count              ; work         ;
-;       |Debouncer:switchDebouncers[3]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[3]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[3]|counter:count              ; work         ;
-;       |Debouncer:switchDebouncers[4]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[4]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[4]|counter:count              ; work         ;
-;       |Debouncer:switchDebouncers[5]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[5]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[5]|counter:count              ; work         ;
-;       |Debouncer:switchDebouncers[6]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[6]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[6]|counter:count              ; work         ;
-;       |Debouncer:switchDebouncers[7]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[7]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[7]|counter:count              ; work         ;
-;       |Debouncer:switchDebouncers[8]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[8]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[8]|counter:count              ; work         ;
-;       |Debouncer:switchDebouncers[9]|     ; 22 (5)            ; 16 (1)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[9]                            ; work         ;
-;          |counter:count|                  ; 17 (17)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[9]|counter:count              ; work         ;
+;    |UiController:uiController|            ; 198 (2)           ; 180 (26)     ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController                                                          ; work         ;
+;       |Debouncer:keyDebouncers[0]|        ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]                               ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]|counter:count                 ; work         ;
+;       |Debouncer:keyDebouncers[1]|        ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[1]                               ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[1]|counter:count                 ; work         ;
+;       |Debouncer:keyDebouncers[2]|        ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[2]                               ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[2]|counter:count                 ; work         ;
+;       |Debouncer:keyDebouncers[3]|        ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[3]                               ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[3]|counter:count                 ; work         ;
+;       |Debouncer:switchDebouncers[0]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[0]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[0]|counter:count              ; work         ;
+;       |Debouncer:switchDebouncers[1]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[1]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[1]|counter:count              ; work         ;
+;       |Debouncer:switchDebouncers[2]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[2]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[2]|counter:count              ; work         ;
+;       |Debouncer:switchDebouncers[3]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[3]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[3]|counter:count              ; work         ;
+;       |Debouncer:switchDebouncers[4]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[4]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[4]|counter:count              ; work         ;
+;       |Debouncer:switchDebouncers[5]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[5]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[5]|counter:count              ; work         ;
+;       |Debouncer:switchDebouncers[6]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[6]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[6]|counter:count              ; work         ;
+;       |Debouncer:switchDebouncers[7]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[7]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[7]|counter:count              ; work         ;
+;       |Debouncer:switchDebouncers[8]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[8]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[8]|counter:count              ; work         ;
+;       |Debouncer:switchDebouncers[9]|     ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[9]                            ; work         ;
+;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:switchDebouncers[9]|counter:count              ; work         ;
 ;       |SevenSeg:ss1|                      ; 7 (7)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|SevenSeg:ss1                                             ; work         ;
 ;       |SevenSeg:ss2|                      ; 7 (7)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|SevenSeg:ss2                                             ; work         ;
 ;       |SevenSeg:ss3|                      ; 7 (7)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|SevenSeg:ss3                                             ; work         ;
@@ -357,346 +357,343 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------------+-----------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                           ;
-+------------------------------------------------+---------------------------------------------+
-; Register name                                  ; Reason for Removal                          ;
-+------------------------------------------------+---------------------------------------------+
-; Regfile:regfile|data[15][31]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][30]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][29]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][28]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][27]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][26]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][25]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][24]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][23]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][22]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][21]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][20]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][19]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][18]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][17]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][16]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][15]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][14]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][13]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][12]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][11]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][10]                   ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][9]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][8]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][7]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][6]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][5]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][4]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][3]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][2]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][1]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][0]                    ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[4][31]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][31]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][31]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][31]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][31]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][31]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][31]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][30]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][30]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][30]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][30]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][30]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][30]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][30]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][29]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][29]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][29]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][29]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][29]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][29]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][29]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][28]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][28]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][28]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][28]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][28]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][28]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][28]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][27]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][27]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][27]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][27]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][27]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][27]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][27]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][26]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][26]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][26]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][26]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][26]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][26]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][26]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][25]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][25]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][25]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][25]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][25]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][25]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][25]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][24]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][24]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][24]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][24]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][24]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][24]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][24]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][23]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][23]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][23]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][23]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][23]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][23]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][23]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][22]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][22]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][22]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][22]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][22]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][22]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][22]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][21]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][21]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][21]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][21]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][21]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][21]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][21]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][20]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][20]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][20]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][20]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][20]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][20]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][20]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][19]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][19]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][19]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][19]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][19]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][19]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][19]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][18]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][18]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][18]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][18]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][18]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][18]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][18]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][17]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][17]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][17]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][17]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][17]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][17]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][17]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][16]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][16]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][16]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][16]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][16]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][16]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][16]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][15]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][15]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][15]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][15]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][15]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][15]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][15]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][14]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][14]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][14]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][14]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][14]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][14]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][14]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][13]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][13]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][13]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][13]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][13]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][13]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][13]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][12]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][12]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][12]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][12]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][12]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][12]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][12]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][11]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][11]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][11]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][11]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][11]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][11]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][11]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][10]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][10]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][10]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][10]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][10]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][10]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][10]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][9]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][9]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][9]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][9]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][9]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][9]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][9]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][8]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][8]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][8]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][8]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][8]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][8]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][8]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][7]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][7]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][7]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][7]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][7]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][7]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][7]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][6]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][6]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][6]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][6]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][6]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][6]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][6]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][5]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][5]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][5]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][5]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][5]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][5]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][5]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][4]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][4]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][4]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][4]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][4]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][4]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][4]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][3]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][3]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][3]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][3]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][3]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][3]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][3]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][2]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][2]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][2]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][2]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][2]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][2]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][2]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][1]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][1]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][1]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][1]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][1]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][1]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][1]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][0]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][0]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][0]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][0]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][0]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][0]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][0]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][0]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][0]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][1]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][1]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][2]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][2]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][3]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][3]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][4]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][4]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][5]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][5]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][6]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][6]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][7]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][7]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][8]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][8]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][9]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][9]                     ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][10]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][10]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][11]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][11]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][13]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][13]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][12]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][12]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][14]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][14]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][15]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][15]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][29]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][29]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][30]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][30]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][31]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][31]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][22]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][22]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][23]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][23]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][24]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][24]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][25]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][25]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][26]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][26]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][27]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][27]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][28]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][28]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][20]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][20]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][21]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][21]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][18]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][18]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][19]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][19]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][16]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][16]                    ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[11][17]                   ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[3][17]                    ; Stuck at GND due to stuck port data_in      ;
-; PcApparatus:pcApparatus|Register:pc|dataOut[0] ; Lost fanout                                 ;
-; Total Number of Removed Registers = 321        ;                                             ;
-+------------------------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; Regfile:regfile|data[15][31]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][30]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][29]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][28]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][27]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][26]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][25]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][24]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][23]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][22]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][21]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][20]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][19]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][18]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][17]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][16]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][15]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][14]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][13]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][12]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][11]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][10]            ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][9]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][8]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][7]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][6]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][5]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][4]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][3]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][2]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][1]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[15][0]             ; Stuck at GND due to stuck port clock_enable ;
+; Regfile:regfile|data[4][31]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][31]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][31]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][31]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][31]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][31]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][31]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][30]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][30]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][30]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][30]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][30]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][30]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][30]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][29]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][29]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][29]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][29]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][29]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][29]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][29]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][28]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][28]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][28]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][28]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][28]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][28]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][28]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][27]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][27]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][27]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][27]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][27]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][27]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][27]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][26]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][26]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][26]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][26]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][26]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][26]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][26]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][25]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][25]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][25]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][25]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][25]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][25]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][25]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][24]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][24]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][24]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][24]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][24]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][24]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][24]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][23]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][23]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][23]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][23]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][23]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][23]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][23]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][22]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][22]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][22]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][22]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][22]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][22]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][22]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][21]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][21]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][21]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][21]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][21]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][21]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][21]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][20]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][20]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][20]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][20]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][20]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][20]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][20]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][19]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][19]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][19]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][19]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][19]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][19]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][19]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][18]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][18]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][18]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][18]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][18]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][18]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][18]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][17]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][17]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][17]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][17]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][17]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][17]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][17]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][16]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][16]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][16]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][16]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][16]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][16]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][16]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][15]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][15]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][15]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][15]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][15]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][15]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][15]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][14]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][14]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][14]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][14]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][14]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][14]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][14]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][13]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][13]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][13]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][13]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][13]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][13]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][13]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][12]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][12]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][12]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][12]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][12]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][12]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][12]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][11]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][11]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][11]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][11]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][11]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][11]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][11]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][10]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][10]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][10]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][10]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][10]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][10]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][10]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][9]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][9]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][9]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][9]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][9]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][9]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][9]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][8]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][8]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][8]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][8]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][8]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][8]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][8]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][7]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][7]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][7]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][7]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][7]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][7]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][7]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][6]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][6]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][6]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][6]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][6]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][6]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][6]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][5]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][5]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][5]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][5]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][5]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][5]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][5]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][4]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][4]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][4]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][4]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][4]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][4]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][4]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][3]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][3]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][3]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][3]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][3]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][3]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][3]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][2]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][2]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][2]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][2]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][2]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][2]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][2]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][1]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][1]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][1]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][1]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][1]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][1]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][1]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[4][0]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[5][0]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[6][0]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[7][0]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[12][0]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[13][0]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[14][0]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][0]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][0]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][1]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][1]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][2]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][2]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][3]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][3]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][4]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][4]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][5]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][5]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][6]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][6]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][7]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][7]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][8]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][8]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][9]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][9]              ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][10]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][10]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][11]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][11]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][12]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][12]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][13]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][13]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][14]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][14]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][15]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][15]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][29]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][29]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][30]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][30]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][31]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][31]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][22]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][22]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][23]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][23]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][24]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][24]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][25]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][25]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][26]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][26]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][27]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][27]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][28]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][28]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][20]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][20]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][21]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][21]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][18]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][18]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][19]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][19]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][16]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][16]             ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[11][17]            ; Stuck at GND due to stuck port data_in      ;
+; Regfile:regfile|data[3][17]             ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 320 ;                                             ;
++-----------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                          ;
-+-----------------------------+--------------------------------+---------------------------------------------------------------------------------------+
-; Register name               ; Reason for Removal             ; Registers Removed due to This Register                                                ;
-+-----------------------------+--------------------------------+---------------------------------------------------------------------------------------+
-; Regfile:regfile|data[4][31] ; Stuck at GND                   ; Regfile:regfile|data[11][0], Regfile:regfile|data[3][0], Regfile:regfile|data[11][1], ;
-;                             ; due to stuck port data_in      ; Regfile:regfile|data[3][1]                                                            ;
-; Regfile:regfile|data[15][0] ; Stuck at GND                   ; PcApparatus:pcApparatus|Register:pc|dataOut[0]                                        ;
-;                             ; due to stuck port clock_enable ;                                                                                       ;
-+-----------------------------+--------------------------------+---------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                     ;
++-----------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; Register name               ; Reason for Removal        ; Registers Removed due to This Register                                                ;
++-----------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; Regfile:regfile|data[4][31] ; Stuck at GND              ; Regfile:regfile|data[11][0], Regfile:regfile|data[3][0], Regfile:regfile|data[11][1], ;
+;                             ; due to stuck port data_in ; Regfile:regfile|data[3][1]                                                            ;
++-----------------------------+---------------------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -704,102 +701,174 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 501   ;
-; Number of registers using Synchronous Clear  ; 499   ;
-; Number of registers using Synchronous Load   ; 1     ;
+; Total registers                              ; 409   ;
+; Number of registers using Synchronous Clear  ; 398   ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 247   ;
+; Number of registers using Clock Enable       ; 246   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Physical Synthesis Netlist Optimizations                                                                   ;
-+-------------------------------------------------------------------+------------------+---------------------+
-; Node                                                              ; Action           ; Reason              ;
-+-------------------------------------------------------------------+------------------+---------------------+
-; PcApparatus:pcApparatus|Add3~13                                   ; Modified         ; Timing optimization ;
-; PcApparatus:pcApparatus|Add3~14                                   ; Modified         ; Timing optimization ;
-; PcApparatus:pcApparatus|Register:pc|dataOut~6                     ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[0]~0                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[0]~0_OTERM49          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[1]~1                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[1]~1_OTERM51          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[2]~2                  ; Deleted          ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[2]~2_OTERM53          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[2]~2_RTM055           ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[2]~2_RTM055           ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[2]~2_wirecell         ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[2]~2_wirecell_OTERM65 ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[2]~2_wirecell_RTM054  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[3]~3                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[3]~3_OTERM57          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[4]~4                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[4]~4_OTERM59          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[5]~5                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[5]~5_OTERM61          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[6]~6                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss1|dOut[6]~6_OTERM63          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[0]~0                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[0]~0_OTERM33          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[1]~1                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[1]~1_OTERM35          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[2]~2                  ; Deleted          ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[2]~2_OTERM37          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[2]~2_RTM039           ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[2]~2_RTM039           ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[2]~2_wirecell         ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[2]~2_wirecell_OTERM67 ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[2]~2_wirecell_RTM038  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[3]~3                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[3]~3_OTERM41          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[4]~4                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[4]~4_OTERM43          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[5]~5                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[5]~5_OTERM45          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[6]~6                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss2|dOut[6]~6_OTERM47          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[0]~0                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[0]~0_OTERM17          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[1]~1                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[1]~1_OTERM19          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[2]~2                  ; Deleted          ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[2]~2_OTERM21          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[2]~2_RTM023           ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[2]~2_RTM023           ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[2]~2_wirecell         ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[2]~2_wirecell_OTERM69 ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[2]~2_wirecell_RTM022  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[3]~3                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[3]~3_OTERM25          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[4]~4                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[4]~4_OTERM27          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[5]~5                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[5]~5_OTERM29          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[6]~6                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss3|dOut[6]~6_OTERM31          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[0]~0                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[0]~0_OTERM1           ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[1]~1                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[1]~1_OTERM3           ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[2]~2                  ; Deleted          ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[2]~2_OTERM5           ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[2]~2_RTM07            ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[2]~2_RTM07            ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[2]~2_wirecell         ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[2]~2_wirecell_OTERM71 ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[2]~2_wirecell_RTM06   ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[3]~3                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[3]~3_OTERM9           ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[4]~4                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[4]~4_OTERM11          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[5]~5                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[5]~5_OTERM13          ; Retimed Register ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[6]~6                  ; Modified         ; Timing optimization ;
-; UiController:uiController|SevenSeg:ss4|dOut[6]~6_OTERM15          ; Retimed Register ; Timing optimization ;
-; regfile_dataIn[2]~14                                              ; Modified         ; Timing optimization ;
-+-------------------------------------------------------------------+------------------+---------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Physical Synthesis Netlist Optimizations                                                                    ;
++--------------------------------------------------------------------+------------------+---------------------+
+; Node                                                               ; Action           ; Reason              ;
++--------------------------------------------------------------------+------------------+---------------------+
+; Add1~70                                                            ; Modified         ; Timing optimization ;
+; Decoder:decoder|regno2[3]~0                                        ; Deleted          ; Timing optimization ;
+; Decoder:decoder|regno2[3]~0_OTERM69                                ; Retimed Register ; Timing optimization ;
+; Decoder:decoder|regno2[3]~0_RTM071                                 ; Modified         ; Timing optimization ;
+; Decoder:decoder|regno2[3]~0_RTM071                                 ; Retimed Register ; Timing optimization ;
+; Decoder:decoder|regno2[3]~7                                        ; Modified         ; Timing optimization ;
+; HEX6~1                                                             ; Deleted          ; Timing optimization ;
+; HEX6~1_OTERM77                                                     ; Retimed Register ; Timing optimization ;
+; HEX6~1_RTM079                                                      ; Modified         ; Timing optimization ;
+; HEX6~1_RTM079                                                      ; Retimed Register ; Timing optimization ;
+; HEX6~2                                                             ; Deleted          ; Timing optimization ;
+; HEX6~2_OTERM73                                                     ; Retimed Register ; Timing optimization ;
+; HEX6~2_RTM075                                                      ; Modified         ; Timing optimization ;
+; HEX6~2_RTM075                                                      ; Retimed Register ; Timing optimization ;
+; HEX6~3                                                             ; Modified         ; Timing optimization ;
+; HEX6~3_OTERM110                                                    ; Retimed Register ; Timing optimization ;
+; HEX6~4                                                             ; Deleted          ; Timing optimization ;
+; HEX6~4_OTERM65                                                     ; Retimed Register ; Timing optimization ;
+; HEX6~4_RTM067                                                      ; Modified         ; Timing optimization ;
+; HEX6~4_RTM067                                                      ; Retimed Register ; Timing optimization ;
+; HEX6~5                                                             ; Modified         ; Timing optimization ;
+; HEX6~5_RTM066                                                      ; Modified         ; Timing optimization ;
+; HEX6~5_RTM070                                                      ; Modified         ; Timing optimization ;
+; HEX6~5_RTM074                                                      ; Modified         ; Timing optimization ;
+; HEX6~5_RTM078                                                      ; Modified         ; Timing optimization ;
+; InstMemory:instMem|data~14                                         ; Modified         ; Timing optimization ;
+; IoController:ioController|Equal0~0                                 ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Add3~85                                    ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Add3~86                                    ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[0]                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[0]_OTERM87             ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[1]                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[1]_OTERM89             ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[2]                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[2]_NEW83_RTM085        ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[2]_NEW83_RTM085        ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[2]_OTERM84             ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[3]                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[3]_NEW93_RTM095        ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[3]_NEW93_RTM095        ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[3]_OTERM94             ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[4]                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[4]_NEW90_RTM092        ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[4]_NEW90_RTM092        ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[4]_OTERM91             ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[5]                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[5]_NEW80_RTM082        ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[5]_NEW80_RTM082        ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[5]_OTERM81             ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[6]                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[6]_NEW96_RTM0100       ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[6]_NEW96_RTM0100       ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[6]_OTERM97             ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[6]_OTERM99             ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[22]                    ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[22]_NEW111_RTM0113     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[22]_NEW111_RTM0113     ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[22]_OTERM112           ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[23]                    ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[23]_NEW117_RTM0119     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[23]_NEW117_RTM0119     ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[23]_OTERM118           ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[24]                    ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[24]_NEW114_RTM0116     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[24]_NEW114_RTM0116     ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut[24]_OTERM115           ; Retimed Register ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~1                      ; Deleted          ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~2                      ; Deleted          ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~3                      ; Deleted          ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~20                     ; Deleted          ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~21                     ; Deleted          ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~22                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~24                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~25                     ; Deleted          ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~26                     ; Deleted          ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[0]~0                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[0]~0_OTERM49           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[1]~1                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[1]~1_OTERM51           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[2]~2                   ; Deleted          ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[2]~2_OTERM53           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[2]~2_RTM055            ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[2]~2_RTM055            ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[2]~2_wirecell          ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[2]~2_wirecell_OTERM102 ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[2]~2_wirecell_RTM054   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[3]~3                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[3]~3_OTERM57           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[4]~4                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[4]~4_OTERM59           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[5]~5                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[5]~5_OTERM61           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[6]~6                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss1|dOut[6]~6_OTERM63           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[0]~0                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[0]~0_OTERM33           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[1]~1                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[1]~1_OTERM35           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[2]~2                   ; Deleted          ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[2]~2_OTERM37           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[2]~2_RTM039            ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[2]~2_RTM039            ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[2]~2_wirecell          ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[2]~2_wirecell_OTERM104 ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[2]~2_wirecell_RTM038   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[3]~3                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[3]~3_OTERM41           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[4]~4                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[4]~4_OTERM43           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[5]~5                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[5]~5_OTERM45           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[6]~6                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss2|dOut[6]~6_OTERM47           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[0]~0                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[0]~0_OTERM17           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[1]~1                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[1]~1_OTERM19           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[2]~2                   ; Deleted          ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[2]~2_OTERM21           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[2]~2_RTM023            ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[2]~2_RTM023            ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[2]~2_wirecell          ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[2]~2_wirecell_OTERM106 ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[2]~2_wirecell_RTM022   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[3]~3                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[3]~3_OTERM25           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[4]~4                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[4]~4_OTERM27           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[5]~5                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[5]~5_OTERM29           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[6]~6                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss3|dOut[6]~6_OTERM31           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[0]~0                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[0]~0_OTERM1            ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[1]~1                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[1]~1_OTERM3            ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[2]~2                   ; Deleted          ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[2]~2_OTERM5            ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[2]~2_RTM07             ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[2]~2_RTM07             ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[2]~2_wirecell          ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[2]~2_wirecell_OTERM108 ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[2]~2_wirecell_RTM06    ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[3]~3                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[3]~3_OTERM9            ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[4]~4                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[4]~4_OTERM11           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[5]~5                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[5]~5_OTERM13           ; Retimed Register ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[6]~6                   ; Modified         ; Timing optimization ;
+; UiController:uiController|SevenSeg:ss4|dOut[6]~6_OTERM15           ; Retimed Register ; Timing optimization ;
+; regfile_dataIn[2]~14                                               ; Modified         ; Timing optimization ;
++--------------------------------------------------------------------+------------------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------+
@@ -811,45 +880,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+------------------------------------------+------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[9]|counter:count|count[2]  ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[8]|counter:count|count[5]  ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[7]|counter:count|count[11] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[6]|counter:count|count[8]  ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[5]|counter:count|count[11] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[4]|counter:count|count[13] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[3]|counter:count|count[6]  ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[3]|counter:count|count[0]     ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[2]|counter:count|count[6]  ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[2]|counter:count|count[0]     ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[1]|counter:count|count[8]  ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[1]|counter:count|count[7]     ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[0]|counter:count|count[13] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]|counter:count|count[10]    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Project2|UiController:uiController|ledValue[2]                                           ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[1]                                  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[0][31]                                                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[1][6]                                                      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[2][19]                                                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[3][16]                                                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[8][3]                                                      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[9][0]                                                      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[10][11]                                                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[11][29]                                                    ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |Project2|UiController:uiController|hexValue[14]                                          ;
-; 5:1                ; 29 bits   ; 87 LEs        ; 58 LEs               ; 29 LEs                 ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[22]                                 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project2|Decoder:decoder|regno2[0]                                                       ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |Project2|Regfile:regfile|Mux27                                                           ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 192 LEs              ; 128 LEs                ; No         ; |Project2|Regfile:regfile|Mux55                                                           ;
-; 13:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[27]                                                              ;
-; 15:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[11]                                                              ;
-; 15:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[4]                                                               ;
-; 15:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[1]                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[9]|counter:count|count[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[8]|counter:count|count[7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[7]|counter:count|count[4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[6]|counter:count|count[6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[5]|counter:count|count[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[4]|counter:count|count[7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[3]|counter:count|count[4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[3]|counter:count|count[2]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[2]|counter:count|count[4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[2]|counter:count|count[2]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[1]|counter:count|count[2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[1]|counter:count|count[7]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[0]|counter:count|count[2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]|counter:count|count[1]    ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Project2|UiController:uiController|ledValue[6]                                          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[1]                                 ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[0][7]                                                     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[1][30]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[2][31]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[3][21]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[8][25]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[9][14]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[10][31]                                                   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[11][8]                                                    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |Project2|UiController:uiController|hexValue[11]                                         ;
+; 5:1                ; 29 bits   ; 87 LEs        ; 58 LEs               ; 29 LEs                 ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[21]                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Project2|Decoder:decoder|regno2[1]                                                      ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |Project2|Regfile:regfile|Mux6                                                           ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 192 LEs              ; 128 LEs                ; No         ; |Project2|Regfile:regfile|Mux57                                                          ;
+; 13:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[26]                                                             ;
+; 15:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[12]                                                             ;
+; 15:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[5]                                                              ;
+; 15:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[1]                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -1201,7 +1270,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1211,8 +1280,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1222,7 +1291,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1232,8 +1301,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1243,7 +1312,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1253,8 +1322,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1264,7 +1333,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1274,8 +1343,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1285,7 +1354,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1295,8 +1364,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1306,7 +1375,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1316,8 +1385,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1327,7 +1396,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1337,8 +1406,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1348,7 +1417,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1358,8 +1427,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1369,7 +1438,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1379,8 +1448,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1390,7 +1459,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                              ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                              ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1400,8 +1469,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                      ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                            ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                            ;
+; SIZE           ; 8     ; Signed Integer                                                                            ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1411,7 +1480,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                     ;
 +----------------+-------+--------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                           ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                           ;
 +----------------+-------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1421,8 +1490,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                   ;
 +----------------+-------+----------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                         ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                         ;
+; SIZE           ; 8     ; Signed Integer                                                                         ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                         ;
 +----------------+-------+----------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1432,7 +1501,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                     ;
 +----------------+-------+--------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                           ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                           ;
 +----------------+-------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1442,8 +1511,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                   ;
 +----------------+-------+----------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                         ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                         ;
+; SIZE           ; 8     ; Signed Integer                                                                         ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                         ;
 +----------------+-------+----------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1453,7 +1522,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                     ;
 +----------------+-------+--------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                           ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                           ;
 +----------------+-------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1463,8 +1532,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                   ;
 +----------------+-------+----------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                         ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                         ;
+; SIZE           ; 8     ; Signed Integer                                                                         ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                         ;
 +----------------+-------+----------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1474,7 +1543,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                     ;
 +----------------+-------+--------------------------------------------------------------------------+
-; COUNTER_BITS   ; 15    ; Signed Integer                                                           ;
+; COUNTER_BITS   ; 8     ; Signed Integer                                                           ;
 +----------------+-------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1484,8 +1553,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                   ;
 +----------------+-------+----------------------------------------------------------------------------------------+
-; SIZE           ; 15    ; Signed Integer                                                                         ;
-; MAX_VALUE      ; 32767 ; Signed Integer                                                                         ;
+; SIZE           ; 8     ; Signed Integer                                                                         ;
+; MAX_VALUE      ; 255   ; Signed Integer                                                                         ;
 +----------------+-------+----------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1615,9 +1684,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 21 13:57:55 2017
+    Info: Processing started: Tue Nov 21 19:09:47 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project2 -c Project2
 Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
     Info (12023): Found entity 1: Debouncer
@@ -2016,8 +2085,9 @@ Info (12133): Instantiated megafunction "DMemController:dMemController|altsyncra
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_acn1.tdf
     Info (12023): Found entity 1: altsyncram_acn1
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX6[6]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (128000): Starting physical synthesis optimizations for speed
 Info (332104): Reading SDC File: 'Timing.sdc'
 Info (332110): Deriving PLL clocks
@@ -2035,7 +2105,7 @@ Info (332111): Found 2 clocks
     Info (332111):  100.000      Clock10
     Info (332111):  500.000 PLL_inst|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk
 Info (128002): Starting physical synthesis algorithm register retiming
-Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 871 ps
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 1 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm register retiming
@@ -2068,15 +2138,15 @@ Warning (20013): Ignored assignments for entity "DE0_CV" -- entity does not exis
 Info (144001): Generated suppressed messages file C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1390 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1304 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 1303 logic cells
+    Info (21059): Implemented 45 output pins
+    Info (21061): Implemented 1210 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 276 warnings
-    Info: Peak virtual memory: 799 megabytes
-    Info: Processing ended: Tue Nov 21 13:58:06 2017
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 278 warnings
+    Info: Peak virtual memory: 1043 megabytes
+    Info: Processing ended: Tue Nov 21 19:09:58 2017
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:11
 

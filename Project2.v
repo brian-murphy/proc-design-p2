@@ -11,7 +11,8 @@ module Project2(
   output [6:0] HEX0,
   output [6:0] HEX1,
   output [6:0] HEX2,
-  output [6:0] HEX3
+  output [6:0] HEX3,
+  output [6:0] HEX6
  );
   parameter DBITS         				 = 32;
   parameter INST_SIZE      			 = 32'd4;
@@ -34,6 +35,8 @@ module Project2(
   parameter DMEMWORDBITS				 = 2;
   parameter DMEMWORDS					 = 2048;
 
+
+  assign HEX6 = pcOut > 100 || pcOut < 64 ? 6'b111111 : 6'b0;
 
   // Add parameters for various secondary opcode values
 

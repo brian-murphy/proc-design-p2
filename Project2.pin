@@ -70,7 +70,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 CHIP  "Project2"  ASSIGNED TO AN: 5CEBA4F23C7
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -83,8 +83,8 @@ RESERVED_INPUT               : A5        :        :                   :         
 VCCIO8A                      : A6        : power  :                   : 2.5V    : 8A        :                
 RESERVED_INPUT               : A7        :        :                   :         : 8A        :                
 RESERVED_INPUT               : A8        :        :                   :         : 8A        :                
-RESERVED_INPUT               : A9        :        :                   :         : 8A        :                
-RESERVED_INPUT               : A10       :        :                   :         : 8A        :                
+HEX6[3]                      : A9        : output : 2.5 V             :         : 8A        : N              
+HEX6[0]                      : A10       : output : 2.5 V             :         : 8A        : N              
 GND                          : A11       : gnd    :                   :         :           :                
 RESERVED_INPUT               : A12       :        :                   :         : 7A        :                
 RESERVED_INPUT               : A13       :        :                   :         : 7A        :                
@@ -145,12 +145,12 @@ GND                          : B1        : gnd    :                   :         
 GND                          : B2        : gnd    :                   :         :           :                
 DNU                          : B3        :        :                   :         :           :                
 DNU                          : B4        :        :                   :         :           :                
-RESERVED_INPUT               : B5        :        :                   :         : 8A        :                
+HEX6[5]                      : B5        : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT               : B6        :        :                   :         : 8A        :                
 RESERVED_INPUT               : B7        :        :                   :         : 8A        :                
 VREFB8AN0                    : B8        : power  :                   :         : 8A        :                
 GND                          : B9        : gnd    :                   :         :           :                
-RESERVED_INPUT               : B10       :        :                   :         : 8A        :                
+HEX6[2]                      : B10       : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT               : B11       :        :                   :         : 7A        :                
 RESERVED_INPUT               : B12       :        :                   :         : 7A        :                
 RESERVED_INPUT               : B13       :        :                   :         : 7A        :                
@@ -281,7 +281,7 @@ nSTATUS                      : H5        :        :                   :         
 RESERVED_INPUT               : H6        :        :                   :         : 8A        :                
 GND                          : H7        : gnd    :                   :         :           :                
 RESERVED_INPUT               : H8        :        :                   :         : 8A        :                
-RESERVED_INPUT               : H9        :        :                   :         : 8A        :                
+HEX6[4]                      : H9        : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT               : H10       :        :                   :         : 7A        :                
 RESERVED_INPUT               : H11       :        :                   :         : 7A        :                
 GND                          : H12       : gnd    :                   :         :           :                
@@ -303,7 +303,7 @@ GND                          : J5        : gnd    :                   :         
 MSEL1                        : J6        : input  :                   :         : 9A        :                
 RESERVED_INPUT               : J7        :        :                   :         : 8A        :                
 RESERVED_INPUT               : J8        :        :                   :         : 8A        :                
-RESERVED_INPUT               : J9        :        :                   :         : 8A        :                
+HEX6[1]                      : J9        : output : 2.5 V             :         : 8A        : N              
 VCC                          : J10       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT               : J11       :        :                   :         : 7A        :                
 VCC                          : J12       : power  :                   : 1.1V    :           :                
@@ -338,7 +338,7 @@ VCCIO5B                      : K18       : power  :                   : 2.5V    
 RESERVED_INPUT               : K19       :        :                   :         : 7A        :                
 RESERVED_INPUT               : K20       :        :                   :         : 7A        :                
 RESERVED_INPUT               : K21       :        :                   :         : 5B        :                
-RESERVED_INPUT               : K22       :        :                   :         : 5B        :                
+HEX6[6]                      : K22       : output : 2.5 V             :         : 5B        : N              
 LEDR[9]                      : L1        : output : 3.3-V LVTTL       :         : 2A        : Y              
 LEDR[8]                      : L2        : output : 3.3-V LVTTL       :         : 2A        : Y              
 GND                          : L3        : gnd    :                   :         :           :                
