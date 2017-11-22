@@ -12,7 +12,9 @@ module Project2(
   output [6:0] HEX1,
   output [6:0] HEX2,
   output [6:0] HEX3,
-  output [6:0] HEX6
+  // output [32 - 1 : 0]pcOut,
+  // input[32 - 1: 0] instWord
+  output [6:0] HEX5
  );
   parameter DBITS         				 = 32;
   parameter INST_SIZE      			 = 32'd4;
@@ -25,27 +27,28 @@ module Project2(
   parameter ADDR_LEDR 					 = 32'hF0000004;
   parameter ADDR_LEDG 					 = 32'hF0000008;
 
-  parameter IMEM_INIT_FILE				 = "integratedUi.mif";
+  parameter IMEM_INIT_FILE				 = "verifyBranches.mif";
   parameter IMEM_ADDR_BIT_WIDTH 		 = 11;
   parameter IMEM_DATA_BIT_WIDTH 		 = INST_BIT_WIDTH;
   parameter IMEM_PC_BITS_HI     		 = IMEM_ADDR_BIT_WIDTH + 2;
   parameter IMEM_PC_BITS_LO     		 = 2;
-
+  
   parameter DMEMADDRBITS 				 = 13;
   parameter DMEMWORDBITS				 = 2;
   parameter DMEMWORDS					 = 2048;
-
-
-  assign HEX6 = pcOut > 100 || pcOut < 64 ? 6'b111111 : 6'b0;
-
+  
+  
   // Add parameters for various secondary opcode values
-
+  
   //PLL, clock generation, and reset generation
   wire clk, lock;
   //Pll pll(.inclk0(CLOCK_50), .c0(clk), .locked(lock));
   PLL	PLL_inst (.refclk (CLOCK_50), .rst(!FPGA_RESET_N), .outclk_0 (clk),.locked (lock));
   wire reset = ~lock;
-  
+  // wire reset = FPGA_RESET_N;
+  // assign clk = CLOCK_50;
+  assign HEX5 = reset == 1'b1 ? 6'b111111 : 6'b0;
+
   wire [DBITS - 1 : 0] imm;
   wire [DBITS - 1 : 0] regfileOut1, regfileOut2;
 
@@ -65,8 +68,8 @@ module Project2(
   // Creat instruction memeory
   wire[IMEM_DATA_BIT_WIDTH - 1: 0] instWord;
   InstMemory #(IMEM_INIT_FILE, IMEM_ADDR_BIT_WIDTH, IMEM_DATA_BIT_WIDTH) instMem (pcOut[IMEM_PC_BITS_HI - 1: IMEM_PC_BITS_LO], instWord);
-
-  // Put the code for getting opcode1, rd, rs, rt, imm, etc. here
+  
+  // Put the code for getting opcode1, rd, rs, rt, imm, etc. here 
   wire [`FUNC_BITS - 1 : 0] alu_func;
   wire alu_in1_sel;
   wire alu_in2_sel;
@@ -77,23 +80,23 @@ module Project2(
   wire isStore;
 
   Decoder decoder(
-    instWord,
+    instWord, 
     alu_func,
     pcSel,
     alu_in1_sel,
-    alu_in2_sel,
-    regfileIn_sel,
-    regno1,
-    regno2,
-    imm,
-    regfile_wrtEn,
+    alu_in2_sel, 
+    regfileIn_sel, 
+    regno1, 
+    regno2, 
+    imm, 
+    regfile_wrtEn, 
     regfile_wrtRegno,
     isStore
   );
 
   assign regfile_dataIn = regfileIn_sel == `REGFILEINSEL_ALUOUT ? aluOut :
                           regfileIn_sel == `REGFILEINSEL_PCPLUS4 ? pcOut + 4 :
-                          regfileIn_sel == `REGFILEINSEL_IO ? ioOut :
+                          regfileIn_sel == `REGFILEINSEL_IO ? ioOut : 
                           {DBITS{1'bz}};
 
   Regfile #(
@@ -110,7 +113,7 @@ module Project2(
     regfileOut1,
     regfileOut2
   );
-
+  
   // mux alu second input
   wire [DBITS - 1 : 0] aluIn2 = alu_in2_sel == `ALUIN2SEL_REG ? regfileOut2 :
                                 alu_in2_sel == `ALUIN2SEL_IMM ? imm :
@@ -123,7 +126,7 @@ module Project2(
   Alu alu(aluIn1, aluIn2, alu_func, aluOut);
 
   // Put the code for data memory and I/O here
-
+  
   // KEYS, SWITCHES, HEXS, and LEDS are memory mapped IO
 
 
@@ -160,7 +163,7 @@ module Project2(
     dMemWrtEn,
     ioOut
   );
-
+  
   UiController #(DBITS) uiController(
     clk,
     reset,

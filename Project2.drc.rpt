@@ -1,5 +1,5 @@
 Design Assistant report for Project2
-Tue Nov 21 19:11:05 2017
+Tue Nov 21 23:37:07 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Tue Nov 21 19:11:05 2017 ;
+; Design Assistant Status           ; Analyzed - Tue Nov 21 23:37:07 2017 ;
 ; Revision Name                     ; Project2                            ;
 ; Top-level Entity Name             ; Project2                            ;
 ; Family                            ; Cyclone V                           ;
@@ -45,8 +45,8 @@ applicable agreement for further details.
 ; Total High Violations             ; 0                                   ;
 ; Total Medium Violations           ; 1                                   ;
 ; - Rule C106                       ; 1                                   ;
-; Total Information only Violations ; 75                                  ;
-; - Rule T101                       ; 25                                  ;
+; Total Information only Violations ; 87                                  ;
+; - Rule T101                       ; 37                                  ;
 ; - Rule T102                       ; 50                                  ;
 +-----------------------------------+-------------------------------------+
 
@@ -103,26 +103,26 @@ applicable agreement for further details.
 ; Rule name                                                                                    ; Name                                                                                                                ;
 +----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
 ; Rule C106: Clock signal source should not drive registers triggered by different clock edges ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL_O_VCOPH0                      ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[2]                                                                      ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[8]                                                                      ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[3]                                                                      ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[12]                                                                     ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[4]                                                                      ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[6]~DUPLICATE                                                            ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[11]                                                                     ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[11]~DUPLICATE                                                           ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[10]                                                                     ;
-;  Positive edge destination node(s) list                                                      ; PcApparatus:pcApparatus|Register:pc|dataOut[9]                                                                      ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[12][0]                                                                                         ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[3][0]                                                                                          ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[7][0]                                                                                          ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[5][0]                                                                                          ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[6][0]                                                                                          ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[4][0]                                                                                          ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[13][0]                                                                                         ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[15][0]                                                                                         ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[12][0]~DUPLICATE                                                                               ;
+;  Positive edge destination node(s) list                                                      ; Regfile:regfile|data[14][0]                                                                                         ;
 ;  Negative edge destination node(s) list                                                      ; UiController:uiController|ledValue[0]                                                                               ;
-;  Negative edge destination node(s) list                                                      ; UiController:uiController|hexValue[0]                                                                               ;
-;  Negative edge destination node(s) list                                                      ; UiController:uiController|ledValue[0]~DUPLICATE                                                                     ;
-;  Negative edge destination node(s) list                                                      ; UiController:uiController|hexValue[11]                                                                              ;
-;  Negative edge destination node(s) list                                                      ; UiController:uiController|hexValue[1]                                                                               ;
-;  Negative edge destination node(s) list                                                      ; UiController:uiController|hexValue[12]                                                                              ;
-;  Negative edge destination node(s) list                                                      ; UiController:uiController|hexValue[8]                                                                               ;
-;  Negative edge destination node(s) list                                                      ; UiController:uiController|ledValue[6]                                                                               ;
-;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a15~porta_datain_reg2  ;
-;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a15~porta_address_reg4 ;
+;  Negative edge destination node(s) list                                                      ; UiController:uiController|hexValue[5]                                                                               ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a5~portb_address_reg7  ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a5~portb_address_reg2  ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a5~portb_address_reg8  ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a5~portb_address_reg10 ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a5~portb_address_reg3  ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a5~portb_address_reg6  ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a5~portb_address_reg0  ;
+;  Negative edge destination node(s) list                                                      ; DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated|ram_block1a5~portb_address_reg4  ;
 +----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
 
 
@@ -131,81 +131,93 @@ applicable agreement for further details.
 +------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+
 ; Rule name                                                        ; Name                                                                          ; Fan-Out ;
 +------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+
-; Rule T101: Nodes with more than the specified number of fan-outs ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; 463     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; InstMemory:instMem|data~22                                                    ; 57      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; InstMemory:instMem|data~15                                                    ; 48      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[12]                               ; 45      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno1[1]~0                                                   ; 32      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; InstMemory:instMem|data~13                                                    ; 35      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[11]~DUPLICATE                     ; 53      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[10]                               ; 66      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[10][31]~5                                                ; 33      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[12]~DUPLICATE                     ; 96      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; InstMemory:instMem|data~14                                                    ; 71      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[1][30]~7                                                 ; 37      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno1[0]~1                                                   ; 65      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; InstMemory:instMem|data~27                                                    ; 39      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|Mux57~0                                                       ; 32      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno2[0]~1                                                   ; 47      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno2[0]~2                                                   ; 47      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno2[1]~4                                                   ; 66      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[9][14]~3                                                 ; 35      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[8][25]~1                                                 ; 42      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|Mux57~1                                                       ; 32      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[0][7]~8                                                  ; 35      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[2][31]~6                                                 ; 37      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|alu_in2_mux~1                                                 ; 82      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; UiController:uiController|hexValue[11]~0                                      ; 44      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; 463     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[12]~DUPLICATE                     ; 96      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_in2_mux~1                                                 ; 82      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~14                                                    ; 71      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[1]~4                                                   ; 66      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[10]                               ; 66      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno1[0]~1                                                   ; 65      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~22                                                    ; 57      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[11]~DUPLICATE                     ; 53      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~15                                                    ; 48      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[0]~1                                                   ; 47      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[0]~2                                                   ; 47      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[12]                               ; 45      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UiController:uiController|hexValue[11]~0                                      ; 44      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[8][25]~1                                                 ; 42      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~27                                                    ; 39      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[2][31]~6                                                 ; 37      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[1][30]~7                                                 ; 37      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[0][7]~8                                                  ; 35      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~13                                                    ; 35      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[9][14]~3                                                 ; 35      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[10][31]~5                                                ; 33      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux57~0                                                       ; 32      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux57~1                                                       ; 32      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno1[1]~0                                                   ; 32      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Equal1~0                                              ; 29      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[21]~0                             ; 29      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~9                                                     ; 28      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[4]                                ; 27      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~5                                                                        ; 27      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~1                                                                        ; 27      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_func~0                                                    ; 25      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|Equal6~0                                                      ; 24      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[5]                                ; 23      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno1[1]~2                                                   ; 21      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[0]~3                                                   ; 20      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_in2_mux~2                                                 ; 20      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[6]~DUPLICATE                      ; 20      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; regfile_dataIn[26]~9                                                          ; 19      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux6~0                                                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Alu:alu|out[0]~12                                                             ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~125                                                                      ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~121                                                                      ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~117                                                                      ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~2                                                     ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~113                                                                      ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux63~2                                                       ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux62~2                                                       ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux57~4                                                       ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|Mux60~2                                                       ; 16      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; 792     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[12]                               ; 125     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno1[1]~1                                                   ; 80      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[14][23]~18                                               ; 38      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; InstMemory:instMem|data~0                                                     ; 45      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[10]~DUPLICATE                     ; 57      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno1[0]~0                                                   ; 80      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; PcApparatus:pcApparatus|Register:pc|dataOut[11]~DUPLICATE                     ; 58      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|alu_in1_mux~1                                                 ; 76      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno1[2]~2                                                   ; 80      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno1[3]~4                                                   ; 80      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[3][25]~5                                                 ; 34      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[11][25]~15                                               ; 37      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|alu_in1_mux~2                                                 ; 107     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno2[2]~2                                                   ; 80      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno2[3]~3                                                   ; 80      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno2[1]~1                                                   ; 80      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[0][28]~1                                                 ; 35      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[2][23]~4                                                 ; 35      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[1][25]~3                                                 ; 35      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|regno2[0]~0                                                   ; 80      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[8][3]~11                                                 ; 33      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[10][3]~14                                                ; 38      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[9][19]~13                                                ; 36      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[15][31]~19                                               ; 34      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[12][22]~16                                               ; 40      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[13][9]~17                                                ; 38      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[5][29]~7                                                 ; 36      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[6][22]~8                                                 ; 35      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[4][18]~6                                                 ; 36      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Regfile:regfile|data[7][2]~9                                                  ; 36      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; aluIn2[12]~1                                                                  ; 39      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|alu_in2_mux~0                                                 ; 68      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|alu_in1_mux~3                                                 ; 64      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Decoder:decoder|alu_func[0]~4                                                 ; 42      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Add1~5                                                                        ; 35      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; UiController:uiController|hexValue[3]~0                                       ; 44      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; 792     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[12]                               ; 125     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_in1_mux~2                                                 ; 107     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno1[2]~2                                                   ; 80      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno1[1]~1                                                   ; 80      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno1[0]~0                                                   ; 80      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[1]~1                                                   ; 80      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[3]~3                                                   ; 80      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[0]~0                                                   ; 80      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno2[2]~2                                                   ; 80      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|regno1[3]~4                                                   ; 80      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_in1_mux~1                                                 ; 76      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_in2_mux~0                                                 ; 68      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_in1_mux~3                                                 ; 64      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[11]~DUPLICATE                     ; 58      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[10]~DUPLICATE                     ; 57      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~0                                                     ; 45      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; UiController:uiController|hexValue[3]~0                                       ; 44      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_func[0]~4                                                 ; 42      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[12][22]~16                                               ; 40      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; aluIn2[12]~1                                                                  ; 39      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[10][3]~14                                                ; 38      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[13][9]~17                                                ; 38      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[14][23]~18                                               ; 38      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[11][25]~15                                               ; 37      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[5][29]~7                                                 ; 36      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[9][19]~13                                                ; 36      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[7][2]~9                                                  ; 36      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[4][18]~6                                                 ; 36      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[2][23]~4                                                 ; 35      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[6][22]~8                                                 ; 35      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[1][25]~3                                                 ; 35      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[0][28]~1                                                 ; 35      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~5                                                                        ; 35      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[15][31]~19                                               ; 34      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[3][25]~5                                                 ; 34      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Regfile:regfile|data[8][3]~11                                                 ; 33      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_func[2]~5                                                 ; 29      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Add1~1                                                                        ; 29      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; IoController:ioController|Equal0~2                                            ; 28      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Decoder:decoder|alu_func[1]~1                                                 ; 28      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[2]                                ; 28      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[4]~DUPLICATE                      ; 25      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Alu:alu|Equal0~0                                                              ; 25      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[5]                                ; 24      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[7]                                ; 24      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; PcApparatus:pcApparatus|Register:pc|dataOut[3]~DUPLICATE                      ; 23      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; InstMemory:instMem|data~28                                                    ; 21      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; regfile_dataIn[7]~42                                                          ; 21      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; regfile_dataIn[30]~85                                                         ; 20      ;
 +------------------------------------------------------------------+-------------------------------------------------------------------------------+---------+
 
 
@@ -215,7 +227,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Design Assistant
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 21 19:11:04 2017
+    Info: Processing started: Tue Nov 21 23:37:05 2017
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off Project2 -c Project2
 Info (332104): Reading SDC File: 'Timing.sdc'
 Info (332110): Deriving PLL clocks
@@ -245,68 +257,74 @@ Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Clock: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[7] with master clock period: 100.000 found on PLL node: PLL_inst|pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[7] does not match the master clock period requirement: 20.000
 Warning (308022): (Medium) Rule C106: Clock signal source should not drive registers triggered by different clock edges. Found 1 node(s) related to this rule.
     Warning (308010): Node  "PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL_O_VCOPH0"
-Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 25 node(s) with highest fan-out.
+Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 37 node(s) with highest fan-out.
     Info (308011): Node  "PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0"
-    Info (308011): Node  "InstMemory:instMem|data~22"
-    Info (308011): Node  "InstMemory:instMem|data~15"
     Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[12]"
-    Info (308011): Node  "Decoder:decoder|regno1[1]~0"
-    Info (308011): Node  "InstMemory:instMem|data~13"
+    Info (308011): Node  "Decoder:decoder|regno1[1]~1"
+    Info (308011): Node  "Regfile:regfile|data[14][23]~18"
+    Info (308011): Node  "InstMemory:instMem|data~0"
+    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[10]~DUPLICATE"
+    Info (308011): Node  "Decoder:decoder|regno1[0]~0"
     Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[11]~DUPLICATE"
-    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[10]"
-    Info (308011): Node  "Regfile:regfile|data[10][31]~5"
-    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[12]~DUPLICATE"
-    Info (308011): Node  "InstMemory:instMem|data~14"
-    Info (308011): Node  "Regfile:regfile|data[1][30]~7"
-    Info (308011): Node  "Decoder:decoder|regno1[0]~1"
-    Info (308011): Node  "InstMemory:instMem|data~27"
-    Info (308011): Node  "Regfile:regfile|Mux57~0"
-    Info (308011): Node  "Decoder:decoder|regno2[0]~1"
-    Info (308011): Node  "Decoder:decoder|regno2[0]~2"
-    Info (308011): Node  "Decoder:decoder|regno2[1]~4"
-    Info (308011): Node  "Regfile:regfile|data[9][14]~3"
-    Info (308011): Node  "Regfile:regfile|data[8][25]~1"
-    Info (308011): Node  "Regfile:regfile|Mux57~1"
-    Info (308011): Node  "Regfile:regfile|data[0][7]~8"
-    Info (308011): Node  "Regfile:regfile|data[2][31]~6"
-    Info (308011): Node  "Decoder:decoder|alu_in2_mux~1"
-    Info (308011): Node  "UiController:uiController|hexValue[11]~0"
+    Info (308011): Node  "Decoder:decoder|alu_in1_mux~1"
+    Info (308011): Node  "Decoder:decoder|regno1[2]~2"
+    Info (308011): Node  "Decoder:decoder|regno1[3]~4"
+    Info (308011): Node  "Regfile:regfile|data[3][25]~5"
+    Info (308011): Node  "Regfile:regfile|data[11][25]~15"
+    Info (308011): Node  "Decoder:decoder|alu_in1_mux~2"
+    Info (308011): Node  "Decoder:decoder|regno2[2]~2"
+    Info (308011): Node  "Decoder:decoder|regno2[3]~3"
+    Info (308011): Node  "Decoder:decoder|regno2[1]~1"
+    Info (308011): Node  "Regfile:regfile|data[0][28]~1"
+    Info (308011): Node  "Regfile:regfile|data[2][23]~4"
+    Info (308011): Node  "Regfile:regfile|data[1][25]~3"
+    Info (308011): Node  "Decoder:decoder|regno2[0]~0"
+    Info (308011): Node  "Regfile:regfile|data[8][3]~11"
+    Info (308011): Node  "Regfile:regfile|data[10][3]~14"
+    Info (308011): Node  "Regfile:regfile|data[9][19]~13"
+    Info (308011): Node  "Regfile:regfile|data[15][31]~19"
+    Info (308011): Node  "Regfile:regfile|data[12][22]~16"
+    Info (308011): Node  "Regfile:regfile|data[13][9]~17"
+    Info (308011): Node  "Regfile:regfile|data[5][29]~7"
+    Info (308011): Node  "Regfile:regfile|data[6][22]~8"
+    Info (308011): Node  "Regfile:regfile|data[4][18]~6"
+    Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
 Info (308044): (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 50 node(s) with highest fan-out.
     Info (308011): Node  "PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0"
-    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[12]~DUPLICATE"
-    Info (308011): Node  "Decoder:decoder|alu_in2_mux~1"
-    Info (308011): Node  "InstMemory:instMem|data~14"
-    Info (308011): Node  "Decoder:decoder|regno2[1]~4"
-    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[10]"
-    Info (308011): Node  "Decoder:decoder|regno1[0]~1"
-    Info (308011): Node  "InstMemory:instMem|data~22"
-    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[11]~DUPLICATE"
-    Info (308011): Node  "InstMemory:instMem|data~15"
-    Info (308011): Node  "Decoder:decoder|regno2[0]~1"
-    Info (308011): Node  "Decoder:decoder|regno2[0]~2"
     Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[12]"
-    Info (308011): Node  "UiController:uiController|hexValue[11]~0"
-    Info (308011): Node  "Regfile:regfile|data[8][25]~1"
-    Info (308011): Node  "InstMemory:instMem|data~27"
-    Info (308011): Node  "Regfile:regfile|data[2][31]~6"
-    Info (308011): Node  "Regfile:regfile|data[1][30]~7"
-    Info (308011): Node  "Regfile:regfile|data[0][7]~8"
-    Info (308011): Node  "InstMemory:instMem|data~13"
-    Info (308011): Node  "Regfile:regfile|data[9][14]~3"
-    Info (308011): Node  "Regfile:regfile|data[10][31]~5"
-    Info (308011): Node  "Regfile:regfile|Mux57~0"
-    Info (308011): Node  "Regfile:regfile|Mux57~1"
-    Info (308011): Node  "Decoder:decoder|regno1[1]~0"
-    Info (308011): Node  "PcApparatus:pcApparatus|Equal1~0"
-    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[21]~0"
-    Info (308011): Node  "InstMemory:instMem|data~9"
-    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[4]"
-    Info (308011): Node  "Add1~5"
+    Info (308011): Node  "Decoder:decoder|alu_in1_mux~2"
+    Info (308011): Node  "Decoder:decoder|regno1[2]~2"
+    Info (308011): Node  "Decoder:decoder|regno1[1]~1"
+    Info (308011): Node  "Decoder:decoder|regno1[0]~0"
+    Info (308011): Node  "Decoder:decoder|regno2[1]~1"
+    Info (308011): Node  "Decoder:decoder|regno2[3]~3"
+    Info (308011): Node  "Decoder:decoder|regno2[0]~0"
+    Info (308011): Node  "Decoder:decoder|regno2[2]~2"
+    Info (308011): Node  "Decoder:decoder|regno1[3]~4"
+    Info (308011): Node  "Decoder:decoder|alu_in1_mux~1"
+    Info (308011): Node  "Decoder:decoder|alu_in2_mux~0"
+    Info (308011): Node  "Decoder:decoder|alu_in1_mux~3"
+    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[11]~DUPLICATE"
+    Info (308011): Node  "PcApparatus:pcApparatus|Register:pc|dataOut[10]~DUPLICATE"
+    Info (308011): Node  "InstMemory:instMem|data~0"
+    Info (308011): Node  "UiController:uiController|hexValue[3]~0"
+    Info (308011): Node  "Decoder:decoder|alu_func[0]~4"
+    Info (308011): Node  "Regfile:regfile|data[12][22]~16"
+    Info (308011): Node  "aluIn2[12]~1"
+    Info (308011): Node  "Regfile:regfile|data[10][3]~14"
+    Info (308011): Node  "Regfile:regfile|data[13][9]~17"
+    Info (308011): Node  "Regfile:regfile|data[14][23]~18"
+    Info (308011): Node  "Regfile:regfile|data[11][25]~15"
+    Info (308011): Node  "Regfile:regfile|data[5][29]~7"
+    Info (308011): Node  "Regfile:regfile|data[9][19]~13"
+    Info (308011): Node  "Regfile:regfile|data[7][2]~9"
+    Info (308011): Node  "Regfile:regfile|data[4][18]~6"
+    Info (308011): Node  "Regfile:regfile|data[2][23]~4"
     Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
-Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 75 information messages and 1 warning messages
+Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 87 information messages and 1 warning messages
 Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 550 megabytes
-    Info: Processing ended: Tue Nov 21 19:11:06 2017
+    Info: Peak virtual memory: 554 megabytes
+    Info: Processing ended: Tue Nov 21 23:37:07 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
