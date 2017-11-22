@@ -12,6 +12,8 @@ module Project2(
   output [6:0] HEX1,
   output [6:0] HEX2,
   output [6:0] HEX3
+  // output [32 - 1 : 0]pcOut,
+  // input[32 - 1: 0] instWord
  );
   parameter DBITS         				 = 32;
   parameter INST_SIZE      			 = 32'd4;
@@ -42,6 +44,8 @@ module Project2(
   //Pll pll(.inclk0(CLOCK_50), .c0(clk), .locked(lock));
   PLL	PLL_inst (.refclk (CLOCK_50), .rst(!FPGA_RESET_N), .outclk_0 (clk),.locked (lock));
   wire reset = ~lock;
+  // wire reset = FPGA_RESET_N;
+  // assign clk = CLOCK_50;
 
   wire [DBITS - 1 : 0] imm;
   wire [DBITS - 1 : 0] regfileOut1, regfileOut2;

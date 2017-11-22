@@ -59,7 +59,7 @@ module Processor_tb();
 
     assign instWord = program[pcOut];
 
-    integer i;
+    integer i,j;
     initial begin
 
         for (i=0; i<START_PC; i=i+1) begin
@@ -77,36 +77,23 @@ module Processor_tb();
         FPGA_RESET_N = 1'b1;
         CLOCK_50 = 1'b0;
 
-        SW = 10'b1010101010;
-        KEY = 4'b1010;
-
-
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        FPGA_RESET_N = 1'b0;
-
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        @(posedge CLOCK_50);
-        SW = 10'b1111000001;
+        SW = 10'b1111111111;
         KEY = 4'b1111;
+
         @(posedge CLOCK_50);
         @(posedge CLOCK_50);
+
+        FPGA_RESET_N = 1'b0;
+        while (1'b1 == 1'b1) begin
+            for (j=0; j<258; j=j+1) begin
+                @(posedge CLOCK_50);
+            end
+            SW = ~SW;
+            KEY = ~KEY;
+        end
         
     end
 
-    always #20 CLOCK_50 = ~CLOCK_50;
+    always #10 CLOCK_50 = ~CLOCK_50;
 
 endmodule
