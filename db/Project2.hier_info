@@ -53,13 +53,6 @@ HEX3[3] <= UiController:uiController.port12
 HEX3[4] <= UiController:uiController.port12
 HEX3[5] <= UiController:uiController.port12
 HEX3[6] <= UiController:uiController.port12
-HEX5[0] <= reset.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[1] <= reset.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[2] <= reset.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[3] <= reset.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[4] <= reset.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[5] <= reset.DB_MAX_OUTPUT_PORT_TYPE
-HEX5[6] <= <GND>
 
 
 |Project2|PLL:PLL_inst
@@ -617,25 +610,21 @@ dataOut[31] <= dataOut[31].DB_MAX_OUTPUT_PORT_TYPE
 
 |Project2|Decoder:decoder
 instruction[0] => regno1.DATAB
-instruction[0] => regno2[0].DATAA
 instruction[0] => regfile_wrtRegno[0].DATAIN
 instruction[1] => regno1.DATAB
-instruction[1] => regno2[1].DATAA
 instruction[1] => regfile_wrtRegno[1].DATAIN
 instruction[2] => regno1.DATAB
-instruction[2] => regno2[2].DATAA
 instruction[2] => regfile_wrtRegno[2].DATAIN
 instruction[3] => regno1.DATAB
-instruction[3] => regno2[3].DATAA
 instruction[3] => regfile_wrtRegno[3].DATAIN
 instruction[4] => regno1.DATAA
-instruction[4] => regno2[0].DATAB
+instruction[4] => regno2[0].DATAA
 instruction[5] => regno1.DATAA
-instruction[5] => regno2[1].DATAB
+instruction[5] => regno2[1].DATAA
 instruction[6] => regno1.DATAA
-instruction[6] => regno2[2].DATAB
+instruction[6] => regno2[2].DATAA
 instruction[7] => regno1.DATAA
-instruction[7] => regno2[3].DATAB
+instruction[7] => regno2[3].DATAA
 instruction[8] => imm[0].IN1
 instruction[9] => imm[1].IN1
 instruction[10] => imm[2].IN1
@@ -755,8 +744,8 @@ alu_func[3] <= alu_func[3].DB_MAX_OUTPUT_PORT_TYPE
 alu_func[4] <= alu_func[4].DB_MAX_OUTPUT_PORT_TYPE
 pc_mux[0] <= pc_mux[0].DB_MAX_OUTPUT_PORT_TYPE
 pc_mux[1] <= pc_mux[1].DB_MAX_OUTPUT_PORT_TYPE
-alu_in1_mux <= alu_in1_mux.DB_MAX_OUTPUT_PORT_TYPE
-alu_in2_mux <= alu_in2_mux.DB_MAX_OUTPUT_PORT_TYPE
+alu_in2_mux[0] <= alu_in2_mux[0].DB_MAX_OUTPUT_PORT_TYPE
+alu_in2_mux[1] <= alu_in2_mux[1].DB_MAX_OUTPUT_PORT_TYPE
 regfile_in_mux[0] <= regfile_in_mux[0].DB_MAX_OUTPUT_PORT_TYPE
 regfile_in_mux[1] <= regfile_in_mux[1].DB_MAX_OUTPUT_PORT_TYPE
 regno1[0] <= regno1.DB_MAX_OUTPUT_PORT_TYPE

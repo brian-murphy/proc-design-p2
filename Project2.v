@@ -26,7 +26,7 @@ module Project2(
   parameter ADDR_LEDR 					 = 32'hF0000004;
   parameter ADDR_LEDG 					 = 32'hF0000008;
 
-  parameter IMEM_INIT_FILE				 = "verifyBranches.mif";
+  parameter IMEM_INIT_FILE				 = "integratedUi.mif";
   parameter IMEM_ADDR_BIT_WIDTH 		 = 11;
   parameter IMEM_DATA_BIT_WIDTH 		 = INST_BIT_WIDTH;
   parameter IMEM_PC_BITS_HI     		 = IMEM_ADDR_BIT_WIDTH + 2;

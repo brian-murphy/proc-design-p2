@@ -163,8 +163,8 @@ VCCIO7A                      : B19       : power  :                   : 2.5V    
 NC                           : B20       :        :                   :         :           :                
 NC                           : B21       :        :                   :         :           :                
 NC                           : B22       :        :                   :         :           :                
-HEX5[4]                      : C1        : output : 3.3-V LVTTL       :         : 2A        : Y              
-HEX5[5]                      : C2        : output : 3.3-V LVTTL       :         : 2A        : Y              
+RESERVED_INPUT               : C1        :        :                   :         : 2A        :                
+RESERVED_INPUT               : C2        :        :                   :         : 2A        :                
 GND                          : C3        : gnd    :                   :         :           :                
 GND                          : C4        : gnd    :                   :         :           :                
 GND                          : C5        :        :                   :         : 9A        :                
@@ -368,7 +368,7 @@ GND                          : M4        : gnd    :                   :         
 TDO                          : M5        : output :                   :         : 3A        :                
 KEY[3]                       : M6        : input  : 3.3-V LVTTL       :         : 3A        : Y              
 KEY[2]                       : M7        : input  : 3.3-V LVTTL       :         : 3A        : Y              
-HEX5[1]                      : M8        : output : 3.3-V LVTTL       :         : 3B        : Y              
+RESERVED_INPUT               : M8        :        :                   :         : 3B        :                
 CLOCK_50                     : M9        : input  : 3.3-V LVTTL       :         : 3B        : Y              
 GND                          : M10       : gnd    :                   :         :           :                
 VCC                          : M11       : power  :                   : 1.1V    :           :                
@@ -391,7 +391,7 @@ GND                          : N5        : gnd    :                   :         
 RESERVED_INPUT               : N6        :        :                   :         : 3A        :                
 GND                          : N7        : gnd    :                   :         :           :                
 RESERVED_INPUT               : N8        :        :                   :         : 3B        :                
-HEX5[0]                      : N9        : output : 3.3-V LVTTL       :         : 3B        : Y              
+RESERVED_INPUT               : N9        :        :                   :         : 3B        :                
 VCC                          : N10       : power  :                   : 1.1V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
 VCC                          : N12       : power  :                   : 1.1V    :           :                
@@ -418,7 +418,7 @@ GND                          : P10       : gnd    :                   :         
 VCC                          : P11       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT               : P12       :        :                   :         : 3B        :                
 VCC                          : P13       : power  :                   : 1.1V    :           :                
-HEX5[3]                      : P14       : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT               : P14       :        :                   :         : 4A        :                
 VCC                          : P15       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT               : P16       :        :                   :         : 5A        :                
 RESERVED_INPUT               : P17       :        :                   :         : 5A        :                
@@ -462,7 +462,7 @@ RESERVED_INPUT               : T10       :        :                   :         
 VCCIO3B                      : T11       : power  :                   : 3.3V    : 3B        :                
 SW[3]                        : T12       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 SW[2]                        : T13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
-HEX5[2]                      : T14       : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT               : T14       :        :                   :         : 4A        :                
 RESERVED_INPUT               : T15       :        :                   :         : 5A        :                
 GND                          : T16       : gnd    :                   :         :           :                
 RESERVED_INPUT               : T17       :        :                   :         : 5A        :                
@@ -533,7 +533,7 @@ VCCIO4A                      : W15       : power  :                   : 3.3V    
 HEX3[1]                      : W16       : output : 3.3-V LVTTL       :         : 4A        : Y              
 VCCPD3B4A                    : W17       : power  :                   : 3.3V    :           :                
 VCC_AUX                      : W18       : power  :                   : 2.5V    :           :                
-HEX5[6]                      : W19       : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT               : W19       :        :                   :         : 4A        :                
 VCCIO4A                      : W20       : power  :                   : 3.3V    : 4A        :                
 HEX0[3]                      : W21       : output : 3.3-V LVTTL       :         : 4A        : Y              
 HEX0[2]                      : W22       : output : 3.3-V LVTTL       :         : 4A        : Y              
