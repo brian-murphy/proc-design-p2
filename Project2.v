@@ -69,8 +69,7 @@ module Project2(
   
   // Put the code for getting opcode1, rd, rs, rt, imm, etc. here 
   wire [`FUNC_BITS - 1 : 0] alu_func;
-  wire alu_in1_sel;
-  wire alu_in2_sel;
+  wire [1 : 0] alu_in2_sel;
   wire [REG_INDEX_BIT_WIDTH - 1 : 0] regno1, regno2, regfile_wrtRegno;
   wire regfile_wrtEn;
   wire [DBITS - 1 : 0] regfile_dataIn;
@@ -81,7 +80,6 @@ module Project2(
     instWord, 
     alu_func,
     pcSel,
-    alu_in1_sel,
     alu_in2_sel, 
     regfileIn_sel, 
     regno1, 
@@ -115,10 +113,9 @@ module Project2(
   // mux alu second input
   wire [DBITS - 1 : 0] aluIn2 = alu_in2_sel == `ALUIN2SEL_REG ? regfileOut2 :
                                 alu_in2_sel == `ALUIN2SEL_IMM ? imm :
+                                alu_in2_sel == `ALUIN2SEL_ZERO ? {DBITS{1'b0}} :
                                 {DBITS{1'bz}};
-  wire [DBITS - 1 : 0] aluIn1 = alu_in1_sel == `ALUIN1SEL_REG ? regfileOut1 :
-                                alu_in2_sel == `ALUIN1SEL_ZERO ? {DBITS{1'b0}} :
-                                {DBITS{1'bz}};
+  wire [DBITS - 1 : 0] aluIn1 = regfileOut1;
 
   // Create ALU unit
   Alu alu(aluIn1, aluIn2, alu_func, aluOut);

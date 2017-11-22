@@ -7,8 +7,7 @@ module Decoder (
 
     output [`FUNC_BITS - 1 : 0] alu_func,
     output [1 : 0]pc_mux,
-    output alu_in1_mux,
-    output alu_in2_mux,
+    output [1 : 0] alu_in2_mux,
     output [1 : 0] regfile_in_mux,
     output [3 : 0] regno1,
     output [3 : 0] regno2,
@@ -77,36 +76,32 @@ assign pc_mux =
     opcode == `JAL ? `PCSEL_REGOFFSET : 
     2'bzz;
 
-assign regno1 = opcode == `STORE ? rd : rs1;
+assign regno1 = opcode == `STORE || opcode == `BRANCH ? rd : rs1;
+
 assign regno2 = opcode == `ALUR || opcode == `CMPR ? rs2 :
-                opcode == `STORE ? rs1 :
-                opcode == `ALUI || opcode == `CMPI ||
-                opcode == `BRANCH || opcode == `JAL ? rd :
+                opcode == `STORE || opcode == `BRANCH ? rs1 :
                 4'bzzzz;
 
-assign alu_in1_mux = 
-opcode == `ALUR || opcode == `ALUI || opcode == `CMPR || opcode == `CMPI ? `ALUIN1SEL_REG : 
-opcode == `BRANCH ? (
-    fn == `INSTR_BF ? `ALUIN1SEL_REG :
-    fn == `INSTR_BEQ ? `ALUIN1SEL_REG :
-    fn == `INSTR_BLT ? `ALUIN1SEL_REG :
-    fn == `INSTR_BLTE ? `ALUIN1SEL_REG :
-    fn == `INSTR_BEQZ ? `ALUIN1SEL_ZERO :
-    fn == `INSTR_BLTZ ? `ALUIN1SEL_ZERO :
-    fn == `INSTR_BLTEZ ? `ALUIN1SEL_ZERO :
-    fn == `INSTR_BT ? `ALUIN1SEL_REG :
-    fn == `INSTR_BNE ? `ALUIN1SEL_REG :
-    fn == `INSTR_BGTE ? `ALUIN1SEL_REG :
-    fn == `INSTR_BGT ? `ALUIN1SEL_REG :
-    fn == `INSTR_BNEZ ? `ALUIN1SEL_ZERO :
-    fn == `INSTR_BGTEZ ? `ALUIN1SEL_ZERO :
-    fn == `INSTR_BGTZ ? `ALUIN1SEL_ZERO :
-    1'bz
-) : 1'bz;
-
-assign alu_in2_mux = opcode == `ALUR || opcode == `CMPR || opcode == `BRANCH ? `ALUIN2SEL_REG :
+assign alu_in2_mux = opcode == `ALUR || opcode == `CMPR ? `ALUIN2SEL_REG :
                      opcode == `ALUI || opcode == `CMPI ? `ALUIN2SEL_IMM :
-                     1'bz;
+                     opcode == `BRANCH ? (
+                        fn == `INSTR_BNEZ ? `ALUIN2SEL_ZERO : 
+                        fn == `INSTR_BGTEZ ? `ALUIN2SEL_ZERO : 
+                        fn == `INSTR_BGTZ ? `ALUIN2SEL_ZERO :
+                        fn == `INSTR_BEQZ ? `ALUIN2SEL_ZERO : 
+                        fn == `INSTR_BLTZ ? `ALUIN2SEL_ZERO : 
+                        fn == `INSTR_BLTEZ ? `ALUIN2SEL_ZERO : 
+                        fn == `INSTR_BF ? `ALUIN2SEL_REG : 
+                        fn == `INSTR_BEQ ? `ALUIN2SEL_REG : 
+                        fn == `INSTR_BLT ? `ALUIN2SEL_REG : 
+                        fn == `INSTR_BLTE ? `ALUIN2SEL_REG : 
+                        fn == `INSTR_BT ? `ALUIN2SEL_REG : 
+                        fn == `INSTR_BNE ? `ALUIN2SEL_REG : 
+                        fn == `INSTR_BGTE ? `ALUIN2SEL_REG : 
+                        fn == `INSTR_BGT ? `ALUIN2SEL_REG :
+                        2'bzz
+                     ) :
+                     2'bzz;
 
 assign regfile_in_mux = opcode == `ALUR || opcode == `ALUI || opcode == `CMPR || opcode == `CMPI
                         ? `REGFILEINSEL_ALUOUT :
