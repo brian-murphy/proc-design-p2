@@ -52,7 +52,7 @@ module Processor_tb();
         instWord
     );
 
-    parameter PROGRAM_SIZE = 100;
+    parameter PROGRAM_SIZE = 1000;
 
 
     reg [DBITS - 1 : 0] program [0 : PROGRAM_SIZE];
@@ -66,13 +66,52 @@ module Processor_tb();
             program[i] = 0;
         end
 
-        program[START_PC] = 32'h2f000000;
-        program[START_PC + 4] = 32'hfbf00001;
-        program[START_PC + 8] = 32'h9001412;
-        program[START_PC + 12] = 32'h8000021;
-        program[START_PC + 16] = 32'h9001012;
-        program[START_PC + 20] = 32'h8000421;
-        program[START_PC + 24] = 32'hc0fffb00;
+        program[START_PC + 0] = 32'h2f000000;
+        program[START_PC + 4] = 32'h3b00000f;
+        program[START_PC + 8] = 32'h30002100;
+        program[START_PC + 12] = 32'h3b00010f;
+        program[START_PC + 16] = 32'h3bffff01;
+        program[START_PC + 20] = 32'hd0001e00;
+        program[START_PC + 24] = 32'hd0000101;
+        program[START_PC + 28] = 32'hc0001c66;
+        program[START_PC + 32] = 32'h3b00020f;
+        program[START_PC + 36] = 32'h3bffff01;
+        program[START_PC + 40] = 32'h20001910;
+        program[START_PC + 44] = 32'h20000101;
+        program[START_PC + 48] = 32'hc0001766;
+        program[START_PC + 52] = 32'h20000100;
+        program[START_PC + 56] = 32'hc0001566;
+        program[START_PC + 60] = 32'h3b00030f;
+        program[START_PC + 64] = 32'h3b000101;
+        program[START_PC + 68] = 32'h80001201;
+        program[START_PC + 72] = 32'h80000100;
+        program[START_PC + 76] = 32'hc0001066;
+        program[START_PC + 80] = 32'h3b00040f;
+        program[START_PC + 84] = 32'h3bffff01;
+        program[START_PC + 88] = 32'h90000d00;
+        program[START_PC + 92] = 32'h90000101;
+        program[START_PC + 96] = 32'hc0000b66;
+        program[START_PC + 100] = 32'h3b00050f;
+        program[START_PC + 104] = 32'h3b000101;
+        program[START_PC + 108] = 32'h60000801;
+        program[START_PC + 112] = 32'h60000100;
+        program[START_PC + 116] = 32'hc0000666;
+        program[START_PC + 120] = 32'h3bffff01;
+        program[START_PC + 124] = 32'h60000101;
+        program[START_PC + 128] = 32'hc0000366;
+        program[START_PC + 132] = 32'h3b00060f;
+        program[START_PC + 136] = 32'hf000061f;
+        program[START_PC + 140] = 32'hc0000066;
+        program[START_PC + 144] = 32'hfbf00001;
+        program[START_PC + 148] = 32'h3b00e002;
+        program[START_PC + 152] = 32'h6f0002f2;
+        program[START_PC + 156] = 32'h8000021;
+        program[START_PC + 160] = 32'hc0000466;
+        program[START_PC + 164] = 32'hfbf00001;
+        program[START_PC + 168] = 32'h3b000502;
+        program[START_PC + 172] = 32'h8000021;
+        program[START_PC + 176] = 32'hc0000066;
+        program[START_PC + 180] = 32'hc0ffff00;
 
         FPGA_RESET_N = 1'b1;
         CLOCK_50 = 1'b0;

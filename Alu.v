@@ -21,12 +21,12 @@ assign out =
         
         func == `F ? 0 :
         func == `EQ ? (in1 == in2 ? 1 : 0) :
-        func == `LT ? (in1 < in2 ? 1 : 0) :
-        func == `LTE ? (in1 <= in2 ? 1 : 0) :
+        func == `LT ? ($signed(in1) < $signed(in2) ? 1 : 0) :
+        func == `LTE ? ($signed(in1) <= $signed(in2) ? 1 : 0) :
         func == `T ? 1 :
         func == `NE ? (in1 != in2 ? 1 : 0) :
-        func == `GTE ? (in1 >= in2 ? 1 : 0) :
-        func == `GT ? (in1 > in2 ? 1 : 0) :
+        func == `GTE ? ($signed(in1) >= $signed(in2) ? 1 : 0) :
+        func == `GT ? ($signed(in1) > $signed(in2) ? 1 : 0) :
         {`WORD_SIZE{1'bz}};
 
 
