@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Nov 22 01:37:36 2017
+Fitter Status : Successful - Wed Nov 22 02:26:04 2017
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Project2
 Top-level Entity Name : Project2
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 625 / 18,480 ( 3 % )
-Total registers : 523
+Logic utilization (in ALMs) : 986 / 18,480 ( 5 % )
+Total registers : 808
 Total pins : 54 / 224 ( 24 % )
 Total virtual pins : 0
 Total block memory bits : 65,536 / 3,153,920 ( 2 % )

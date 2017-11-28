@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Project2
-Wed Nov 22 01:36:51 2017
+Wed Nov 22 02:25:11 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,57 +15,56 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Physical Synthesis Netlist Optimizations
- 13. Registers Packed Into Inferred Megafunctions
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated
- 16. Parameter Settings for User Entity Instance: Top-level Entity: |Project2
- 17. Parameter Settings for User Entity Instance: PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i
- 18. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus
- 19. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus|Register:pc
- 20. Parameter Settings for User Entity Instance: InstMemory:instMem
- 21. Parameter Settings for User Entity Instance: Decoder:decoder|SignExtension:immSext
- 22. Parameter Settings for User Entity Instance: Regfile:regfile
- 23. Parameter Settings for User Entity Instance: IoController:ioController
- 24. Parameter Settings for User Entity Instance: UiController:uiController
- 25. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[0]
- 26. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[0]|counter:count
- 27. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[1]
- 28. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[1]|counter:count
- 29. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[2]
- 30. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[2]|counter:count
- 31. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[3]
- 32. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[3]|counter:count
- 33. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[4]
- 34. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[4]|counter:count
- 35. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[5]
- 36. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[5]|counter:count
- 37. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[6]
- 38. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[6]|counter:count
- 39. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[7]
- 40. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[7]|counter:count
- 41. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[8]
- 42. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[8]|counter:count
- 43. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[9]
- 44. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[9]|counter:count
- 45. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[0]
- 46. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[0]|counter:count
- 47. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[1]
- 48. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[1]|counter:count
- 49. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[2]
- 50. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[2]|counter:count
- 51. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[3]
- 52. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[3]|counter:count
- 53. Parameter Settings for User Entity Instance: DMemController:dMemController
- 54. Parameter Settings for Inferred Entity Instance: DMemController:dMemController|altsyncram:data_rtl_0
- 55. altsyncram Parameter Settings by Entity Instance
- 56. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[0]|counter:count"
- 57. Port Connectivity Checks: "PcApparatus:pcApparatus|Register:pc"
- 58. Elapsed Time Per Partition
- 59. Analysis & Synthesis Messages
- 60. Analysis & Synthesis Suppressed Messages
+ 10. General Register Statistics
+ 11. Physical Synthesis Netlist Optimizations
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated
+ 15. Parameter Settings for User Entity Instance: Top-level Entity: |Project2
+ 16. Parameter Settings for User Entity Instance: PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i
+ 17. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus
+ 18. Parameter Settings for User Entity Instance: PcApparatus:pcApparatus|Register:pc
+ 19. Parameter Settings for User Entity Instance: InstMemory:instMem
+ 20. Parameter Settings for User Entity Instance: Decoder:decoder|SignExtension:immSext
+ 21. Parameter Settings for User Entity Instance: Regfile:regfile
+ 22. Parameter Settings for User Entity Instance: IoController:ioController
+ 23. Parameter Settings for User Entity Instance: UiController:uiController
+ 24. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[0]
+ 25. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[0]|counter:count
+ 26. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[1]
+ 27. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[1]|counter:count
+ 28. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[2]
+ 29. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[2]|counter:count
+ 30. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[3]
+ 31. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[3]|counter:count
+ 32. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[4]
+ 33. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[4]|counter:count
+ 34. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[5]
+ 35. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[5]|counter:count
+ 36. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[6]
+ 37. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[6]|counter:count
+ 38. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[7]
+ 39. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[7]|counter:count
+ 40. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[8]
+ 41. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[8]|counter:count
+ 42. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[9]
+ 43. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:switchDebouncers[9]|counter:count
+ 44. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[0]
+ 45. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[0]|counter:count
+ 46. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[1]
+ 47. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[1]|counter:count
+ 48. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[2]
+ 49. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[2]|counter:count
+ 50. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[3]
+ 51. Parameter Settings for User Entity Instance: UiController:uiController|Debouncer:keyDebouncers[3]|counter:count
+ 52. Parameter Settings for User Entity Instance: DMemController:dMemController
+ 53. Parameter Settings for Inferred Entity Instance: DMemController:dMemController|altsyncram:data_rtl_0
+ 54. altsyncram Parameter Settings by Entity Instance
+ 55. Port Connectivity Checks: "UiController:uiController|Debouncer:switchDebouncers[0]|counter:count"
+ 56. Port Connectivity Checks: "PcApparatus:pcApparatus|Register:pc"
+ 57. Elapsed Time Per Partition
+ 58. Analysis & Synthesis Messages
+ 59. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -91,13 +90,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +-------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Wed Nov 22 01:36:51 2017           ;
+; Analysis & Synthesis Status         ; Successful - Wed Nov 22 02:25:11 2017           ;
 ; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                       ; Project2                                        ;
 ; Top-level Entity Name               ; Project2                                        ;
 ; Family                              ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)         ; N/A                                             ;
-; Total registers                     ; 468                                             ;
+; Total registers                     ; 724                                             ;
 ; Total pins                          ; 54                                              ;
 ; Total virtual pins                  ; 0                                               ;
 ; Total block memory bits             ; 65,536                                          ;
@@ -256,16 +255,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 573                                                                   ;
+; Estimate of Logic utilization (ALMs needed) ; 884                                                                   ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 912                                                                   ;
-;     -- 7 input functions                    ; 0                                                                     ;
-;     -- 6 input functions                    ; 203                                                                   ;
-;     -- 5 input functions                    ; 365                                                                   ;
-;     -- 4 input functions                    ; 102                                                                   ;
-;     -- <=3 input functions                  ; 242                                                                   ;
+; Combinational ALUT usage for logic          ; 1188                                                                  ;
+;     -- 7 input functions                    ; 18                                                                    ;
+;     -- 6 input functions                    ; 503                                                                   ;
+;     -- 5 input functions                    ; 296                                                                   ;
+;     -- 4 input functions                    ; 118                                                                   ;
+;     -- <=3 input functions                  ; 253                                                                   ;
 ;                                             ;                                                                       ;
-; Dedicated logic registers                   ; 468                                                                   ;
+; Dedicated logic registers                   ; 724                                                                   ;
 ;                                             ;                                                                       ;
 ; I/O pins                                    ; 54                                                                    ;
 ; Total MLAB memory bits                      ; 0                                                                     ;
@@ -275,9 +274,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1                                                                     ;
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 529                                                                   ;
-; Total fan-out                               ; 6038                                                                  ;
-; Average fan-out                             ; 3.96                                                                  ;
+; Maximum fan-out                             ; 793                                                                   ;
+; Total fan-out                               ; 8494                                                                  ;
+; Average fan-out                             ; 4.13                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
@@ -286,21 +285,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
-; |Project2                                 ; 912 (141)         ; 468 (0)      ; 65536             ; 0          ; 54   ; 0            ; |Project2                                                                                    ; work         ;
-;    |Alu:alu|                              ; 160 (160)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Alu:alu                                                                            ; work         ;
+; |Project2                                 ; 1188 (210)        ; 724 (0)      ; 65536             ; 0          ; 54   ; 0            ; |Project2                                                                                    ; work         ;
+;    |Alu:alu|                              ; 146 (146)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Alu:alu                                                                            ; work         ;
 ;    |DMemController:dMemController|        ; 1 (1)             ; 0 (0)        ; 65536             ; 0          ; 0    ; 0            ; |Project2|DMemController:dMemController                                                      ; work         ;
 ;       |altsyncram:data_rtl_0|             ; 0 (0)             ; 0 (0)        ; 65536             ; 0          ; 0    ; 0            ; |Project2|DMemController:dMemController|altsyncram:data_rtl_0                                ; work         ;
 ;          |altsyncram_acn1:auto_generated| ; 0 (0)             ; 0 (0)        ; 65536             ; 0          ; 0    ; 0            ; |Project2|DMemController:dMemController|altsyncram:data_rtl_0|altsyncram_acn1:auto_generated ; work         ;
-;    |Decoder:decoder|                      ; 19 (19)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Decoder:decoder                                                                    ; work         ;
-;    |InstMemory:instMem|                   ; 37 (37)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|InstMemory:instMem                                                                 ; work         ;
+;    |Decoder:decoder|                      ; 39 (39)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|Decoder:decoder                                                                    ; work         ;
+;    |InstMemory:instMem|                   ; 101 (101)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|InstMemory:instMem                                                                 ; work         ;
 ;    |IoController:ioController|            ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|IoController:ioController                                                          ; work         ;
 ;    |PLL:PLL_inst|                         ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst                                                                       ; PLL          ;
 ;       |PLL_0002:pll_inst|                 ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst                                                     ; PLL          ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|PLL:PLL_inst|PLL_0002:pll_inst|altera_pll:altera_pll_i                             ; work         ;
-;    |PcApparatus:pcApparatus|              ; 128 (93)          ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus                                                            ; work         ;
-;       |Register:pc|                       ; 35 (35)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus|Register:pc                                                ; work         ;
-;    |Regfile:regfile|                      ; 211 (211)         ; 256 (256)    ; 0                 ; 0          ; 0    ; 0            ; |Project2|Regfile:regfile                                                                    ; work         ;
-;    |UiController:uiController|            ; 199 (3)           ; 180 (26)     ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController                                                          ; work         ;
+;    |PcApparatus:pcApparatus|              ; 131 (93)          ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus                                                            ; work         ;
+;       |Register:pc|                       ; 38 (38)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Project2|PcApparatus:pcApparatus|Register:pc                                                ; work         ;
+;    |Regfile:regfile|                      ; 346 (346)         ; 512 (512)    ; 0                 ; 0          ; 0    ; 0            ; |Project2|Regfile:regfile                                                                    ; work         ;
+;    |UiController:uiController|            ; 198 (2)           ; 180 (26)     ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController                                                          ; work         ;
 ;       |Debouncer:keyDebouncers[0]|        ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]                               ; work         ;
 ;          |counter:count|                  ; 10 (10)           ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]|counter:count                 ; work         ;
 ;       |Debouncer:keyDebouncers[1]|        ; 12 (2)            ; 9 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Project2|UiController:uiController|Debouncer:keyDebouncers[1]                               ; work         ;
@@ -356,282 +355,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------------+-----------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                    ;
-+-----------------------------------------+---------------------------------------------+
-; Register name                           ; Reason for Removal                          ;
-+-----------------------------------------+---------------------------------------------+
-; Regfile:regfile|data[15][31]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][30]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][29]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][28]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][27]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][26]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][25]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][24]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][23]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][22]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][21]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][20]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][19]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][18]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][17]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][16]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][15]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][14]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][13]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][12]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][11]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][10]            ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][9]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][8]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][7]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][6]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][5]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][4]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][3]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][2]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][1]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[15][0]             ; Stuck at GND due to stuck port clock_enable ;
-; Regfile:regfile|data[4][31]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][31]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][31]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][31]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][31]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][31]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][31]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][30]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][30]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][30]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][30]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][30]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][30]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][30]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][29]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][29]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][29]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][29]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][29]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][29]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][29]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][28]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][28]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][28]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][28]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][28]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][28]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][28]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][27]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][27]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][27]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][27]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][27]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][27]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][27]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][26]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][26]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][26]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][26]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][26]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][26]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][26]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][25]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][25]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][25]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][25]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][25]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][25]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][25]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][24]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][24]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][24]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][24]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][24]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][24]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][24]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][23]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][23]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][23]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][23]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][23]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][23]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][23]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][22]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][22]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][22]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][22]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][22]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][22]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][22]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][21]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][21]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][21]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][21]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][21]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][21]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][21]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][20]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][20]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][20]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][20]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][20]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][20]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][20]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][19]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][19]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][19]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][19]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][19]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][19]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][19]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][18]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][18]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][18]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][18]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][18]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][18]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][18]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][17]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][17]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][17]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][17]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][17]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][17]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][17]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][16]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][16]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][16]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][16]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][16]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][16]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][16]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][15]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][15]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][15]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][15]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][15]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][15]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][15]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][14]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][14]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][14]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][14]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][14]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][14]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][14]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][13]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][13]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][13]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][13]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][13]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][13]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][13]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][12]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][12]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][12]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][12]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][12]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][12]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][12]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][11]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][11]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][11]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][11]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][11]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][11]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][11]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][10]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][10]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][10]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][10]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][10]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][10]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][10]            ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][9]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][9]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][9]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][9]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][9]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][9]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][9]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][8]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][8]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][8]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][8]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][8]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][8]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][8]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][7]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][7]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][7]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][7]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][7]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][7]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][7]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][6]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][6]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][6]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][6]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][6]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][6]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][6]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][5]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][5]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][5]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][5]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][5]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][5]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][5]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][4]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][4]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][4]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][4]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][4]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][4]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][4]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][3]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][3]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][3]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][3]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][3]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][3]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][3]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][2]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][2]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][2]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][2]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][2]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][2]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][2]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][1]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][1]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][1]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][1]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][1]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][1]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][1]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[4][0]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[5][0]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[6][0]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[7][0]              ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[12][0]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[13][0]             ; Stuck at GND due to stuck port data_in      ;
-; Regfile:regfile|data[14][0]             ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 256 ;                                             ;
-+-----------------------------------------+---------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 468   ;
-; Number of registers using Synchronous Clear  ; 465   ;
+; Total registers                              ; 724   ;
+; Number of registers using Synchronous Clear  ; 689   ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 312   ;
+; Number of registers using Clock Enable       ; 568   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -641,11 +375,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+------------------+---------------------+
 ; Node                                                              ; Action           ; Reason              ;
 +-------------------------------------------------------------------+------------------+---------------------+
-; Add1~70                                                           ; Modified         ; Timing optimization ;
-; IoController:ioController|Equal0~0                                ; Modified         ; Timing optimization ;
-; PcApparatus:pcApparatus|Add3~1                                    ; Modified         ; Timing optimization ;
-; PcApparatus:pcApparatus|Add3~2                                    ; Modified         ; Timing optimization ;
-; PcApparatus:pcApparatus|Register:pc|dataOut~3                     ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Add3~21                                   ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Add3~22                                   ; Modified         ; Timing optimization ;
+; PcApparatus:pcApparatus|Register:pc|dataOut~10                    ; Modified         ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss1|dOut[0]~0                  ; Modified         ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss1|dOut[0]~0_OTERM49          ; Retimed Register ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss1|dOut[1]~1                  ; Modified         ; Timing optimization ;
@@ -722,7 +454,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UiController:uiController|SevenSeg:ss4|dOut[5]~5_OTERM13          ; Retimed Register ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss4|dOut[6]~6                  ; Modified         ; Timing optimization ;
 ; UiController:uiController|SevenSeg:ss4|dOut[6]~6_OTERM15          ; Retimed Register ; Timing optimization ;
-; regfile_dataIn[2]~12                                              ; Modified         ; Timing optimization ;
+; regfile_dataIn[2]~18                                              ; Modified         ; Timing optimization ;
 +-------------------------------------------------------------------+------------------+---------------------+
 
 
@@ -740,38 +472,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[9]|counter:count|count[1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[8]|counter:count|count[7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[7]|counter:count|count[5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[6]|counter:count|count[2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[5]|counter:count|count[7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[4]|counter:count|count[7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[3]|counter:count|count[2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[3]|counter:count|count[7]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[2]|counter:count|count[0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[2]|counter:count|count[4]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[1]|counter:count|count[3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[1]|counter:count|count[3]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[9]|counter:count|count[3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[8]|counter:count|count[3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[7]|counter:count|count[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[6]|counter:count|count[7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[5]|counter:count|count[6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[4]|counter:count|count[3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[3]|counter:count|count[7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[3]|counter:count|count[4]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[2]|counter:count|count[2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[2]|counter:count|count[3]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[1]|counter:count|count[0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[1]|counter:count|count[1]    ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:switchDebouncers[0]|counter:count|count[3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]|counter:count|count[3]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Project2|UiController:uiController|Debouncer:keyDebouncers[0]|counter:count|count[5]    ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Project2|UiController:uiController|ledValue[7]                                          ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[0]                                 ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[1][16]                                                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[0][31]                                                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[3][29]                                                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[2][30]                                                    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[9][8]                                                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[8][1]                                                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[11][17]                                                   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[10][26]                                                   ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |Project2|UiController:uiController|hexValue[10]                                         ;
-; 5:1                ; 29 bits   ; 87 LEs        ; 58 LEs               ; 29 LEs                 ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[26]                                ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |Project2|Regfile:regfile|Mux27                                                          ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 192 LEs              ; 128 LEs                ; No         ; |Project2|Regfile:regfile|Mux44                                                          ;
-; 13:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[26]                                                             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[14][6]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[13][6]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[12][6]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[11][7]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[10][9]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[9][21]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[8][26]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[7][25]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[6][23]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[5][25]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[4][25]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[3][30]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[2][26]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[1][2]                                                     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Project2|Regfile:regfile|data[0][3]                                                     ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |Project2|UiController:uiController|hexValue[5]                                          ;
+; 5:1                ; 29 bits   ; 87 LEs        ; 58 LEs               ; 29 LEs                 ; Yes        ; |Project2|PcApparatus:pcApparatus|Register:pc|dataOut[4]                                 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Project2|aluIn2[4]                                                                      ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |Project2|Regfile:regfile|Mux5                                                           ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |Project2|Regfile:regfile|Mux42                                                          ;
+; 13:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[20]                                                             ;
 ; 15:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[15]                                                             ;
 ; 15:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[9]                                                              ;
-; 15:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[1]                                                              ;
+; 15:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Project2|regfile_dataIn[3]                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
 
@@ -799,7 +539,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ADDR_HEX            ; 11110000000000000000000000000000 ; Unsigned Binary ;
 ; ADDR_LEDR           ; 11110000000000000000000000000100 ; Unsigned Binary ;
 ; ADDR_LEDG           ; 11110000000000000000000000001000 ; Unsigned Binary ;
-; IMEM_INIT_FILE      ; integratedUi.mif                 ; String          ;
+; IMEM_INIT_FILE      ; esotericInstructions.mif         ; String          ;
 ; IMEM_ADDR_BIT_WIDTH ; 11                               ; Signed Integer  ;
 ; IMEM_DATA_BIT_WIDTH ; 32                               ; Signed Integer  ;
 ; IMEM_PC_BITS_HI     ; 13                               ; Signed Integer  ;
@@ -1059,14 +799,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: InstMemory:instMem ;
-+----------------+------------------+-----------------------------+
-; Parameter Name ; Value            ; Type                        ;
-+----------------+------------------+-----------------------------+
-; MEM_INIT_FILE  ; integratedUi.mif ; String                      ;
-; ADDR_BIT_WIDTH ; 11               ; Signed Integer              ;
-; DATA_BIT_WIDTH ; 32               ; Signed Integer              ;
-; N_WORDS        ; 2048             ; Signed Integer              ;
-+----------------+------------------+-----------------------------+
++----------------+--------------------------+---------------------+
+; Parameter Name ; Value                    ; Type                ;
++----------------+--------------------------+---------------------+
+; MEM_INIT_FILE  ; esotericInstructions.mif ; String              ;
+; ADDR_BIT_WIDTH ; 11                       ; Signed Integer      ;
+; DATA_BIT_WIDTH ; 32                       ; Signed Integer      ;
+; N_WORDS        ; 2048                     ; Signed Integer      ;
++----------------+--------------------------+---------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1530,7 +1270,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -1540,7 +1280,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Nov 22 01:36:41 2017
+    Info: Processing started: Wed Nov 22 02:24:59 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project2 -c Project2
 Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
     Info (12023): Found entity 1: Debouncer
@@ -1922,7 +1662,7 @@ Info (128002): Starting physical synthesis algorithm combinational resynthesis u
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
-Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:04
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:05
 Warning (20013): Ignored assignments for entity "DE0_CV" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV -section_id Top was ignored
@@ -1950,17 +1690,17 @@ Warning (20013): Ignored assignments for entity "DE0_CV" -- entity does not exis
 Info (144001): Generated suppressed messages file C:/Users/Brian/dev/proc-design/project2/modelsim/Project2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1285 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1817 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 1198 logic cells
+    Info (21061): Implemented 1730 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 236 warnings
-    Info: Peak virtual memory: 1027 megabytes
-    Info: Processing ended: Wed Nov 22 01:36:51 2017
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 1035 megabytes
+    Info: Processing ended: Wed Nov 22 02:25:11 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +------------------------------------------+
