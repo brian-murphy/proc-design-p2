@@ -6,6 +6,7 @@ module PcApparatus #(
 ) (
     input clk,
     input reset,
+    input enable,
     input cmp,
     input [DBITS - 1 : 0] imm,
     input [1 : 0] pcSel,
@@ -24,7 +25,7 @@ module PcApparatus #(
                   (pcSel == `PCSEL_REGOFFSET) ? (reg1 + (imm << 2)) : 
                   {DBITS{1'bz}};
 
-    Register #(.BIT_WIDTH(DBITS), .RESET_VALUE(START_PC)) pc (clk, reset, 1'b1, pcIn, pcOut);
+    Register #(.BIT_WIDTH(DBITS), .RESET_VALUE(START_PC)) pc (clk, reset, enable, pcIn, pcOut);
 
 
 endmodule
