@@ -19,7 +19,6 @@
 `define GTE 5'd15
 `define GT 5'd16
 
-`define WORD_SIZE 32
 `define FUNC_BITS 5
 
 // `define M (`N << 2)
