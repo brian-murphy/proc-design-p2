@@ -4,13 +4,14 @@
 module DecodeStage #(
     parameter DBITS = 32
 ) (
-    input [DBITS - 1 : 32] instruction,
+    input [DBITS - 1 : 0] instruction,
 
     output [`FUNC_BITS - 1 : 0] alu_func,
     output [1 : 0] alu_in2_mux,
     output [1 : 0] regfile_in_mux,
     output [3 : 0] regno1,
     output [3 : 0] regno2,
+    output [3 : 0] rd,
     output [DBITS - 1 : 0] immOut,
     output regfile_wrtEn,
     output [3 : 0] regfile_wrtRegno,
@@ -22,7 +23,7 @@ module DecodeStage #(
     wire [15 : 0] imm = instruction[23:8];
     wire [3 : 0] rs2 = instruction[11:8];
     wire [3 : 0] rs1 = instruction[7:4];
-    wire [3 : 0] rd = instruction[3:0];
+    assign rd = instruction[3:0];
 
     assign regno1 = opcode == `STORE || opcode == `BRANCH ? rd : rs1;
 
@@ -81,10 +82,12 @@ module DecodeStage #(
         fn == `INSTR_BGTEZ ? `GTE :
         fn == `INSTR_BGTZ ? `GT :
         5'bzzzzz
+    ) : (opcode == `LOAD || opcode == `STORE) ? (
+        `ADD
     ) : 5'bzzzzz;
 
     assign alu_in2_mux = opcode == `ALUR || opcode == `CMPR ? `ALUIN2SEL_REG :
-                     opcode == `ALUI || opcode == `CMPI ? `ALUIN2SEL_IMM :
+                     opcode == `ALUI || opcode == `CMPI  || opcode == `LOAD || opcode == `STORE ? `ALUIN2SEL_IMM :
                      opcode == `BRANCH ? (
                         fn == `INSTR_BNEZ ? `ALUIN2SEL_ZERO : 
                         fn == `INSTR_BGTEZ ? `ALUIN2SEL_ZERO : 
