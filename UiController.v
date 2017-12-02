@@ -1,7 +1,8 @@
 `include "UiController.vh"
 
 module UiController #(
-    parameter DBITS = 32
+    parameter DBITS = 32,
+    parameter DEBOUNCER_COUNTER_SIZE = 8
 ) (
     input clk,
     input reset,
@@ -28,10 +29,10 @@ module UiController #(
     SevenSeg ss4(hexValue[15:12], I_HEX3);
 
     wire [9 : 0] switchValue;
-    Debouncer #(8) switchDebouncers[9 : 0] (clk, reset, SWITCHES[9:0], switchValue);
+    Debouncer #(DEBOUNCER_COUNTER_SIZE) switchDebouncers[9 : 0] (clk, reset, SWITCHES[9:0], switchValue);
 
     wire [3 : 0] keyValue;
-    Debouncer #(8) keyDebouncers[3 : 0] (clk, reset, KEYS[3:0], keyValue);
+    Debouncer #(DEBOUNCER_COUNTER_SIZE) keyDebouncers[3 : 0] (clk, reset, KEYS[3:0], keyValue);
 
     assign out = (uiDevice == `UI_KEY) ? {{DBITS-4{1'b0}}, ~keyValue} :
                  (uiDevice == `UI_SW) ? {{DBITS-10{1'b0}}, switchValue} :
