@@ -1,8 +1,6 @@
 `include "PcApparatus.vh"
 `include "Decoder.vh"
 
-`define NOOP 32'h3b000099
-
 module FetchStage #(
     parameter DBITS = 32,
     parameter START_PC = 64

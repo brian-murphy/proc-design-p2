@@ -1,7 +1,8 @@
+`include "Decoder.vh"
+
 `define BEQ_f_R0_R0 32'hC0000f00
 `define JAL_0_R0_R1 32'h01000001
 `define SUB_R0_R0_R0 32'h2f000000
-`define NOOP 32'h3b000099
 
 module FetchStage_tb();
 
