@@ -4,7 +4,7 @@
 module DecodeStage #(
     parameter DBITS = 32
 ) (
-    input [DBITS - 1 : 32] instruction,
+    input [DBITS - 1 : 0] instruction,
 
     output [`FUNC_BITS - 1 : 0] alu_func,
     output [1 : 0] alu_in2_mux,

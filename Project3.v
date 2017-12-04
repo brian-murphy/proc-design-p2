@@ -1,7 +1,7 @@
 `include "Decoder.vh"
 `include "Alu.vh"
 
-`define DEBUG
+// `define DEBUG
 
 module Project3 #(
     parameter DBITS         				= 32,
@@ -15,7 +15,7 @@ module Project3 #(
     parameter ADDR_LEDR 					= 32'hF0000004,
     parameter ADDR_LEDG 					= 32'hF0000008,
 
-    parameter IMEM_INIT_FILE				= "io.mif",
+    parameter IMEM_INIT_FILE				= "integratedUi.mif",
     parameter IMEM_ADDR_BIT_WIDTH 		    = 11,
     parameter IMEM_DATA_BIT_WIDTH 		    = INST_BIT_WIDTH,
     parameter IMEM_PC_BITS_HI     		    = IMEM_ADDR_BIT_WIDTH + 2,
@@ -30,7 +30,9 @@ module Project3 #(
     input [3:0] KEY,
     input CLOCK_50,
     input FPGA_RESET_N,
+`ifdef DEBUG
     input [DBITS - 1: 0] debugInstWord,
+`endif
 
     output [9:0] LEDR,
     output [6:0] HEX0,
@@ -147,7 +149,7 @@ module Project3 #(
         dStageInstr
     );
 
-    Register #(DBITS, 0) dStagePcReg (
+    Register #(DBITS, {DBITS{1'b0}}) dStagePcReg (
         clk,
         reset,
         1'b1,
@@ -158,6 +160,7 @@ module Project3 #(
     DecodeStage #(DBITS) decodeStage (
         dStageInstr,
         dStageAluFunc,
+        dStageAluIn2Sel,
         dStageRegfileInSel,
         dStageRegno1,
         dStageRegno2,
@@ -182,73 +185,73 @@ module Project3 #(
 
 
     // Exec stage
-    Register #(DBITS, 0) eStageRegfileOut1Reg(
+    Register #(DBITS, {DBITS{1'b0}}) eStageRegfileOut1Reg(
         clk, reset, 1'b1,
         regfileOut1,
         eStageRegfileOut1
     );
 
-    Regsiter #(REG_INDEX_BIT_WIDTH, 0) eStageRegno1Reg(
+    Register #(REG_INDEX_BIT_WIDTH, {REG_INDEX_BIT_WIDTH{1'b0}}) eStageRegno1Reg(
         clk, reset, 1'b1,
         dStageRegno1,
         eStageRegno1
     );
 
-    Register #(DBITS, 0) eStageRegfileOut2Reg(
+    Register #(DBITS, {DBITS{1'b0}}) eStageRegfileOut2Reg(
         clk, reset, 1'b1,
         regfileOut2,
         eStageRegfileOut2
     );
 
-    Register #(REG_INDEX_BIT_WIDTH, 0) eStageRegno2Reg(
+    Register #(REG_INDEX_BIT_WIDTH, {REG_INDEX_BIT_WIDTH{1'b0}}) eStageRegno2Reg(
         clk, reset, 1'b1,
         dStageRegno2,
         eStageRegno2
     );
 
-    Register #(DBITS, 0) eStageImmReg(
+    Register #(DBITS, {DBITS{1'b0}}) eStageImmReg(
         clk, reset, 1'b1,
         dStageImmOut,
         eStageImm
     );
 
-    Register #(2, 0) eStageAluIn2SelReg(
+    Register #(2, 2'b0) eStageAluIn2SelReg(
         clk, reset, 1'b1,
         dStageAluIn2Sel,
         eStageAluIn2Sel
     );
 
-    Register #(`FUNC_BITS, 0) eStageAluFuncReg(
+    Register #(`FUNC_BITS, {`FUNC_BITS{1'b0}}) eStageAluFuncReg(
         clk, reset, 1'b1,
         dStageAluFunc,
         eStageAluFunc
     );
 
-    Register #(1, 0) eStageLoadStoreReg(
+    Register #(1, 1'b0) eStageLoadStoreReg(
         clk, reset, 1'b1,
         dStageIsStore,
         eStageIsStore
     );
 
-    Register #(REG_INDEX_BIT_WIDTH, 0) eStageRdReg(
+    Register #(REG_INDEX_BIT_WIDTH, {REG_INDEX_BIT_WIDTH{1'b0}}) eStageRdReg(
         clk, reset, 1'b1,
         dStageRd,
-        eStageRd,
+        eStageRd
     );
 
-    Register #(DBITS, 0) eStagePcReg(
+    Register #(DBITS, {DBITS{1'b0}}) eStagePcReg(
         clk, reset, 1'b1,
         dStagePc,
         eStagePc
     );
 
-    Register #(1, 0) eStageRegfileWrtEnReg(
+    Register #(1, 1'b0) eStageRegfileWrtEnReg(
         clk, reset, 1'b1,
         dStageRegfileWrtEn,
         eStageRegfileWrtEn
     );
 
-    Register #(2, 0) regfileInSel(
+    Register #(2, 2'b0) regfileInSel(
         clk, reset, 1'b1,
         dStageRegfileInSel,
         eStageRegfileInSel
@@ -277,43 +280,43 @@ module Project3 #(
 
     // mem stage
 
-    Register #(DBITS, 0) mStageAddrReg(
+    Register #(DBITS, {DBITS{1'b0}}) mStageAddrReg(
         clk, reset, 1'b1,
         eStageAluResult,
         mStageAddr
     );
 
-    Register #(DBITS, 0) mStageIoInReg(
+    Register #(DBITS, {DBITS{1'b0}}) mStageIoInReg(
         clk, reset, 1'b1,
         eStageResolvedRs2,
         mStageIoIn
     );
 
-    Register #(1, 0) mStageIsStoreReg(
+    Register #(1, 1'b0) mStageIsStoreReg(
         clk, reset, 1'b1,
         eStageIsStore,
         mStageIsStore
     );
 
-    Register #(REG_INDEX_BIT_WIDTH, 0) mStageRdReg(
+    Register #(REG_INDEX_BIT_WIDTH, {REG_INDEX_BIT_WIDTH{1'b0}}) mStageRdReg(
         clk, reset, 1'b1,
         eStageRd,
         mStageRd
     );
 
-    Register #(DBITS, 0) mStagePcReg(
+    Register #(DBITS, {DBITS{1'b0}}) mStagePcReg(
         clk, reset, 1'b1,
         eStagePc,
         mStagePc
     );
 
-    Register #(1, 0) mStageRegfileWrtEnReg(
+    Register #(1, 1'b0) mStageRegfileWrtEnReg(
         clk, reset, 1'b1,
         eStageRegfileWrtEn,
         mStageRegfileWrtEn
     );
 
-    Register #(2, 0) mStageRegfileInSelReg(
+    Register #(2, 2'b0) mStageRegfileInSelReg(
         clk, reset, 1'b1,
         eStageRegfileInSel,
         mStageRegfileInSel
@@ -352,37 +355,37 @@ module Project3 #(
     
     // wb stage
 
-    Register #(DBITS, 0) wbStageAluOutReg(
+    Register #(DBITS, {DBITS{1'b0}}) wbStageAluOutReg(
         clk, reset, 1'b1,
         mStageAddr,
         wbStageAluOut
     );
 
-    Register #(DBITS, 0) wbStageIoOutReg(
+    Register #(DBITS, {DBITS{1'b0}}) wbStageIoOutReg(
         clk, reset, 1'b1,
         mStageIoOut,
         wbStageIoOut
     );
 
-    Register #(DBITS, 0) wbStagePcReg(
+    Register #(DBITS, {DBITS{1'b0}}) wbStagePcReg(
         clk, reset, 1'b1,
         mStagePc,
         wbStagePc
     );
 
-    Register #(2, 0) wbStageRegfileInSelReg(
+    Register #(2, 2'b0) wbStageRegfileInSelReg(
         clk, reset, 1'b1,
         mStageRegfileInSel,
         wbStageRegfileInSel
     );
 
-    Register #(REG_INDEX_BIT_WIDTH, 0) wbStageWrtRegnoReg(
+    Register #(REG_INDEX_BIT_WIDTH, {REG_INDEX_BIT_WIDTH{1'b0}}) wbStageWrtRegnoReg(
         clk, reset, 1'b1,
         mStageRd,
         wbStageRegfileWrtRegno
     );
 
-    Register #(1, 0) wbStageRegfileWrtEnReg(
+    Register #(1, 1'b0) wbStageRegfileWrtEnReg(
         clk, reset, 1'b1,
         mStageRegfileWrtEn,
         wbStageRegfileWrtEn
