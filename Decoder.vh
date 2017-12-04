@@ -52,4 +52,6 @@
 `define REGFILEINSEL_PCPLUS4    2'b01
 `define REGFILEINSEL_IO         2'b10
 
+`define NOOP 32'h3b000099
+
 `endif
